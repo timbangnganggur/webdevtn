@@ -5,7 +5,7 @@ namespace App\Http\Controllers\General;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class profileTNController extends Controller
+class ProfileTNController extends Controller
 {
     public function profile()
     {
