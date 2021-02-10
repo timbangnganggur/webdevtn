@@ -14,4 +14,6 @@ use App\Http\Controllers\General\LandingPageController;
 */
 
 Route::get('', [LandingPageController::class, 'index']);
-Route::get('', [profileTNController::class, 'profile']);
+Route::get('/profileTN', function () {
+    return view('profileTN');
+});
