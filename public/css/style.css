@@ -3,23 +3,51 @@
     height: 100px;
 }
 
+.modal-footer{
+    justify-content: center;
+}
+
 .jumbotron {
     background-image: url(/img/jumbotron.png);
     background-color: rgb(217, 255, 0);
     background-size: cover;
-    /* height: 450px; */
+    height: 450px;
 }
 
 .pencarian{
     text-align: center;
 }
 
+center{
+    font-size: 15px;
+}
+
+#clbk{
+    font-size: 15px;
+    text-transform: uppercase;
+    
+}
+
+.btn-login{
+    background-color: #eb4335;
+    border: 2px solid black;
+    color: white;
+}
+
 .tombol{
-    border: 4px solid blue;
+    border: 4px solid  #004aad;
+    background-color: #1893f8;
+    color: white;
     border-radius: 10px 10px 10px;    
     width: 100px;
     text-transform: uppercase;
     font-weight: bold;
+    padding: 5px 10px;
+}
+
+.tombol:hover{
+    text-decoration: none;
+    color: aqua;
 }
 
 .masuk, .atau, .daftar{
@@ -72,6 +100,7 @@
 
 
 
+
 .btn-next {
     position: absolute;
     content: "";
@@ -90,9 +119,51 @@
     transition: background-color 0.3s;
 }
 
-.fab   {
-    font-size: 50px;
+.fab, .far {
+    font-size: 25px;
     color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.penawaran{
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.penawaran:hover{
+    color: yellow;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.topik{
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.topik:hover{
+    color: yellow;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+.FUO{
+    color: black;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.FUO:hover{
+    color: yellow;
+    text-decoration: none;
+}
+
+.bg-footer{
+    background-color: rgb(146, 138, 138);
 }
 
 .logo-footer{
@@ -107,4 +178,26 @@
 
 .mgFooter{
     margin-top: 30px;
+}
+
+
+
+/* CSS profileTN */
+
+.sectionLogo img{
+    display: block;
+    margin: -100px auto -200px ;
+    width: 450px;
+}
+
+.section1 img{
+    display: block;
+    width: 85%;
+    margin: -100px auto 0px ;
+}
+
+.section2 img{
+    display: block;
+    width: 85%;
+    margin: -100px auto 0px ;
 }
