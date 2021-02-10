@@ -5,10 +5,10 @@ namespace App\Http\Controllers\General;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class LandingPageController extends Controller
+class profileTNController extends Controller
 {
-    public function index()
+    public function profile()
     {
-        return view('general.landingpage');
+        return view('general.profileTN');
     }
 }
