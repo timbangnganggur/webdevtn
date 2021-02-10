@@ -14,3 +14,4 @@ use App\Http\Controllers\General\LandingPageController;
 */
 
 Route::get('', [LandingPageController::class, 'index']);
+Route::get('', [LandingPageController::class, 'profileTN']);
