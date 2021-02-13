@@ -10,10 +10,10 @@
           <a class="nav-link" href="/profileTN">Profile TN <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Ayo Makaryo</a>
+          <a class="nav-link" href="/ayoMakaryo">Ayo Makaryo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CLBK</a>
+          <a class="nav-link" href="/clbk">CLBK</a>
         </li>
       </ul>
     </div>

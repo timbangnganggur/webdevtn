@@ -13,8 +13,8 @@
               <hr class="bg-warning mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 2px;">
   
               <ul class="list-unstyled">
-                <li class="my-2"><a href="#" class="penawaran">AYO MAKARYO</a></li>
-                <li class="my-2"><a href="#" class="penawaran">CLBK</a></li>
+                <li class="my-2"><a href="/ayoMakaryo" class="penawaran">AYO MAKARYO</a></li>
+                <li class="my-2"><a href="/clbk" class="penawaran">CLBK</a></li>
               </ul>
             </div>
   

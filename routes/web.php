@@ -22,3 +22,9 @@ Route::get('/', function () {
 Route::get('/profileTN', function () {
     return view('general.profileTN');
 });
+Route::get('/ayoMakaryo', function () {
+    return view('general.ayoMakaryo');
+});
+Route::get('/clbk', function () {
+    return view('general.clbk');
+});

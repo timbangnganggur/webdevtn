@@ -8,7 +8,7 @@
 }
 
 .jumbotron {
-    background-image: url(/img/jumbotron.png);
+    background-image: url(/img/jumbotron1.png);
     background-color: rgb(217, 255, 0);
     background-size: cover;
     height: 450px;
@@ -18,14 +18,21 @@
     text-align: center;
 }
 
-center{
+#clbk{
+    z-index: 1;
+    display: block;
+    margin-top: 10px;
+    margin-left: 850px;
     font-size: 15px;
+    position: absolute;
 }
 
-#clbk{
-    font-size: 15px;
-    text-transform: uppercase;
-    
+.line{
+    background-color: black;
+    height: 2px;
+    width: 500px;
+    margin-top: -70px;
+    margin-bottom: 150px;
 }
 
 .btn-login{
@@ -70,11 +77,13 @@ center{
 }
 
 #ayo-sinau{
+    z-index: 1;
     height: 500px;
     position: relative;
 }
 
 .section-judul{
+    margin-left: -300px;
     text-align: center;
     font-weight: bold;
     margin-bottom: 90px;
@@ -201,3 +210,85 @@ center{
     width: 85%;
     margin: -100px auto 0px ;
 }
+
+
+/* CSS Ayo Makaryo */
+.headAyoMakaryo{
+    margin-top: 40px;
+    background-color: #3e4e60;
+    height: 60px;
+}
+.ham{
+    padding-top: 10px;
+}
+
+.submit-btn{
+    display: inline-block;
+    border-radius: 5px 5px 5px 5px ;
+    border: 2px solid #ffff00;
+    background-color: #ffff00;
+    width: 40px;
+    height: 40px;
+}
+
+.submit-btn:hover{
+    display: inline-block;
+    border: 2px solid #ffff00;
+    background-color: #ffff00;
+    width: 40px;
+    height: 40px;
+    color: lightgreen;
+}
+
+#loker,
+#tersimpan,
+#terakhir-dilihat{
+    padding-top: 50px;
+}
+
+.lowongan-kerja img{
+    margin-left: 30%;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+}
+
+.lowongan-kerja .row{
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.Tersimpan img{
+    margin-left: 30%;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+}
+.Tersimpan .col{
+    margin-bottom: 10px;
+}
+.Tersimpan p,
+.Tersimpan a{
+    font-size: 10px;
+}
+
+.terakhir-lihat img{
+    margin-left: 30%;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+}
+.terakhir-lihat .col{
+    margin-bottom: 10px;
+}
+.terakhir-lihat p,
+.terakhir-lihat a{
+    font-size: 10px;
+}
+
+.vl {
+    border-radius: 10px;
+    border-left: 4px solid black;
+    height: 1670px;
+    margin-top: 50px;
+  }
