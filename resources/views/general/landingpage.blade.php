@@ -2,7 +2,7 @@
 @section('content')
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <br><br><br> <br><br><br>
+    <br><br><br> <br><br><br> <br><br><br>
     <!-- <h1 class="display-4">Fluid jumbotron</h1>
           <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
     <div class="pencarian ">
@@ -24,10 +24,10 @@
     <div class="item"><img class="gambar-carousel" src="img/Tips.png" alt="">
       <h2>Tips & Trick</h2>
     </div>
-    <div class="item"><img class="gambar-carousel" src="img/Merintis.png" alt="">
+    <div class="item"><img class="gambar-carousel" src="img/MK.png" alt="">
       <h2>Merintis Karir</h2>
     </div>
-    <div class="item"><img src="img/Kerja.png" alt="">
+    <div class="item"><img src="img/DK.png" alt="">
       <h2>Dunia Kerja</h2>
     </div>
     <div class="item">
