@@ -25,6 +25,10 @@ Route::get('/profileTN', function () {
 Route::get('/ayoMakaryo', function () {
     return view('general.ayoMakaryo');
 });
+Route::get('/detailLowongan', function () {
+    return view('general.detailLowongan');
+});
+
 Route::get('/clbk', function () {
     return view('general.clbk');
 });

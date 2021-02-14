@@ -292,3 +292,53 @@
     height: 1670px;
     margin-top: 50px;
   }
+
+  /* CSS detailLowongan */
+  .img-detilLowongan img{
+      width: 250px;
+      height: 300px;
+      margin-left: 10px;
+      margin-top: -100px;
+  }
+  .daerah{
+      font-weight: lighter;
+  }
+
+  .profilPerusahaan{
+      width: 600px;
+      height: 40px;
+      background-color: #ffdd3e;
+      text-align: center;
+      padding-top: 2px;
+      box-shadow: 3px 4px #947a7ad3;
+      margin: 30px 0;
+      margin-left: 100px;
+  }
+
+  .detil{
+    display: inline-block; 
+    margin-left: 10px;
+  }
+  .detil .namaPerusahaan{
+    margin-bottom: 40px;
+  }
+
+  .isiSkill{
+      margin-left: 10px;
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      padding-top: 8px;
+      font-weight: bold;
+      background-color: #1893f8;
+      border: 2px solid #1893f8;
+      border-radius: 10px 10px 10px 10px;
+      width: 100px;
+      height: 40px;
+  }
+
+  .isiSkill:hover{
+    color: white;
+    text-decoration: none;
+}
