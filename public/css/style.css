@@ -193,23 +193,36 @@
 
 /* CSS profileTN */
 
-.sectionLogo img{
-    display: block;
-    margin: -100px auto -200px ;
-    width: 450px;
+.profileTN .sectionLogo img{
+    width: auto;
+    height: 400px;
+}
+.profileTN .sectionLogo p{
+    margin: 100px 0;
 }
 
-.section1 img{
-    display: block;
-    width: 85%;
-    margin: -100px auto 0px ;
+.profileTN .section1 img{
+    width: auto;
+    height: 400px;
 }
 
-.section2 img{
-    display: block;
-    width: 85%;
-    margin: -100px auto 0px ;
+.profileTN h1{
+    text-align: center;
+    margin: 50px 0;
 }
+
+#carouselExampleControls .carousel-item img{
+    width: auto;
+    height: auto;
+}
+#carouselExampleControls .carousel-control-prev,
+#carouselExampleControls .carousel-control-next{
+    background-color: yellowgreen;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+}
+
 
 
 /* CSS Ayo Makaryo */
@@ -341,4 +354,150 @@
   .isiSkill:hover{
     color: white;
     text-decoration: none;
+}
+
+/* CSS CLBK */
+.pembungkusCLBK{
+    margin-top: 30px;
+}
+.pembungkusCLBK ul{
+    margin-top: -50px;
+    margin-bottom: 70px;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+.pembungkusCLBK ul .topik{
+    list-style: none;
+    display: inline-block;
+}
+.pembungkusCLBK ul .topik a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.pembungkusCLBK ul .topik a:hover{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.pembungkusCLBK .topik1{
+    text-align: center;
+    padding-top: 5px;
+    border-top: 5px solid #ffff00;
+    border-bottom: 5px solid #ffff00;
+    background-color: #d6c6cc;
+    width: 120px;
+    height: 40px;
+}
+.pembungkusCLBK .topik2{
+    text-align: center;
+    padding-top: 5px;
+    border-top: 5px solid #ff8210;
+    border-bottom: 5px solid #ff8210;
+    background-color: #d6c6cc;
+    width: 160px;
+    height: 40px;
+}
+.pembungkusCLBK .topik3{
+    text-align: center;
+    padding-top: 5px;
+    border-top: 5px solid #12c8dd;
+    border-bottom: 5px solid #12c8dd;
+    background-color: #d6c6cc;
+    width: 170px;
+    height: 40px;
+}
+.pembungkusCLBK .topik4{
+    text-align: center;
+    padding-top: 5px;
+    border-top: 5px solid #ff0000;
+    border-bottom: 5px solid #ff0000;
+    background-color: #d6c6cc;
+    width: 170px;
+    height: 40px;
+}
+.pembungkusCLBK .topik5{
+    text-align: center;
+    padding-top: 5px;
+    border-top: 5px solid  #f52ec0;
+    border-bottom: 5px solid  #f52ec0;
+    background-color: #d6c6cc;
+    width: 160px;
+    height: 40px;
+}
+.rowBawah{
+    margin-top: 30px;
+    margin-left: 60px;
+
+}
+
+.search-artikel{
+    border-radius: 10px 10px 10px 10px;
+    height: 40px;
+}
+
+.form-artikelClbk{
+    margin-left: 90px;
+    padding: 3px 50px;
+    background-color: #3e4e60;
+    height: 50px;
+    width: 340px;
+}
+
+.paging-clbk{
+    margin-top: 100px;
+}
+
+.vl2 {
+    border-radius: 10px;
+    border-left: 4px solid black;
+    height: 1200px;
+    margin-top: -20px;
+    margin-right: 10px;
+  }
+
+.fa-heart{
+    color: black;
+}
+
+/* CSS detailClbk */
+.row-gambar-detailClbk img{
+    width: 100%;
+    height: 400px;
+}
+.row-gambar-detailClbk p{
+    text-align: right;
+}
+.row-gambar-detailClbk .card img{
+    height: 200px;
+}
+.row-gambar-detailClbk .col-artikel-terkait{
+    border-left: 4px solid black;
+}
+
+.row-topik-artikelClbk .tombol{
+    border: 1px solid #f52ec0;
+    background-color: #f52ec0;
+}
+.row-topik-artikelClbk .tombol:hover{
+    border: 1px solid #f52ec0;
+    background-color: #f52ec0;
+    color: black;
+}
+
+.row-topik-artikelClbk ul{
+    display: flex;
+    gap: 15px;
+}
+.row-topik-artikelClbk ul li{
+    list-style: none;
+}
+
+.isidetailClbk .col h3 span{
+    text-transform: none;
+    font-size: 20px;
 }
