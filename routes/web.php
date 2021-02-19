@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\General\LandingPageController;
+use App\Http\Controllers\Admin\DashboardAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,4 +32,8 @@ Route::get('/detailLowongan', function () {
 
 Route::get('/clbk', function () {
     return view('general.clbk');
+});
+
+Route::prefix('admin')->group(function(){
+    Route::get('dashboard', [DashboardAdminController::class, 'index']);
 });
