@@ -33,6 +33,9 @@ Route::get('/detailLowongan', function () {
 Route::get('/clbk', function () {
     return view('general.clbk');
 });
+Route::get('/detailClbk', function () {
+    return view('general.detailClbk');
+});
 
 Route::prefix('admin')->group(function(){
     Route::get('dashboard', [DashboardAdminController::class, 'index']);

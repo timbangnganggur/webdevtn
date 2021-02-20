@@ -449,19 +449,38 @@
 }
 
 .paging-clbk{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
-.vl2 {
-    border-radius: 10px;
-    border-left: 4px solid black;
-    height: 1200px;
-    margin-top: -20px;
-    margin-right: 10px;
-  }
+.pembungkusCLBK .card{
+   margin-bottom: 30px;
+}
 
 .fa-heart{
     color: black;
+}
+
+.col-kiri-Clbk .card-body a{
+    color: black;
+    text-decoration: none;
+}
+.col-kiri-Clbk .card-body a:hover{
+    color: lightgreen;
+}
+
+.col-kanan-clbk{
+    border-left: 4px solid black;
+}
+.col-kanan-clbk .card img{
+    width: 115px;
+    height: 170px;
+}
+.col-kanan-clbk .card-body a{
+    color: black;
+    text-decoration: none;
+}
+.col-kanan-clbk .card-body a:hover{
+    color: lightgreen;
 }
 
 /* CSS detailClbk */
@@ -472,6 +491,15 @@
 .row-gambar-detailClbk p{
     text-align: right;
 }
+
+.col-artikel-terkait .card-body a{
+    color: black;
+    text-decoration: none;
+}
+.col-artikel-terkait .card-body a:hover{
+    color: lightgreen;
+}
+
 .row-gambar-detailClbk .card img{
     height: 200px;
 }
