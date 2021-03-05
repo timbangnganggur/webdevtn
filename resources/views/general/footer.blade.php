@@ -4,7 +4,7 @@
           <div class="row">
   
             <div class="col-md-3 mx-auto mb-4 mgFooter">
-              <img class="logo-footer" src="/img/Logo.png" alt="">
+              <img class="logo-footer" src="{{ asset('img/Logo.png') }}" alt="">
             </div>
 
 

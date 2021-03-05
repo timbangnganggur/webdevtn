@@ -6,7 +6,7 @@
         <section class="sectionLogo">
           <div class="row">
             <div class="col-md-6">
-              <img src="/img/Logo.png" alt="">
+              <img src="{{ asset('img/Logo.png') }}" alt="">
             </div>
             <div class="col-md-6">
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, dicta? Vel, excepturi eligendi culpa impedit nemo ipsam, enim repudiandae in deleniti voluptatibus reprehenderit itaque, laboriosam saepe consequatur voluptatum necessitatibus voluptatem sint magnam. Similique, laborum repellat incidunt possimus corporis tempora ea, ad eligendi beatae adipisci deserunt maiores officiis amet! Sapiente quam ab iste minima possimus dolor reiciendis ea, ratione ex molestias labore! Sed omnis blanditiis veniam libero minus autem aspernatur. Non.</p>

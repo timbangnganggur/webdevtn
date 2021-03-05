@@ -40,7 +40,7 @@
                 <div class="lowongan-kerja">
                     <div class="row">
                             <div class="card" style="width: 16rem;">
-                                <img src="img/Logo.png" class="card-img-top" alt="...">
+                                <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Perusahaan</h5>
                                     <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -53,7 +53,7 @@
                         
             
                             <div class="card" style="width: 16rem;">
-                                <img src="img/Logo.png" class="card-img-top" alt="...">
+                                <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Perusahaan</h5>
                                     <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -66,7 +66,7 @@
                         
                         
                             <div class="card" style="width: 16rem;">
-                                <img src="img/Logo.png" class="card-img-top" alt="...">
+                                <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">Perusahaan</h5>
                                     <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -80,7 +80,7 @@
 
                     <div class="row">
                         <div class="card" style="width: 16rem;">
-                            <img src="img/Logo.png" class="card-img-top" alt="...">
+                            <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Perusahaan</h5>
                                 <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -93,7 +93,7 @@
                     
         
                         <div class="card" style="width: 16rem;">
-                            <img src="img/Logo.png" class="card-img-top" alt="...">
+                            <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Perusahaan</h5>
                                 <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -106,7 +106,7 @@
                     
                     
                         <div class="card" style="width: 16rem;">
-                            <img src="img/Logo.png" class="card-img-top" alt="...">
+                            <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Perusahaan</h5>
                                 <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -120,7 +120,7 @@
 
                 <div class="row">
                     <div class="card" style="width: 16rem;">
-                        <img src="img/Logo.png" class="card-img-top" alt="...">
+                        <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Perusahaan</h5>
                             <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -133,7 +133,7 @@
                 
     
                     <div class="card" style="width: 16rem;">
-                        <img src="img/Logo.png" class="card-img-top" alt="...">
+                        <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Perusahaan</h5>
                             <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -146,7 +146,7 @@
                 
                 
                     <div class="card" style="width: 16rem;">
-                        <img src="img/Logo.png" class="card-img-top" alt="...">
+                        <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Perusahaan</h5>
                             <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -160,7 +160,7 @@
 
             <div class="row">
                 <div class="card" style="width: 16rem;">
-                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Perusahaan</h5>
                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -173,7 +173,7 @@
             
 
                 <div class="card" style="width: 16rem;">
-                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Perusahaan</h5>
                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -186,7 +186,7 @@
             
             
                 <div class="card" style="width: 16rem;">
-                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Perusahaan</h5>
                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
@@ -222,7 +222,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="card" style="width: 17rem;">
-                                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
@@ -232,7 +232,7 @@
                             </div>
                             <div class="col">
                                 <div class="card" style="width: 17rem; ">
-                                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
@@ -242,7 +242,7 @@
                             </div>
                             <div class="col">
                                 <div class="card" style="width: 17rem;">
-                                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
@@ -261,7 +261,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="card" style="width: 17rem;">
-                                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
@@ -271,7 +271,7 @@
                             </div>
                             <div class="col">
                                 <div class="card" style="width: 17rem; ">
-                                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
@@ -281,7 +281,7 @@
                             </div>
                             <div class="col">
                                 <div class="card" style="width: 17rem; ">
-                                    <img src="img/Logo.png" class="card-img-top" alt="...">
+                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>

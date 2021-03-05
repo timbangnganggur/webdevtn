@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 img-detilLowongan">
-                <img src="/img/Logo.png" alt="" >
+                <img src="{{ asset('img/Logo.png') }}" alt="" >
                 <div class="detil">
                     <h1 style="margin-top:">Profesi</h1>
                     <h1 class="namaPerusahaan">Nama Perusahaan <span class="daerah"> - Daerah</span></h2>
@@ -52,7 +52,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="card" style="width: 17rem;">
-                                <img src="img/Logo.png" class="card-img-top" alt="...">
+                                <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                   <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="col">
                             <div class="card" style="width: 17rem; ">
-                                <img src="img/Logo.png" class="card-img-top" alt="...">
+                                <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                   <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>

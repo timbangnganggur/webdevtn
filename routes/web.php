@@ -22,21 +22,23 @@ Route::get('/', function () {
 
 Route::get('/profileTN', function () {
     return view('general.profileTN');
-});
+})->name('profileTN');
 Route::get('/ayoMakaryo', function () {
     return view('general.ayoMakaryo');
-});
+})->name('ayoMakaryo');
 Route::get('/detailLowongan', function () {
     return view('general.detailLowongan');
 });
 
 Route::get('/clbk', function () {
     return view('general.clbk');
-});
+})->name('clbk');
 Route::get('/detailClbk', function () {
     return view('general.detailClbk');
 });
 
+
+// ROUTE ADMIN
 Route::prefix('admin')->group(function(){
     Route::get('dashboard', [DashboardAdminController::class, 'index']);
 });
