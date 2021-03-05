@@ -26,7 +26,7 @@
                       <div class="col-md-8">
                         <div class="card-body">
                           <h5 class="card-title">Topik</h5>
-                          <h3 class="card-text"><a href="/detailClbk">Judul</a></h3>
+                          <h3 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h3>
                         </div>
                       </div>
                     </div>
@@ -40,7 +40,7 @@
                       <div class="col-md-8">
                         <div class="card-body">
                           <h5 class="card-title">Topik</h5>
-                          <h3 class="card-text"><a href="/detailClbk">Judul</a></h3>
+                          <h3 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h3>
                         </div>
                       </div>
                     </div>
@@ -54,7 +54,7 @@
                       <div class="col-md-8">
                         <div class="card-body">
                           <h5 class="card-title">Topik</h5>
-                          <h3 class="card-text"><a href="/detailClbk">Judul</a></h3>
+                          <h3 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h3>
                         </div>
                       </div>
                     </div>

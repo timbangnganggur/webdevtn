@@ -47,7 +47,7 @@
                                     <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                     <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                                     <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                    <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                    <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                 </div>
                             </div>
                         
@@ -60,7 +60,7 @@
                                     <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                     <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                                     <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                    <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                    <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                 </div>
                             </div>
                         
@@ -73,7 +73,7 @@
                                     <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                     <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                                     <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                    <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                    <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                 </div>
                             </div>
                     </div>
@@ -87,7 +87,7 @@
                                 <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                 <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                                 <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                             </div>
                         </div>
                     
@@ -100,7 +100,7 @@
                                 <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                 <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                                 <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                             </div>
                         </div>
                     
@@ -113,7 +113,7 @@
                                 <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                 <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                                 <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                             </div>
                         </div>
                 </div>
@@ -127,7 +127,7 @@
                             <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                             <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                             <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                            <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                            <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                         </div>
                     </div>
                 
@@ -140,7 +140,7 @@
                             <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                             <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                             <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                            <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                            <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                         </div>
                     </div>
                 
@@ -153,7 +153,7 @@
                             <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                             <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                             <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                            <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                            <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                         </div>
                     </div>
             </div>
@@ -167,7 +167,7 @@
                         <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                         <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                         <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                        <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                        <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                     </div>
                 </div>
             
@@ -180,7 +180,7 @@
                         <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                         <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                         <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                        <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                        <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                     </div>
                 </div>
             
@@ -193,7 +193,7 @@
                         <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                         <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
                         <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                        <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                        <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                     </div>
                 </div>
         </div>
@@ -226,7 +226,7 @@
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                     </div>
                                   </div>
                             </div>
@@ -236,7 +236,7 @@
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                     </div>
                                   </div>
                             </div>
@@ -246,7 +246,7 @@
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                     </div>
                                   </div>
                             </div>
@@ -265,7 +265,7 @@
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                     </div>
                                   </div>
                             </div>
@@ -275,7 +275,7 @@
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                     </div>
                                   </div>
                             </div>
@@ -285,7 +285,7 @@
                                     <div class="card-body">
                                       <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
                                       <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="/detailLowongan" class="btn btn-primary">Detail</a>
+                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                     </div>
                                   </div>
                             </div>

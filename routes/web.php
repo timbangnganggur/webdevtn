@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\General\LandingPageController;
 use App\Http\Controllers\Admin\DashboardAdminController;
+use App\Http\Controllers\Admin\InfoLokerAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,17 +29,18 @@ Route::get('/ayoMakaryo', function () {
 })->name('ayoMakaryo');
 Route::get('/detailLowongan', function () {
     return view('general.detailLowongan');
-});
+})->name('detailLowongan');
 
 Route::get('/clbk', function () {
     return view('general.clbk');
 })->name('clbk');
 Route::get('/detailClbk', function () {
     return view('general.detailClbk');
-});
+})->name('detailClbk');
 
 
 // ROUTE ADMIN
 Route::prefix('admin')->group(function(){
     Route::get('dashboard', [DashboardAdminController::class, 'index']);
+    Route::resource('info-loker', InfoLokerAdminController::class);
 });

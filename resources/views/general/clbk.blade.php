@@ -37,7 +37,7 @@
                     <img src="/img/coba.jpg" alt="">
                     <div class="card-body">
                       <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="/detailClbk">Judul</a></h4>
+                      <h4 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h4>
                       <p>by (penulis)</p>
                       <p>Tanggal terbit</p>
                     </div>
@@ -48,31 +48,7 @@
                     <img src="/img/coba.jpg" alt="">
                     <div class="card-body">
                       <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="/detailClbk">Judul</a></h4>
-                      <p>by (penulis)</p>
-                      <p>Tanggal terbit</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="card">
-                    <img src="/img/coba.jpg" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="/detailClbk">Judul</a></h4>
-                      <p>by (penulis)</p>
-                      <p>Tanggal terbit</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="card">
-                    <img src="/img/coba.jpg" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="/detailClbk">Judul</a></h4>
+                      <h4 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h4>
                       <p>by (penulis)</p>
                       <p>Tanggal terbit</p>
                     </div>
@@ -85,7 +61,7 @@
                     <img src="/img/coba.jpg" alt="">
                     <div class="card-body">
                       <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="/detailClbk">Judul</a></h4>
+                      <h4 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h4>
                       <p>by (penulis)</p>
                       <p>Tanggal terbit</p>
                     </div>
@@ -96,7 +72,31 @@
                     <img src="/img/coba.jpg" alt="">
                     <div class="card-body">
                       <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="/detailClbk">Judul</a></h4>
+                      <h4 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h4>
+                      <p>by (penulis)</p>
+                      <p>Tanggal terbit</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <img src="/img/coba.jpg" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Topik</h5>
+                      <h4 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h4>
+                      <p>by (penulis)</p>
+                      <p>Tanggal terbit</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <img src="/img/coba.jpg" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Topik</h5>
+                      <h4 class="card-text"><a href="{{ route('detailClbk') }}">Judul</a></h4>
                       <p>by (penulis)</p>
                       <p>Tanggal terbit</p>
                     </div>
@@ -124,7 +124,7 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title"><a href="/detailClbk">Judul</a></h5>
+                      <h5 class="card-title"><a href="{{ route('detailClbk') }}">Judul</a></h5>
                       <p class="card-text">Topik</p>
                     </div>
                   </div>
@@ -138,7 +138,7 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title"><a href="/detailClbk">Judul</a></h5>
+                      <h5 class="card-title"><a href="{{ route('detailClbk') }}">Judul</a></h5>
                       <p class="card-text">Topik</p>
                     </div>
                   </div>
@@ -152,7 +152,7 @@
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title"><a href="/detailClbk">Judul</a></h5>
+                      <h5 class="card-title"><a href="{{ route('detailClbk') }}">Judul</a></h5>
                       <p class="card-text">Topik</p>
                     </div>
                   </div>
