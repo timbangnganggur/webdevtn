@@ -15,6 +15,11 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('salary');
+            $table->enum('type', ['part_time', 'full_time', 'internship', 'apprentice']);
+            $table->text('description');
+            $table->text('qualification');
             $table->timestamps();
         });
     }
