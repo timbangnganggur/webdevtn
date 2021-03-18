@@ -3,6 +3,7 @@
 <!-- IonIcons -->
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @yield('dataTablesCSS')
+@yield('style')
 <!-- Theme style -->
 <link rel="stylesheet" href="{{ asset('./dist/css/adminlte.min.css') }}">
 <!-- Google Font: Source Sans Pro -->

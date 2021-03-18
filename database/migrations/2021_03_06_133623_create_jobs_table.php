@@ -20,6 +20,7 @@ class CreateJobsTable extends Migration
             $table->enum('type', ['part_time', 'full_time', 'internship', 'apprentice']);
             $table->text('description');
             $table->text('qualification');
+            $table->foreignId('companies_id')->constrained('companies');
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
+              <li class="breadcrumb-item active">Info Loker</li>
             </ol>
           </div>
         </div>
@@ -31,6 +31,12 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Informasi Lowongan Kerja</h3>
+                <div class="card-tools">
+                  <a href="{{ route('info-loker.create') }}" class="btn btn-tool">
+                      <i class="fa fa-plus"></i>
+                      &nbsp; Tambah Data Baru
+                  </a>
+              </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -41,40 +47,53 @@
                     <th>Daerah</th>
                     <th>Profesi</th>
                     <th>Gaji</th>
-                    <th>Jenis Pekerjaan</th>
+                    <th>Jenis</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                    <td class="text-center">
-                      <form method="POST" action="{{ URL::to('admin/tentor-belum-diverifikasi/'.$t['tentor_id']) }}">
-                          @csrf
-                          <input type="hidden" name="_method" value="DELETE" />
-                          <div class="btn-group">
-                              <a class="btn btn-info" href="{{ URL::to('admin/tentor-belum-diverifikasi/'.$t['tentor_id']) }}"><i class="fa fa-eye"></i></a>
-                              <a class="btn btn-success" href="{{ $t['link_khs'] }}" title="Link KHS"><i class="fa fa-file" aria-hidden="true"></i></a>
-                              <a class="btn btn-success" href="{{ $t['link_cv'] }}" title="Link CV"><i class="fa fa-user" aria-hidden="true"></i></a>
-                              <button title="Hapus Data Tentor" onclick="confirmDelete()" type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                          </div>
-                      </form>
-                    </td>
-                  </tr>
+                    @foreach ($jobs as $job)
+                    <tr>
+                      <td>{{ $job->companies->name }}</td>
+                      <td>{{ $job->companies->regions->name }}</td>
+                      <td>{{ $job->name }}</td>
+                      <td>{{ $job->salary }}</td>
+                      <td>
+                        @if ($job->type == 'full_time')
+                          <span class="badge badge-primary">Full Time</span>    
+                        @endif
+                        @if ($job->type == 'part_time')
+                          <span class="badge badge-primary">Part Time</span>    
+                        @endif
+                        @if ($job->type == 'internship')
+                          <span class="badge badge-success">Internship</span>    
+                        @endif
+                        @if ($job->type == 'apprentice')
+                        <span class="badge badge-success">Apprentice</span>    
+                        @endif
+                      </td>
+                      <td class="text-center">
+                        <form method="POST" action="{{ URL::to('admin/info-loker/'.$job->id) }}">
+                            @csrf
+                            <input type="hidden" name="_method" value="DELETE" />
+                            <div class="btn-group">
+                                <a class="btn btn-info" href="{{ URL::to('admin/info-loker/'.$job->id) }}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-success" href="{{ $job->id }}" title="Ubah Data Info Loker"><i class="fa fa-magic" aria-hidden="true"></i></a>
+                                <button title="Hapus Data Info Loker" onclick="confirmDelete()" type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                            </div>
+                        </form>
+                      </td>
+                    </tr>
+                    @endforeach
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>Nama Perusahaan</th>
+                    <th>Daerah</th>
+                    <th>Profesi</th>
+                    <th>Gaji</th>
+                    <th>Jenis</th>
+                    <th>Aksi</th>
                   </tr>
                   </tfoot>
                 </table>

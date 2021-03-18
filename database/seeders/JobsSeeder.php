@@ -19,7 +19,8 @@ class JobsSeeder extends Seeder
             'salary' => 150000,
             'type' => 'full_time',
             'description' => 'Mengubah tampilan lama webiste webdevtn.id',
-            'qualification' => 'HTML, CSS, JS, dst'
+            'qualification' => 'HTML, CSS, JS, dst',
+            'companies_id' => '1'
         ]);
 
         Job::create([
@@ -27,7 +28,8 @@ class JobsSeeder extends Seeder
             'salary' => 180000,
             'type' => 'full_time',
             'description' => 'Mengubah sistem lama webiste webdevtn.id',
-            'qualification' => 'Go, PHP, dst'
+            'qualification' => 'Go, PHP, dst',
+            'companies_id' => '1'
         ]);
     }
 }

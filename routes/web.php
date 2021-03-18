@@ -2,8 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\General\LandingPageController;
+use App\Http\Controllers\General\ProfileTNController;
+use App\Http\Controllers\General\AyoMakaryoController;
+use App\Http\Controllers\General\ClbkController;
+
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\InfoLokerAdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,27 +21,12 @@ use App\Http\Controllers\Admin\InfoLokerAdminController;
 */
 
 Route::get('', [LandingPageController::class, 'index']);
+Route::get('/profileTN', [ProfileTNController::class, 'index'])->name('profileTN');
+Route::get('/ayoMakaryo', [AyoMakaryoController::class, 'index'])->name('ayoMakaryo');
+Route::get('/ayoMakaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayoMakaryo.show');
 
-Route::get('/', function () {
-    return view('general.landingpage');
-});
-
-Route::get('/profileTN', function () {
-    return view('general.profileTN');
-})->name('profileTN');
-Route::get('/ayoMakaryo', function () {
-    return view('general.ayoMakaryo');
-})->name('ayoMakaryo');
-Route::get('/detailLowongan', function () {
-    return view('general.detailLowongan');
-})->name('detailLowongan');
-
-Route::get('/clbk', function () {
-    return view('general.clbk');
-})->name('clbk');
-Route::get('/detailClbk', function () {
-    return view('general.detailClbk');
-})->name('detailClbk');
+Route::get('/clbk', [ClbkController::class, 'index'])->name('clbk');
+Route::get('/clbk/{id}', [ClbkController::class, 'show'])->name('detailClbk');
 
 
 // ROUTE ADMIN

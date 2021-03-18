@@ -1,6 +1,8 @@
 @extends('general.master')
+@section('title')
+    Ayo Makaryo
+@endsection
 @section('content')
-
     <div class="headAyoMakaryo">
         <div class="container ham">
             <form>
@@ -28,10 +30,6 @@
               </form>
         </div>
     </div>
-    
-
-
-    
     <div class="container">
         <div class="row">
             <!-- Area Kiri -->
@@ -39,164 +37,33 @@
                 <h2 id="loker">Lowongan Pekerjaan</h2>
                 <div class="lowongan-kerja">
                     <div class="row">
-                            <div class="card" style="width: 16rem;">
+                        @foreach ($jobs as $job)
+                            <div class="card mx-2" style="width: 16rem;">
                                 <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Perusahaan</h5>
-                                    <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                                    <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                    <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                                    <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                    <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
+                                    <h5 class="card-title">{{ $job->companies->name }}</h5>
+                                    <p class="card-text"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $job->companies->regions->name }}</p>
+                                    <p class="card-text"><i class="fas fa-user"></i>&nbsp;{{ $job->name }}</p>
+                                    <p class="card-text"><i class="fas fa-coins"></i>&nbsp;{{ $job->salary }}</p>
+                                    <p class="card-text"><i class="fas fa-clock"></i>
+                                        @if ($job->type == 'full_time')
+                                            &nbsp;Full Time    
+                                        @endif
+                                        @if ($job->type == 'part_time')
+                                            &nbsp;Part Time    
+                                        @endif
+                                        @if ($job->type == 'internship')
+                                            &nbsp;Internship    
+                                        @endif
+                                        @if ($job->type == 'apprentice')
+                                            &nbsp;Apprentice    
+                                        @endif
+                                    </p>
+                                    <a href="{{ route('ayoMakaryo.show', ['id' => $job->id]) }}" class="btn btn-primary">Detail</a>
                                 </div>
                             </div>
-                        
-            
-                            <div class="card" style="width: 16rem;">
-                                <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Perusahaan</h5>
-                                    <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                                    <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                    <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                                    <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                    <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                                </div>
-                            </div>
-                        
-                        
-                            <div class="card" style="width: 16rem;">
-                                <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Perusahaan</h5>
-                                    <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                                    <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                    <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                                    <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                    <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                                </div>
-                            </div>
+                        @endforeach
                     </div>
-
-                    <div class="row">
-                        <div class="card" style="width: 16rem;">
-                            <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Perusahaan</h5>
-                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                                <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                                <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                            </div>
-                        </div>
-                    
-        
-                        <div class="card" style="width: 16rem;">
-                            <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Perusahaan</h5>
-                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                                <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                                <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                            </div>
-                        </div>
-                    
-                    
-                        <div class="card" style="width: 16rem;">
-                            <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Perusahaan</h5>
-                                <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                                <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                                <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                            </div>
-                        </div>
-                </div>
-
-                <div class="row">
-                    <div class="card" style="width: 16rem;">
-                        <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Perusahaan</h5>
-                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                            <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                            <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                            <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                            <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                        </div>
-                    </div>
-                
-    
-                    <div class="card" style="width: 16rem;">
-                        <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Perusahaan</h5>
-                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                            <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                            <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                            <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                            <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                        </div>
-                    </div>
-                
-                
-                    <div class="card" style="width: 16rem;">
-                        <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Perusahaan</h5>
-                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                            <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                            <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                            <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                            <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                        </div>
-                    </div>
-            </div>
-
-            <div class="row">
-                <div class="card" style="width: 16rem;">
-                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Perusahaan</h5>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                        <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                        <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                        <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                        <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                    </div>
-                </div>
-            
-
-                <div class="card" style="width: 16rem;">
-                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Perusahaan</h5>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                        <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                        <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                        <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                        <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                    </div>
-                </div>
-            
-            
-                <div class="card" style="width: 16rem;">
-                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Perusahaan</h5>
-                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> Daerah </p>
-                        <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                        <p class="card-text"><i class="fas fa-coins"></i> Gaji </p>
-                        <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                        <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                    </div>
-                </div>
-        </div>
 
         <nav aria-label="Page navigation example">
             <ul class="pagination">
@@ -215,12 +82,11 @@
 
             <!-- Area Kanan -->
             <div class="col-md-2">
-
                 <div class="tersimpan">
                     <h2 id="tersimpan"><i class="fas fa-bookmark"></i> Tersimpan </h2>
                     <div class="Tersimpan">
                         <div class="row">
-                            <div class="col">
+                            {{-- <div class="col">
                                 <div class="card" style="width: 17rem;">
                                     <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -229,28 +95,7 @@
                                       <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                     </div>
                                   </div>
-                            </div>
-                            <div class="col">
-                                <div class="card" style="width: 17rem; ">
-                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                      <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col">
-                                <div class="card" style="width: 17rem;">
-                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                      <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                                    </div>
-                                  </div>
-                            </div>
-        
+                            </div>        --}}
                         </div>
                     </div>
                 </div>
@@ -259,7 +104,7 @@
                     <h2 id="terakhir-dilihat"><i class="fas fa-history"></i> Terakhir Dilihat</h2>
                     <div class="terakhir-lihat">
                         <div class="row">
-                            <div class="col">
+                            {{-- <div class="col">
                                 <div class="card" style="width: 17rem;">
                                     <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -268,27 +113,7 @@
                                       <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
                                     </div>
                                   </div>
-                            </div>
-                            <div class="col">
-                                <div class="card" style="width: 17rem; ">
-                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                      <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                                    </div>
-                                  </div>
-                            </div>
-                            <div class="col">
-                                <div class="card" style="width: 17rem; ">
-                                    <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <p class="card-text"><i class="fas fa-user"></i> Profesi </p>
-                                      <p class="card-text"><i class="fas fa-clock"></i> Jenis Pekerjaan </p>
-                                      <a href="{{ route('detailLowongan') }}" class="btn btn-primary">Detail</a>
-                                    </div>
-                                  </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

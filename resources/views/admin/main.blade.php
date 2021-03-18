@@ -7,7 +7,6 @@
 
   <title>@yield('title')</title>
   @include('admin.style')
-  @yield('style')
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">

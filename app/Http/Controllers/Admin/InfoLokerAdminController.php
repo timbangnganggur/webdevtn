@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Job;
+use App\Models\Company;
+use App\Models\Skill;
+use App\Models\SkillJob;
 
 class InfoLokerAdminController extends Controller
 {
@@ -14,7 +18,8 @@ class InfoLokerAdminController extends Controller
      */
     public function index()
     {
-        return view('admin.infoLoker.index');
+        $jobs = Job::all();
+        return view('admin.infoLoker.index', compact('jobs'));
     }
 
     /**
@@ -24,7 +29,9 @@ class InfoLokerAdminController extends Controller
      */
     public function create()
     {
-        //
+        $companies = Company::all();
+        $skills = Skill::all();
+        return view('admin.infoLoker.create', compact('companies', 'skills'));
     }
 
     /**
@@ -35,7 +42,32 @@ class InfoLokerAdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $type = $request->type;
+        switch($type){
+            case 1 : $type = 'part_time'; break;
+            case 2 : $type = 'full_time'; break;
+            case 3 : $type = 'internship'; break;
+            case 4 : $type = 'apprentice'; break;
+            default : $type = 'internship';
+        }
+        $job = Job::create(
+            [
+                'name' => $request->name,
+                'salary' => $request->salary,
+                'type' => $request->type,
+                'description' => $request->description,
+                'qualification' => $request->qualification,
+                'companies_id' => $request->companies_id
+            ]
+        );
+        
+        foreach($request->skills_jobs_id as $skill_job_id){
+            SkillJob::create([
+                'skills_id' => $skill_job_id,
+                'jobs_id' => $job->id
+            ]);
+        }
+        return redirect()->route('info-loker.index');
     }
 
     /**
@@ -46,7 +78,8 @@ class InfoLokerAdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $job = Job::find($id);
+        return view('admin.infoLoker.show', compact('job'));
     }
 
     /**

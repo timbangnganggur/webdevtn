@@ -10,4 +10,8 @@ class Company extends Model
     use HasFactory;
 
     protected $table = 'companies';
+
+	public function regions() {
+		return $this->belongsTo('App\Models\Region', 'regions_id', 'id');
+	}
 }
