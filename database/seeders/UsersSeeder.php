@@ -22,7 +22,7 @@ class UsersSeeder extends Seeder
             'phone_number' => '082234386822',
             'instagram_account' => 'andreditvirs',
             'email' => 'a@gmail.com',
-            'password' => '$2b$10$OpHA.maZ7eMbEHuLwr1O/Ot/HSubALCO62Z5vvsdP5od9wenYB89S',
+            'password' => '$2b$10$taNXWqlkY.4uIuZIMrrDYeCKexLB6s4qAF3yr0v.dbEBBq5Qn3QTK',
         ]);
     }
 }

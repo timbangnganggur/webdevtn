@@ -1,0 +1,13 @@
+.kotak-logo {
+    text-align: center;
+    height: 70px;
+}
+
+.font-heading {
+    font-size: 30px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-image: "/umum-asset/assets/img/hero-bg.jpg";
+}

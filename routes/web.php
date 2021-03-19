@@ -6,8 +6,12 @@ use App\Http\Controllers\General\ProfileTNController;
 use App\Http\Controllers\General\AyoMakaryoController;
 use App\Http\Controllers\General\ClbkController;
 
+use App\Http\Controllers\AuthController;
+
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\InfoLokerAdminController;
+
+use App\Http\Controllers\Company\DashboardCompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +24,7 @@ use App\Http\Controllers\Admin\InfoLokerAdminController;
 |
 */
 
-Route::get('', [LandingPageController::class, 'index']);
+Route::get('', [LandingPageController::class, 'index'])->name('home');
 Route::get('/profileTN', [ProfileTNController::class, 'index'])->name('profileTN');
 Route::get('/ayoMakaryo', [AyoMakaryoController::class, 'index'])->name('ayoMakaryo');
 Route::get('/ayoMakaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayoMakaryo.show');
@@ -28,6 +32,11 @@ Route::get('/ayoMakaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayo
 Route::get('/clbk', [ClbkController::class, 'index'])->name('clbk');
 Route::get('/clbk/{id}', [ClbkController::class, 'show'])->name('detailClbk');
 
+Route::post('login', [AuthController::class, 'login'])->name('login');
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
+// ROUTE COMPANY
+Route::get('dashboard', [DashboardCompanyController::class, 'index'])->name('company.dashboard');
 
 // ROUTE ADMIN
 Route::prefix('admin')->group(function(){
