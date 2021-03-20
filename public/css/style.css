@@ -1,23 +1,23 @@
-.logo{
+.logo {
     width: 100px;
     height: 100px;
 }
 
-.modal-footer{
+.modal-footer {
     justify-content: center;
 }
 
 .jumbotron {
-    background-color: rgb(217, 255, 0);
+    /* background-color: rgb(217, 255, 0); */
     background-size: cover;
     height: 450px;
 }
 
-.pencarian{
+.pencarian {
     text-align: center;
 }
 
-#clbk{
+#clbk {
     z-index: 1;
     display: block;
     margin-top: 10px;
@@ -26,7 +26,7 @@
     position: absolute;
 }
 
-.line{
+.line {
     background-color: black;
     height: 2px;
     width: 500px;
@@ -34,33 +34,35 @@
     margin-bottom: 150px;
 }
 
-.btn-login{
+.btn-login {
     background-color: #eb4335;
     border: 2px solid black;
     color: white;
 }
 
-.tombol{
-    border: 4px solid  #004aad;
+.tombol {
+    border: 4px solid #004aad;
     background-color: #1893f8;
     color: white;
-    border-radius: 10px 10px 10px;    
+    border-radius: 10px 10px 10px;
     width: 100px;
     text-transform: uppercase;
     font-weight: bold;
     padding: 5px 10px;
 }
 
-.tombol:hover{
+.tombol:hover {
     text-decoration: none;
     color: aqua;
 }
 
-.masuk, .atau, .daftar{
+.masuk,
+.atau,
+.daftar {
     margin: 10px;
 }
 
-.pencarian .cari{
+.pencarian .cari {
     text-align: center;
     border-radius: 10px 10px 10px;
     border: 4px solid white;
@@ -68,20 +70,26 @@
     height: 50px;
 }
 
-.keterangan{
+.keterangan {
     position: relative;
     margin-top: 120px;
     margin-left: -400px;
     font-size: 20px;
 }
 
-#ayo-sinau{
+#ayo-sinau {
     z-index: 1;
     height: 500px;
     position: relative;
 }
+#ayo-sinau .clbk-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
 
-.section-judul{
+.section-judul {
     margin-left: -300px;
     text-align: center;
     font-weight: bold;
@@ -106,9 +114,6 @@
    border: 3px solid black;
 } */
 
-
-
-
 .btn-next {
     position: absolute;
     content: "";
@@ -116,134 +121,130 @@
     transform: translateY(-50%);
     right: -3px;
     z-index: 20;
-    background-color: #15477A;
+    background-color: #15477a;
     border: none;
     height: 35px;
     width: 35px;
-    color: #fff; 
+    color: #fff;
     border-radius: 50%;
     outline: none;
     box-shadow: 0 0 20px #ddd;
     transition: background-color 0.3s;
 }
 
-.fab, .far {
+.fab,
+.far {
     font-size: 25px;
     color: white;
     text-decoration: none;
     margin-right: 15px;
 }
 
-.penawaran{
+.penawaran {
     color: black;
     font-weight: 500;
     text-transform: uppercase;
 }
-.penawaran:hover{
+.penawaran:hover {
     color: yellow;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-.topik{
+.topik {
     color: black;
     font-weight: 500;
     text-transform: uppercase;
 }
-.topik:hover{
+.topik:hover {
     color: yellow;
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-
-.FUO{
+.FUO {
     color: black;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.FUO:hover{
+.FUO:hover {
     color: yellow;
     text-decoration: none;
 }
 
-.bg-footer{
+.bg-footer {
     background-color: rgb(146, 138, 138);
 }
 
-.logo-footer{
+.logo-footer {
     margin-left: -50px;
     height: 200px;
     width: 200px;
 }
 
-.page-footer{
+.page-footer {
     color: white;
 }
 
-.mgFooter{
+.mgFooter {
     margin-top: 30px;
 }
 
-
-
 /* CSS profileTN */
 
-.profileTN .sectionLogo img{
+.profileTN .sectionLogo img {
     width: auto;
     height: 400px;
 }
-.profileTN .sectionLogo p{
+.profileTN .sectionLogo p {
     margin: 100px 0;
 }
 
-.profileTN .section1 img{
+.profileTN .section1 img {
     width: auto;
     height: 400px;
 }
 
-.profileTN h1{
+.profileTN h1 {
     text-align: center;
     margin: 50px 0;
 }
 
-#carouselExampleControls .carousel-item img{
+#carouselExampleControls .carousel-item img {
     width: auto;
     height: auto;
 }
 #carouselExampleControls .carousel-control-prev,
-#carouselExampleControls .carousel-control-next{
+#carouselExampleControls .carousel-control-next {
     background-color: yellowgreen;
     top: 50%;
     height: 50px;
     width: 50px;
 }
 
-
-
 /* CSS Ayo Makaryo */
-.headAyoMakaryo{
+.headAyoMakaryo {
     margin-top: 40px;
     background-color: #3e4e60;
     height: 60px;
 }
-.ham{
+.ham {
     padding-top: 10px;
 }
 
-.submit-btn{
+.submit-btn {
     display: inline-block;
-    border-radius: 5px 5px 5px 5px ;
+    border-radius: 5px 5px 5px 5px;
     border: 2px solid #ffff00;
     background-color: #ffff00;
     width: 40px;
     height: 40px;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
     display: inline-block;
     border: 2px solid #ffff00;
     background-color: #ffff00;
@@ -254,47 +255,47 @@
 
 #loker,
 #tersimpan,
-#terakhir-dilihat{
+#terakhir-dilihat {
     padding-top: 50px;
 }
 
-.lowongan-kerja img{
+.lowongan-kerja img {
     margin-left: 30%;
     background-position: center;
     height: 100px;
     width: 100px;
 }
 
-.lowongan-kerja .row{
+.lowongan-kerja .row {
     margin-bottom: 30px;
     margin-right: 10px;
 }
 
-.Tersimpan img{
+.Tersimpan img {
     margin-left: 30%;
     background-position: center;
     height: 100px;
     width: 100px;
 }
-.Tersimpan .col{
+.Tersimpan .col {
     margin-bottom: 10px;
 }
 .Tersimpan p,
-.Tersimpan a{
+.Tersimpan a {
     font-size: 10px;
 }
 
-.terakhir-lihat img{
+.terakhir-lihat img {
     margin-left: 30%;
     background-position: center;
     height: 100px;
     width: 100px;
 }
-.terakhir-lihat .col{
+.terakhir-lihat .col {
     margin-bottom: 10px;
 }
 .terakhir-lihat p,
-.terakhir-lihat a{
+.terakhir-lihat a {
     font-size: 10px;
 }
 
@@ -303,87 +304,87 @@
     border-left: 4px solid black;
     height: 1670px;
     margin-top: 50px;
-  }
+}
 
-  /* CSS detailLowongan */
-  .img-detilLowongan img{
-      width: 250px;
-      height: 300px;
-      margin-left: 10px;
-      margin-top: -100px;
-  }
-  .daerah{
-      font-weight: lighter;
-  }
-
-  .profilPerusahaan{
-      width: 600px;
-      height: 40px;
-      background-color: #ffdd3e;
-      text-align: center;
-      padding-top: 2px;
-      box-shadow: 3px 4px #947a7ad3;
-      margin: 30px 0;
-      margin-left: 100px;
-  }
-
-  .detil{
-    display: inline-block; 
+/* CSS detailLowongan */
+.img-detilLowongan img {
+    width: 250px;
+    height: 300px;
     margin-left: 10px;
-  }
-  .detil .namaPerusahaan{
+    margin-top: -100px;
+}
+.daerah {
+    font-weight: lighter;
+}
+
+.profilPerusahaan {
+    width: 600px;
+    height: 40px;
+    background-color: #ffdd3e;
+    text-align: center;
+    padding-top: 2px;
+    box-shadow: 3px 4px #947a7ad3;
+    margin: 30px 0;
+    margin-left: 100px;
+}
+
+.detil {
+    display: inline-block;
+    margin-left: 10px;
+}
+.detil .namaPerusahaan {
     margin-bottom: 40px;
-  }
+}
 
-  .isiSkill{
-      margin-left: 10px;
-      display: inline-block;
-      text-decoration: none;
-      color: black;
-      text-align: center;
-      padding-top: 8px;
-      font-weight: bold;
-      background-color: #1893f8;
-      border: 2px solid #1893f8;
-      border-radius: 10px 10px 10px 10px;
-      width: 100px;
-      height: 40px;
-  }
+.isiSkill {
+    margin-left: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding-top: 8px;
+    font-weight: bold;
+    background-color: #1893f8;
+    border: 2px solid #1893f8;
+    border-radius: 10px 10px 10px 10px;
+    width: 100px;
+    height: 40px;
+}
 
-  .isiSkill:hover{
+.isiSkill:hover {
     color: white;
     text-decoration: none;
 }
 
 /* CSS CLBK */
-.pembungkusCLBK{
+.pembungkusCLBK {
     margin-top: 30px;
 }
-.pembungkusCLBK ul{
+.pembungkusCLBK ul {
     margin-top: -50px;
     margin-bottom: 70px;
     margin-left: 100px;
     margin-right: 20px;
 }
 
-.pembungkusCLBK ul .topik{
+.pembungkusCLBK ul .topik {
     list-style: none;
     display: inline-block;
 }
-.pembungkusCLBK ul .topik a{
+.pembungkusCLBK ul .topik a {
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-size: 15px;
 }
-.pembungkusCLBK ul .topik a:hover{
+.pembungkusCLBK ul .topik a:hover {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 15px;
 }
 
-.pembungkusCLBK .topik1{
+.pembungkusCLBK .topik1 {
     text-align: center;
     padding-top: 5px;
     border-top: 5px solid #ffff00;
@@ -392,7 +393,7 @@
     width: 120px;
     height: 40px;
 }
-.pembungkusCLBK .topik2{
+.pembungkusCLBK .topik2 {
     text-align: center;
     padding-top: 5px;
     border-top: 5px solid #ff8210;
@@ -401,7 +402,7 @@
     width: 160px;
     height: 40px;
 }
-.pembungkusCLBK .topik3{
+.pembungkusCLBK .topik3 {
     text-align: center;
     padding-top: 5px;
     border-top: 5px solid #12c8dd;
@@ -410,7 +411,7 @@
     width: 170px;
     height: 40px;
 }
-.pembungkusCLBK .topik4{
+.pembungkusCLBK .topik4 {
     text-align: center;
     padding-top: 5px;
     border-top: 5px solid #ff0000;
@@ -419,27 +420,26 @@
     width: 170px;
     height: 40px;
 }
-.pembungkusCLBK .topik5{
+.pembungkusCLBK .topik5 {
     text-align: center;
     padding-top: 5px;
-    border-top: 5px solid  #f52ec0;
-    border-bottom: 5px solid  #f52ec0;
+    border-top: 5px solid #f52ec0;
+    border-bottom: 5px solid #f52ec0;
     background-color: #d6c6cc;
     width: 160px;
     height: 40px;
 }
-.rowBawah{
+.rowBawah {
     margin-top: 30px;
     margin-left: 60px;
-
 }
 
-.search-artikel{
+.search-artikel {
     border-radius: 10px 10px 10px 10px;
     height: 40px;
 }
 
-.form-artikelClbk{
+.form-artikelClbk {
     margin-left: 90px;
     padding: 3px 50px;
     background-color: #3e4e60;
@@ -447,84 +447,84 @@
     width: 340px;
 }
 
-.paging-clbk{
+.paging-clbk {
     margin-top: 50px;
 }
 
-.pembungkusCLBK .card{
-   margin-bottom: 30px;
+.pembungkusCLBK .card {
+    margin-bottom: 30px;
 }
 
-.fa-heart{
+.fa-heart {
     color: black;
 }
 
-.col-kiri-Clbk .card-body a{
+.col-kiri-Clbk .card-body a {
     color: black;
     text-decoration: none;
 }
-.col-kiri-Clbk .card-body a:hover{
+.col-kiri-Clbk .card-body a:hover {
     color: lightgreen;
 }
 
-.col-kanan-clbk{
+.col-kanan-clbk {
     border-left: 4px solid black;
 }
-.col-kanan-clbk .card img{
+.col-kanan-clbk .card img {
     width: 115px;
     height: 170px;
 }
-.col-kanan-clbk .card-body a{
+.col-kanan-clbk .card-body a {
     color: black;
     text-decoration: none;
 }
-.col-kanan-clbk .card-body a:hover{
+.col-kanan-clbk .card-body a:hover {
     color: lightgreen;
 }
 
 /* CSS detailClbk */
-.row-gambar-detailClbk img{
+.row-gambar-detailClbk img {
     width: 100%;
     height: 400px;
 }
-.row-gambar-detailClbk p{
+.row-gambar-detailClbk p {
     text-align: right;
 }
 
-.col-artikel-terkait .card-body a{
+.col-artikel-terkait .card-body a {
     color: black;
     text-decoration: none;
 }
-.col-artikel-terkait .card-body a:hover{
+.col-artikel-terkait .card-body a:hover {
     color: lightgreen;
 }
 
-.row-gambar-detailClbk .card img{
+.row-gambar-detailClbk .card img {
     height: 200px;
 }
-.row-gambar-detailClbk .col-artikel-terkait{
+.row-gambar-detailClbk .col-artikel-terkait {
     border-left: 4px solid black;
 }
 
-.row-topik-artikelClbk .tombol{
+.row-topik-artikelClbk .tombol {
     border: 1px solid #f52ec0;
     background-color: #f52ec0;
 }
-.row-topik-artikelClbk .tombol:hover{
+.row-topik-artikelClbk .tombol:hover {
     border: 1px solid #f52ec0;
     background-color: #f52ec0;
     color: black;
 }
 
-.row-topik-artikelClbk ul{
+.row-topik-artikelClbk ul {
     display: flex;
     gap: 15px;
 }
-.row-topik-artikelClbk ul li{
+.row-topik-artikelClbk ul li {
     list-style: none;
 }
 
-.isidetailClbk .col h3 span{
+.isidetailClbk .col h3 span {
     text-transform: none;
     font-size: 20px;
 }
