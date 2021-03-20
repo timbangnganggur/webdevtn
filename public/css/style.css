@@ -78,6 +78,7 @@
 }
 
 #ayo-sinau {
+    margin-top: 100px;
     z-index: 1;
     height: 500px;
     position: relative;
@@ -113,6 +114,14 @@
    margin: auto;
    border: 3px solid black;
 } */
+
+.owl-carousel .item {
+    overflow: hidden;
+}
+.owl-carousel .item:hover {
+    transform: scale(0.9);
+    transition-duration: 0.5s;
+}
 
 .btn-next {
     position: absolute;

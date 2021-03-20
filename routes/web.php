@@ -39,7 +39,7 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('dashboard', [DashboardCompanyController::class, 'index'])->name('company.dashboard');
 
 // ROUTE ADMIN
-Route::prefix('admin')->group(function(){
+Route::prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardAdminController::class, 'index']);
     Route::resource('info-loker', InfoLokerAdminController::class);
 });

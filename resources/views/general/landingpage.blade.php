@@ -27,26 +27,22 @@
   </div>
 
   <div class="owl-carousel owl-theme">
-    <div class="item"><img class="gambar-carousel" src="img/Tips.png" alt="">
-      <h2>Tips & Trick</h2>
+    <div class="item">
+      <a href="#"><img class="gambar-carousel" src="img/Tips.png" alt=""></a>
+      <!-- <h2>Tips & Trick</h2> -->
     </div>
-    <div class="item"><img class="gambar-carousel" src="img/MK.png" alt="">
-      <h2>Merintis Karir</h2>
+    <div class="item">
+      <a href="#"><img class="gambar-carousel" src="img/MK.png" alt=""></a>
+      <!-- <h2>Merintis Karir</h2> -->
     </div>
-    <div class="item"><img src="img/DK.png" alt="">
-      <h2>Dunia Kerja</h2>
-    </div>
-    <div class="item"><img src="img/DK.png" alt="">
-      <h4>4</h4>
-    </div>
-    <div class="item"><img src="img/DK.png" alt="">
-      <h4>5</h4>
-    </div>
-    <div class="item"><img src="img/DK.png" alt="">
-      <h4>6</h4>
+    <div class="item">
+      <a href="#"><img src="img/DK.png" alt=""></a>
+      <!-- <h2>Dunia Kerja</h2> -->
     </div>
   </div>
   {{-- <button type="button" role="presentation" class="btn-next disabled fas fa-angle-right"></button> --}}
 </section>
+
+<div style="height: 200px;"></div>
 
 @endsection
