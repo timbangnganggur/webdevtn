@@ -8,8 +8,10 @@
 }
 
 .jumbotron {
-    /* background-color: rgb(217, 255, 0); */
+    background-color: rgb(217, 255, 0);
     background-size: cover;
+    background-position: center;
+    background-position-y: 50px;
     height: 450px;
 }
 
