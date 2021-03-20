@@ -1,31 +1,39 @@
 @extends('general.master')
 @section('content')
 
-	 
-      <div class="container profileTN">
-        <section class="sectionLogo">
-          <div class="row">
-            <div class="col-md-6">
-              <img src="{{ asset('img/Logo.png') }}" alt="">
-            </div>
-            <div class="col-md-6">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, dicta? Vel, excepturi eligendi culpa impedit nemo ipsam, enim repudiandae in deleniti voluptatibus reprehenderit itaque, laboriosam saepe consequatur voluptatum necessitatibus voluptatem sint magnam. Similique, laborum repellat incidunt possimus corporis tempora ea, ad eligendi beatae adipisci deserunt maiores officiis amet! Sapiente quam ab iste minima possimus dolor reiciendis ea, ratione ex molestias labore! Sed omnis blanditiis veniam libero minus autem aspernatur. Non.</p>
-            </div>
-          </div>
-        </section>
 
-        <div class="section1">
-          <div class="row">
-            <div class="col-md-6">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, dicta? Vel, excepturi eligendi culpa impedit nemo ipsam, enim repudiandae in deleniti voluptatibus reprehenderit itaque, laboriosam saepe consequatur voluptatum necessitatibus voluptatem sint magnam. Similique, laborum repellat incidunt possimus corporis tempora ea, ad eligendi beatae adipisci deserunt maiores officiis amet! Sapiente quam ab iste minima possimus dolor reiciendis ea, ratione ex molestias labore! Sed omnis blanditiis veniam libero minus autem aspernatur. Non.</p>
-            </div>
-            <div class="col-md-6">
-              <img src="/img/ikon visi misi.png" alt="">
-            </div>
-          </div>
-        </div>
+<div class="container profileTN">
+  <section class="sectionLogo">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{ asset('img/Logo.png') }}" alt="">
+      </div>
+      <div class="col-md-6">
+        <p>Timbang Nganggur adalah platform untuk membantu para pencari kerja dalam meningkatakn kualitas dirinya, melalui konten kreatif edukatif seputar dunia kerja yang dikemas secara ringkas. Timbang Nganggur juga memberikan informasi lowongan kerja aktual, baik Full Time, Part Time hingga internship yang tersedia di seluruh wilayah Indonesia</p>
+      </div>
+    </div>
+  </section>
 
-        <h1>PRODUCT</h1>
+  <div class="section1">
+    <div class="row">
+      <div class="col-md-6 col-sect1">
+        <h4>VISI</h4>
+        <p>Membantu mengurangi pengangguran melalui konten edukatif berisi pembelajaran dan gambaran kerja untuk sebagai bekal para pencari kerja</p>
+
+        <h4>MISI</h4>
+        <p>Menjadi perusahaan pengembangan karir anak muda Indonesia nomor 1 dengan fokus mengurangi pengangguran dengan cara membuat anak muda Indonesia lebih siap soft skill & hard skill untuk masuk ke dunia kerja</p>
+      </div>
+      <div class="col-md-6">
+        <img src="/img/ikon visi misi.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <section class="section2">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-9">
+          <h1>PRODUCT</h1>
 
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -45,11 +53,17 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-        
+        </div>
+      </div>
+    </div>
+  </section>
 
-        
-      </div><!--Akhir Container-->
-      
+
+
+
+</div>
+<!--Akhir Container-->
+
 
 
 

@@ -217,6 +217,16 @@
     height: 400px;
 }
 
+.profileTN p {
+    text-align: justify;
+    font-weight: bold;
+}
+.profileTN h4 {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
+
 .profileTN h1 {
     text-align: center;
     margin: 50px 0;
@@ -224,7 +234,7 @@
 
 #carouselExampleControls .carousel-item img {
     width: auto;
-    height: auto;
+    height: 500px;
 }
 #carouselExampleControls .carousel-control-prev,
 #carouselExampleControls .carousel-control-next {
