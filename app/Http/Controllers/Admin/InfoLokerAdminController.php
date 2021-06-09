@@ -78,8 +78,10 @@ class InfoLokerAdminController extends Controller
      */
     public function show($id)
     {
+        $companies = Company::all();
+        $skills = Skill::all();
         $job = Job::find($id);
-        return view('admin.infoLoker.show', compact('job'));
+        return view('admin.infoLoker.show', compact('companies','skills', 'job'));
     }
 
     /**

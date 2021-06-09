@@ -1,23 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded-pill p-4 mx-4 mt-2 fixed-top" style="max-height: 77px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);">
+  <div class="container-fluid">
     <a class="navbar-brand" href="/"><span><img class="logo" src="{{ asset('img/Logo.png') }}" alt=""></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{ route('profileTN') }}">Profile TN <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('ayoMakaryo') }}">Ayo Makaryo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('clbk') }}">CLBK</a>
-        </li>
-      </ul>
-      <div class="ml-auto">
-        <div class="row w-100 align-items-center justify-content-end m-0 p-0">
+    <div class="collapse navbar-collapse align-items-center justify-content-end m-0 p-0" id="navbarNav">
+      <div class="navbar-nav text-end text-right fw-bold">
+        <a class="nav-link" href="{{ route('profileTN') }}"><strong>Profile TN</strong> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{ route('ayoMakaryo') }}"><strong>Ayo Makaryo</strong></a>
+        <a class="nav-link" href="{{ route('clbk') }}"><strong>CLBK</strong></a>
+      </div>
+      <!-- <div class="ml-auto"> -->
+        <!-- <div class="row w-100 align-items-center justify-content-end m-0 p-0"> -->
           @if (!Auth::check())
             <div class="masuk">
               <button type="button" class="btn btn-primary tombol" data-toggle="modal" data-target="#exampleModal"> Masuk</button>
@@ -31,7 +25,7 @@
           @else
             <button type="button" class="btn btn-danger tombol" data-toggle="modal" data-target="#exampleModal3">Logout</button>
           @endif
-        </div>
+        <!-- </div> -->
         
         @if (!Auth::check())
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -170,8 +164,7 @@
             </div>
           </div>
         @endif
-
-      </div>
+      <!-- </div> -->
     </div>
   </div>
 </nav> <!-- Akhir NavBar-->

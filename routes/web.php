@@ -25,9 +25,9 @@ use App\Http\Controllers\Company\DashboardCompanyController;
 */
 
 Route::get('', [LandingPageController::class, 'index'])->name('home');
-Route::get('/profileTN', [ProfileTNController::class, 'index'])->name('profileTN');
-Route::get('/ayoMakaryo', [AyoMakaryoController::class, 'index'])->name('ayoMakaryo');
-Route::get('/ayoMakaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayoMakaryo.show');
+Route::get('/profile-tn', [ProfileTNController::class, 'index'])->name('profileTN');
+Route::get('/ayo-makaryo', [AyoMakaryoController::class, 'index'])->name('ayoMakaryo');
+Route::get('/ayo-makaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayoMakaryo.show');
 
 Route::get('/clbk', [ClbkController::class, 'index'])->name('clbk');
 Route::get('/clbk/{id}', [ClbkController::class, 'show'])->name('detailClbk');
@@ -42,4 +42,44 @@ Route::get('dashboard', [DashboardCompanyController::class, 'index'])->name('com
 Route::prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardAdminController::class, 'index']);
     Route::resource('info-loker', InfoLokerAdminController::class);
+});
+
+Route::get('view_clear', function () {
+
+    \Artisan::call('view:clear');
+
+    dd("view 3 is cleared");
+
+});
+
+Route::get('view_cache', function () {
+
+    \Artisan::call('view:cache');
+
+    dd("view 3 is cleared");
+
+});
+
+Route::get('config_cache', function () {
+
+    \Artisan::call('config:cache');
+
+    dd("view 3 is cleared");
+
+});
+
+Route::get('config_clear', function () {
+
+    \Artisan::call('config:clear');
+
+    dd("view 3 is cleared");
+
+});
+
+Route::get('dump_autoload', function () {
+
+   shell_exec('composer dump-autoload');
+
+    dd("view 3 is cleared");
+
 });

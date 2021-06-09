@@ -42,24 +42,20 @@
                                 <div class="col-lg-3 col-md-12 col-sm-12">
                                     <div class="form-group">
                                         <label for="judul">Gaji</label>
-                                        <input class="form-control" type="number" name="salary" id="salary" placeholder="Masukkan nama pekerjaan"><br>        
+                                        <input class="form-control" type="text" name="salary" id="salary" value="{{ $job->salary }}" disabled><br>        
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-12 col-sm-12">
                                 <div class="form-group">
                                     <label for="type">Jenis Pekerjaan</label>
-                                    <select name="type" class="form-control" style="width: 100%;">
-                                        <option value="1">Part Time</option>
-                                        <option value="2">Full Time</option>
-                                        <option value="3">Internship</option>
-                                        <option value="4">Apprentice</option>
-                                    </select>
+                                    <input class="form-control" type="text" name="type" id="type" value="{{ $job->type }}" disabled><br>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12">
                                 <div class="form-group">
                                     <label for="companies">Perusahaan</label>
-                                    <select name="companies_id" class="form-control select2" style="width: 100%;">
+                                    
+                                    <select name="companies_id" class="form-control select2" style="width: 100%;" disabled>
                                         @if ($companies->count() > 0)
                                             @foreach ($companies as $company)
                                                 <option value="{{ $company->id }}">{{ $company->name }}</option>
@@ -75,13 +71,13 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="description">Deskripsi</label>
-                                        <textarea name="description" placeholder="Masukkan deskripsi" class="form-control"></textarea>
+                                        <textarea class="form-control" type="text" name="description" id="description" disabled>{{ $job->description }}</textarea>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="qualification">Kualifikasi</label>
-                                        <textarea name="qualification" placeholder="Masukkan kualifikasi" class="form-control"></textarea>
+                                        <textarea class="form-control" type="text" name="qualification" id="qualification" disabled>{{ $job->qualification }}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -89,11 +85,12 @@
                                 <div class="col">
                                     <div class="form-group">
                                         <label>Skill yang diperlukan</label>
-                                        <select name="skills_jobs_id[]" class="select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                        
+                                          <ul>
                                           @foreach ($skills as $skill)
-                                              <option value="{{ $skill->id }}">{{ $skill->name }}</option>
+                                            <li value="{{ $skill->id }}">{{ $skill->name }}</li>
                                           @endforeach
-                                        </select>
+                                          </ul>
                                       </div>
                                 </div>
                             </div>

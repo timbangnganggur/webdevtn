@@ -12,3 +12,4 @@ class LandingPageController extends Controller
         return view('general.landingpage');
     }
 }
+ 

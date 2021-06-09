@@ -12,3 +12,4 @@ class DashboardCompanyController extends Controller
         return view('company.dashboard');
     }
 }
+ 

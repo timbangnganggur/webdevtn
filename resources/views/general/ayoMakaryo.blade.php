@@ -14,18 +14,24 @@
                     <input type="text" class="form-control" placeholder="Bidang Profesi">
                   </div>
                   <div class="col">
-                    <select id="inputState" class="form-control">
-                        <option selected>Jenis Pekerjaan</option>
-                        <option>Pekerjaan 1</option>
-                        <option>Pekerjaan 2</option>
-                        <option>Pekerjaan 3</option>
+                    <select id="inputState" class="form-control" >
+                        <option disable selected>Jenis Pekerjaan</option>
+                        @foreach ($jobs as $job)
+                            <option value="{{ $job->id }}">{{ $job->name }}</option>
+                        @endforeach
+                        <?php
+                        // $Job = array('FrontEnd Engineer','BackEnd Engineer');
+                        // foreach ($Job as $val){
+                        //     echo "<option value='$val'>$val</option>"; 
+                        // }
+                        ?>
+                        
                     </select>
                   </div>
                   <div class="col search-box">
                     <input class="form-control search-text" type="search" placeholder="Kabupaten/Kota">
                 </div>
                <button class="submit-btn"> <i class="fas fa-search"></i> </button>
-    
                 </div>
               </form>
         </div>
