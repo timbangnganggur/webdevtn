@@ -24,7 +24,7 @@ use App\Http\Controllers\Company\DashboardCompanyController;
 |
 */
 
-Route::get('', [LandingPageController::class, 'index'])->name('home');
+Route::get('/', [LandingPageController::class, 'index'])->name('home');
 Route::get('/profile-tn', [ProfileTNController::class, 'index'])->name('profileTN');
 Route::get('/ayo-makaryo', [AyoMakaryoController::class, 'index'])->name('ayoMakaryo');
 Route::get('/ayo-makaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayoMakaryo.show');
