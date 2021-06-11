@@ -1,4 +1,7 @@
 @extends('general.master')
+@section('title')
+    Timbangnganggur | Website Informatif & Edukatif untuk Persiapan Diri di Dunia Kerja
+@endsection
 @section('content')
 <div class="jumbotron jumbotron-fluid" style="background-image: url('{{ asset('img/jumbotron.png') }}'); height: 567px; background-size: auto;">
   <div class="container">
