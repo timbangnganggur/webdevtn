@@ -8,7 +8,7 @@ use App\Models\Company;
 use App\Models\Region;
 use Exception;
 
-class PerusahaanAdminController extends Controller
+class DaerahAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class PerusahaanAdminController extends Controller
      */
     public function index()
     {
-        $companies = Company::all();
-        return view('admin.perusahaan.index', compact('companies'));
+        $regions = Region::all();
+        return view('admin.daerah.index', compact('regions'));
     }
 
     /**

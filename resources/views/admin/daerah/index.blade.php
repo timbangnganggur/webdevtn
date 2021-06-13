@@ -46,19 +46,17 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Nama Perusahaan</th>
-                    <th>Daerah</th>
+                    <th>Nama</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
                   <tbody>
-                    @foreach ($companies as $company)
+                    @foreach ($regions as $region)
                     <tr>
-                      <td>{{ $company->name }}</td>
-                      <td>{{ $company->regions->name }}</td>
+                      <td>{{ $region->name }}</td>
 
                       <td class="text-center">
-                        <form method="POST" action="{{ URL::to('admin/perusahaan/'.$company->id) }}">
+                        <form method="POST" action="{{ URL::to('admin/daerah/'.$region->id) }}">
                             @csrf
                             <input type="hidden" name="_method" value="DELETE" />
                             <div class="btn-group">

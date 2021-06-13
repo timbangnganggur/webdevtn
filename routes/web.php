@@ -11,6 +11,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\InfoLokerAdminController;
 use App\Http\Controllers\Admin\PerusahaanAdminController;
+use App\Http\Controllers\Admin\DaerahAdminController;
 
 use App\Http\Controllers\Company\DashboardCompanyController;
 
@@ -44,6 +45,7 @@ Route::prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardAdminController::class, 'index']);
     Route::resource('info-loker', InfoLokerAdminController::class);
     Route::resource('perusahaan', PerusahaanAdminController::class);
+    Route::resource('daerah', DaerahAdminController::class);
 });
 
 Route::get('view_clear', function () {

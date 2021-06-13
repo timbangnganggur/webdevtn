@@ -48,15 +48,21 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="{{ route('info-loker.index') }}" class="nav-link">
+                <i class="fas fa-briefcase nav-icon"></i>
+                <p>Info Loker</p>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="{{ route('perusahaan.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
                 <p>Perusahaan</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('info-loker.index') }}" class="nav-link">
+            <a href="{{ route('daerah.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
-                <p>Info Loker</p>
+                <p>Daerah</p>
             </a>
         </li>
     </ul>

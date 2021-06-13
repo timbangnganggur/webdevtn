@@ -1,0 +1,9 @@
+---
+ 
+deployment:
+ 
+ tasks:
+ 
+ - export DEPLOYPATH=/home/timw7363/webdevtn
+ 
+ - /usr/bin/rsync -Paz * $DEPLOYPATH --delete

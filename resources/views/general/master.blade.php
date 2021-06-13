@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" href="{{ asset('img/Logo.png') }}"/>
   @include('general.style')
+  @yield('style')
   <style>
     body {
       background-color: #F4F1DE;
@@ -20,6 +21,7 @@
   @yield('content')
   @include('general.footer')
   @include('general.script')
+  @yield('script')
 </body>
 
 </html>
