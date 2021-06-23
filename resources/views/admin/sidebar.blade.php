@@ -22,54 +22,44 @@
     <!-- Sidebar Menu -->
     <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <!-- Add icons to the links using the .nav-icon class
-            with font-awesome or any other icon font library -->
-        <!-- <li class="nav-item has-treeview">
-        <a href="#" class="nav-link active">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>
-            Dashboard
-            <i class="right fas fa-angle-left"></i>
-            </p>
-        </a>
-        <ul class="nav nav-treeview">
-            <li class="nav-item">
-            <a href="./index3.html" class="nav-link active">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Dashboard</p>
-            </a>
-            </li>
-        </ul>
-        </li> -->
         <li class="nav-item">
-            <a href="/admin/dashboard" class="nav-link">
+            <a href="{{ route('admin.dashboard.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
                 <p>Dashboard</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('info-loker.index') }}" class="nav-link">
+            <a href="{{ route('admin.info-loker.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
                 <p>Info Loker</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('perusahaan.index') }}" class="nav-link">
+            <a href="{{ route('admin.perusahaan.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
                 <p>Perusahaan</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('daerah.index') }}" class="nav-link">
+            <a href="{{ route('admin.daerah.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
                 <p>Daerah</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{ route('artikel.index') }}" class="nav-link">
+            <a href="{{ route('admin.artikel.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
                 <p>Artikel</p>
             </a>
+        </li>
+        <li class="nav-item">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button class="btn btn-warning nav-link w-100 text-left">
+                    <i class="fas fa-sign-out-alt nav-icon"></i>
+                    <p>Log Out</p>
+                </button>
+            </form>
         </li>
     </ul>
     </nav>

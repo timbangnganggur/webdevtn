@@ -9,6 +9,8 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
+  @include('admin.alert.success')
+  @include('admin.alert.error')
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -35,7 +37,7 @@
               <div class="card-header">
                 <h3 class="card-title">Informasi Lowongan Kerja</h3>
                 <div class="card-tools">
-                  <a href="{{ route('perusahaan.create') }}" class="btn btn-tool">
+                  <a href="{{ route('admin.perusahaan.create') }}" class="btn btn-tool">
                       <i class="fa fa-plus"></i>
                       &nbsp; Tambah Data Baru
                   </a>

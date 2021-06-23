@@ -1,3 +1,12 @@
+hr {
+    color: white; 
+    font-weight: bold;
+}
+
+span.fw-bold {
+    font-weight: 600;
+}
+
 .logo {
     width: 100px;
     height: 100px;
@@ -7,12 +16,17 @@
     justify-content: center;
 }
 
+.navbar {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
 .jumbotron {
-    background-color: black;
-    background-size: cover;
+    background-color: #3D405B;
     background-position: center;
-    background-position-y: 50px;
-    height: 450px;
+    background-image: url("../img/image-hero.png");
+    background-size: auto;
+    height: 567px; 
 }
 
 .pencarian {
@@ -20,7 +34,7 @@
 }
 
 #clbk {
-    z-index: 1;
+    z-index: 1; 
     display: block;
     margin-top: 10px;
     margin-left: 850px;
@@ -40,6 +54,17 @@
     background-color: #eb4335;
     border: 2px solid black;
     color: white;
+}
+
+.btn-danger {
+    background: #FA7E61;
+    border-radius: 25px;
+    width: 140px;
+    height: 36px;
+    /* left: 1059px;
+    top: 37px; */
+    background: #FA7E61;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .tombol {
@@ -143,51 +168,65 @@
     transition: background-color 0.3s;
 }
 
+.fab.google {
+    font-size: 15px;
+    font-weight: bold;
+    color: maroon;
+    text-decoration: none;
+    margin-right: 10px;
+}
 .fab,
 .far {
-    font-size: 25px;
-    color: white;
+    font-size: 50px;
+    color: #F3DF05;
     text-decoration: none;
     margin-right: 15px;
 }
 
-.penawaran {
-    color: black;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-.penawaran:hover {
-    color: yellow;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-.topik {
-    color: black;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-.topik:hover {
-    color: yellow;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
 .FUO {
-    color: black;
+    color: #F3DF05;
     font-weight: 500;
     text-transform: uppercase;
 }
 
 .FUO:hover {
-    color: yellow;
+    color: white;
     text-decoration: none;
 }
 
+.footer-title {
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    color: #FA7E61;
+
+    /* identical to box height */
+}
+
+.sub-link {
+    text-decoration: none;
+    color: #F3DF05;
+}
+
+.sub-link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-sub {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
 .bg-footer {
-    background-color: rgb(146, 138, 138);
+    background: #3D405B;
+
 }
 
 .logo-footer {
@@ -197,11 +236,7 @@
 }
 
 .page-footer {
-    color: white;
-}
-
-.mgFooter {
-    margin-top: 30px;
+    color: #F3DF05;
 }
 
 /* CSS profileTN */

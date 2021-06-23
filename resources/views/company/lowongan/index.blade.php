@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <a href="{{ route('perusahaan.lowongan.edit', $data->id) }}">
+                            <a href="{{ route('admin.perusahaan.lowongan.edit', $data->id) }}">
                                 <div class="fa fa-pencil-square"> Edit</div>
                             </a>
                             <h4>{{$data->perusahaan->nama}}</h4>
@@ -52,7 +52,7 @@
                                 <h6>Tgl. selesai : {{$data->tanggal_selesai}}</h6>
                             </div>
                         </div>
-                        <a href="{{route('perusahaan.lowongan.pendaftar', $data->id)}}">
+                        <a href="{{route('admin.perusahaan.lowongan.pendaftar', $data->id)}}">
                             <div class="panel-footer">
                                 <span class="pull-left">Lihat Pelamar</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

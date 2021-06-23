@@ -25,7 +25,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
-                <form action="{{ route('perusahaan.store') }}" method="POST">
+                <form action="{{ route('admin.perusahaan.store') }}" method="POST">
                     @csrf
                     <div class="card">
                         <div class="card-header">

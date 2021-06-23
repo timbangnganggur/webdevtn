@@ -48,7 +48,7 @@ class DaerahAdminController extends Controller
                 'regions_id' => $regions_id
             ]
         );
-        return redirect()->route('perusahaan.index');
+        return redirect()->route('admin.perusahaan.index');
     }
 
     /**
@@ -102,8 +102,8 @@ class DaerahAdminController extends Controller
                 $company_selected->delete();
             }
         }catch (Exception $ex){
-            return redirect()->route('perusahaan.index');
+            return redirect()->route('admin.perusahaan.index');
         }
-        return redirect()->route('perusahaan.index');
+        return redirect()->route('admin.perusahaan.index');
     }
 }

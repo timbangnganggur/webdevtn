@@ -54,13 +54,13 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <a href="{{route('perusahaan.lowongan')}}">
+                            <a href="{{route('admin.perusahaan.lowongan')}}">
                                 <div class="panel-footer col-xs-6 text-center">
                                     <span style="color: green;"><b>TERIMA</b></span>
                                     <div class="clearfix"></div>
                                 </div>
                             </a>
-                            <a href="{{route('perusahaan.lowongan')}}">
+                            <a href="{{route('admin.perusahaan.lowongan')}}">
                                 <div class="panel-footer col-xs-6 text-center">
                                     <span style="color: red;"><b>TOLAK</b></span>
                                     <div class="clearfix"></div>

@@ -23,6 +23,7 @@
           </div>
         </div><!-- /.container-fluid -->
     </section>
+    @include('admin.alert.error')
     <section class="content">
         <div class="row">
           <div class="col-md-12">
@@ -39,16 +40,16 @@
                 <!-- /. tools -->
               </div>
               <!-- /.card-header -->
-                <form action="{{ route('artikel.store') }}" method="POST">
+                <form action="{{ route('admin.artikel.store') }}" method="POST">
                     @csrf
                     <div class="card-body pad">
                         <div class="form-group">
                           <label class="form-label">Title</label>
-                          <input type="text" name="title" class="form-control" placeholder="Tuliskan title artikel"/>
+                          <input type="text" name="title" class="form-control" placeholder="Tuliskan title artikel" required/>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Header</label>
-                            <input type="text" name="header" class="form-control" placeholder="Tuliskan header tambahan"/>
+                            <input type="text" name="header" class="form-control" placeholder="Tuliskan header tambahan" required/>
                         </div>
                         <div class="my-3">
                             <label class="form-label">Body</label>
@@ -57,16 +58,12 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Footer</label>
-                            <input type="text" name="footer" class="form-control" placeholder="Tuliskan footer tambahan"/>
+                            <input type="text" name="footer" class="form-control" placeholder="Tuliskan footer tambahan" required/>
                         </div>
                         <div class="form-group row">
                           <div class="col">
                             <label class="form-label">Tag</label>
-                            <input type="text" name="tag" class="form-control" placeholder="Tuliskan topik yang berkaitan dengan hal ini (ex: kerja, menarik, fulltime, tips) ..."/>
-                          </div>
-                          <div class="col">
-                            <label class="form-label">Writer</label>
-                            <input type="text" name="writer" class="form-control" placeholder="Tuliskan nama penulis disini ..."/>
+                            <input type="text" name="tag" class="form-control" placeholder="Tuliskan topik yang berkaitan dengan hal ini (ex: kerja, menarik, fulltime, tips) ..."  required/>
                           </div>
                         </div>
                         <p class="text-sm mb-0">

@@ -42,8 +42,8 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('dashboard', [DashboardCompanyController::class, 'index'])->name('company.dashboard');
 
 // ROUTE ADMIN
-Route::prefix('admin')->group(function () {
-    Route::get('dashboard', [DashboardAdminController::class, 'index']);
+Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('dashboard', [DashboardAdminController::class, 'index'])->name('dashboard.index');
     Route::resource('info-loker', InfoLokerAdminController::class);
     Route::resource('perusahaan', PerusahaanAdminController::class);
     Route::resource('daerah', DaerahAdminController::class);
