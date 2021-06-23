@@ -1,5 +1,3 @@
-DB_NAME untuk .env = timbangngannggur_webdevtn
-
 # Petunjuk Set-up
 ## Awal Clone/pull
 - Masuk ke folder project
