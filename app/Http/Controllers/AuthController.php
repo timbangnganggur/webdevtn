@@ -16,7 +16,7 @@ class AuthController extends Controller
         ];
 
         if(Auth::guard('admin')->attempt($data)){
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.dashboard.index');
         }else{
             return back();
         }
