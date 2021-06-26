@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\DaerahAdminController;
 use App\Http\Controllers\Admin\ArticleAdminController;
 
 use App\Http\Controllers\Company\DashboardCompanyController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::get('/', [LandingPageController::class, 'index'])->name('home');
 Route::get('/profile-tn', [ProfileTNController::class, 'index'])->name('profileTN');
 Route::get('/ayo-makaryo', [AyoMakaryoController::class, 'index'])->name('ayoMakaryo');
 Route::get('/ayo-makaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayoMakaryo.show');
+Route::get('/Article', [ArticleController::class, 'index'])->name('articles');
 
 Route::get('/clbk', [ClbkController::class, 'index'])->name('clbk');
 Route::get('/clbk/{id}', [ClbkController::class, 'show'])->name('detailClbk');
