@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\ArticleAdminController;
 
 use App\Http\Controllers\Company\DashboardCompanyController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ImageUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,9 @@ Route::get('/profile-tn', [ProfileTNController::class, 'index'])->name('profileT
 Route::get('/ayo-makaryo', [AyoMakaryoController::class, 'index'])->name('ayoMakaryo');
 Route::get('/ayo-makaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayoMakaryo.show');
 Route::get('/Article', [ArticleController::class, 'index'])->name('articles');
+
+Route::get('image-upload', [ ImageUploadController::class, 'imageUpload' ])->name('image.upload');
+Route::post('image-upload', [ ImageUploadController::class, 'imageUploadPost' ])->name('image.upload.post');
 
 Route::get('/clbk', [ClbkController::class, 'index'])->name('clbk');
 Route::get('/clbk/{id}', [ClbkController::class, 'show'])->name('detailClbk');
