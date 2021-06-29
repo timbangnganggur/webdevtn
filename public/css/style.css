@@ -508,7 +508,10 @@ span.fw-bold {
 }
 
 .pembungkusCLBK .card {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: #3D405B;
+    color: white;
 }
 
 .fa-heart {
@@ -544,7 +547,7 @@ span.fw-bold {
     height: 400px;
 }
 .row-gambar-detailClbk p {
-    text-align: right;
+    text-align: justify;
 }
 
 .col-artikel-terkait .card-body a {
@@ -555,8 +558,11 @@ span.fw-bold {
     color: lightgreen;
 }
 
-.row-gambar-detailClbk .card img {
-    height: 200px;
+.row-gambar-detailClbk .col img {
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-right: 15px;
 }
 .row-gambar-detailClbk .col-artikel-terkait {
     border-left: 4px solid black;
