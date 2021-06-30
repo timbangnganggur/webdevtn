@@ -48,6 +48,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('perusahaan', PerusahaanAdminController::class);
     Route::resource('daerah', DaerahAdminController::class);
     Route::resource('artikel', ArticleAdminController::class);
+    Route::get('/article/detail/{id}/{slug}',[ArticleAdminController::class,'show'])->name('article.show');
 });
 
 Route::get('view_clear', function () {
