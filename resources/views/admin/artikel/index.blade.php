@@ -57,7 +57,7 @@
                     <tr>
                       <td>{{ $article->title }}</td>
                         <td>
-                            @foreach (explode(',', $article->tag) as $tag)
+                            @foreach (explode(',', $article->tag,Str::slug($articlesall->title)) as $tag)
                             <span class="m-1 badge bg-primary">{{ $tag }}</span>
                             @endforeach
                         </td>
