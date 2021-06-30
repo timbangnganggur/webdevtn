@@ -39,7 +39,7 @@
                 <!-- /. tools -->
               </div>
               <!-- /.card-header -->
-                <form action="{{ route('artikel.store') }}" method="POST">
+                <form action="{{ route('artikel.store',[$articlesall->tag,Str::slug($articlesall->title)]) }}" method="POST">
                     @csrf
                     <div class="card-body pad">
                         <div class="form-group">
