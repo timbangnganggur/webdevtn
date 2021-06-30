@@ -33,6 +33,7 @@ Route::get('/profile-tn', [ProfileTNController::class, 'index'])->name('profileT
 Route::get('/ayo-makaryo', [AyoMakaryoController::class, 'index'])->name('ayoMakaryo');
 Route::get('/ayo-makaryo/{id}', [AyoMakaryoController::class, 'show'])->name('ayoMakaryo.show');
 Route::get('/Article', [ArticleController::class, 'index'])->name('articles');
+Route::get('/search', [LandingPageController::class, 'search'])->name('search');
 
 Route::get('/clbk', [ClbkController::class, 'index'])->name('clbk');
 Route::get('/clbk/{id}', [ClbkController::class, 'show'])->name('detailClbk');
