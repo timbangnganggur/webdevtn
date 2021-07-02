@@ -67,7 +67,7 @@ class InfoLokerAdminController extends Controller
                 'jobs_id' => $job->id
             ]);
         }
-        return redirect()->route('info-loker.index');
+        return redirect()->route('admin.info-loker.index');
     }
 
     /**

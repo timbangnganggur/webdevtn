@@ -1,7 +1,5 @@
 @extends('general.master')
 @section('content')
-
-
 <div class="container profileTN">
   <section class="sectionLogo">
     <div class="row">
@@ -57,18 +55,6 @@
       </div>
     </div>
   </section>
-
-
-
-
 </div>
 <!--Akhir Container-->
-
-
-
-
-
-
-
-
 @endsection

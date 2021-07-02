@@ -18,7 +18,7 @@
             </div>
             <div class="panel-body">
                 <div class="col-lg-6">
-                    <form role="form" action="{{route('perusahaan.lowongan.store')}}" method="POST" enctype="multipart/form-data">
+                    <form role="form" action="{{route('admin.perusahaan.lowongan.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group mb-3">
                             <label for="nama" class="form-label">Nama</label>

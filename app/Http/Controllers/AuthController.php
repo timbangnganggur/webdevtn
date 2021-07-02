@@ -15,9 +15,8 @@ class AuthController extends Controller
             'password' => $request->password
         ];
 
-        $user = Auth::attempt($data);
-        if(Auth::check()){
-            return redirect()->route('company.dashboard');
+        if(Auth::guard('admin')->attempt($data)){
+            return redirect()->route('admin.dashboard.index');
         }else{
             return back();
         }
@@ -25,7 +24,7 @@ class AuthController extends Controller
 
     public function logout()
     {
-        Auth::logout();
+        Auth::guard('admin')->logout();
         return redirect()->route('home');
     }
 }

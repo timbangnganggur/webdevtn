@@ -82,6 +82,7 @@
                     <th>Title</th>
                     <th>Tags</th>
                     <th>Writer</th>
+                    <th>Aksi</th>
                   </tr>
                   </tfoot>
                 </table>
