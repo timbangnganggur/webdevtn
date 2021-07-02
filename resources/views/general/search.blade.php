@@ -24,6 +24,17 @@
 </div>
 </form>
 <!--Akhir Hero-->
+@if($Jobs->isNotEmpty())
+    @foreach ($Jobs as $Job)
+        <div class="post-list">
+            <p>{{ $Job->name }}</p>
+        </div>
+    @endforeach
+@else 
+    <div>
+        <h2>No posts found</h2>
+    </div>
+@endif
 
 <section id="main">
     <div class="card m-2">
@@ -83,6 +94,7 @@
       </div>
     </div>
 </section>
+
 
 <!-- <section id="ayo-sinau" style="height: 100%">
   <div class="row m-0 p-0 text-center">
