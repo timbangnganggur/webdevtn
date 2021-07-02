@@ -14,6 +14,15 @@ class ArticleAdminController extends Controller
     {
         $articles = Article::all();
         return view('admin.artikel.index', compact('articles'));
+        
+        $articlesall = Article::all();
+        return view('admin.artikel.index', compact('articlesall'));
+    }
+    
+    public function show($id,$slug);
+    {
+        $articlesall = Article::all();
+        return view('admin.artikel.index', compact('articlesall'));
     }
 
     public function create()
