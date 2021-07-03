@@ -1,8 +1,15 @@
 @extends('general.master')
 @section('title')
-    Ayo Makaryo
+    Ayo Makaryo | TimbangNganggur
 @endsection
 @section('content')
+    <div class="container">
+        <div class="mt-5 pt-5 text-center">
+            <img class="d-block mx-auto mb-4" src="{{ asset("img/ayoMakaryo/ayoMakaryo.png") }}" alt="" width="72" height="72">
+            <h2>Ayo Makaryo</h2>
+            <p class="lead">Informasi Lowongan Kerja Terupdate</p>
+          </div>
+    </div>
     <div class="headAyoMakaryo">
         <div class="container ham">
             <form>
