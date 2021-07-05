@@ -16,17 +16,10 @@
                 <div class="row">
                   <div class="col">
                     <select id="inputState" class="form-control" >
-                        <option disable selected>perusahaan</option>
-                        @foreach ($companies as $Company)
-                            <option value="{{ $Company->id }}">{{ $Company->name }}</option>
+                        <option disable selected>Perusahaan</option>
+                        @foreach ($companies as $company)
+                            <option value="{{ $company->id }}">{{ $company->name }}</option>
                         @endforeach
-                        <?php
-                        // $Job = array('FrontEnd Engineer','BackEnd Engineer');
-                        // foreach ($Job as $val){
-                        //     echo "<option value='$val'>$val</option>"; 
-                        // }
-                        ?>
-                        
                     </select>
                   </div>
                   <div class="col">
@@ -38,13 +31,6 @@
                         @foreach ($jobs as $job)
                             <option value="{{ $job->id }}">{{ $job->name }}</option>
                         @endforeach
-                        <?php
-                        // $Job = array('FrontEnd Engineer','BackEnd Engineer');
-                        // foreach ($Job as $val){
-                        //     echo "<option value='$val'>$val</option>"; 
-                        // }
-                        ?>
-                        
                     </select>
                   </div>
                   <div class="col search-box">

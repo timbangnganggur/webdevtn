@@ -31,7 +31,10 @@ class AyoMakaryoController extends Controller
             $jobs = Job::all();
         }
 
-        return view('general.ayoMakaryo', compact('jobs', 'search'));
+        // get all companies
+        $companies = Company::all();
+
+        return view('general.ayoMakaryo', compact('jobs', 'search', 'companies'));
     }
 
     public function show($id)
