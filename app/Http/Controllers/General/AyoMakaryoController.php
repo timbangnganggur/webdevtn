@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Job;
 use App\Models\SkillJob;
+use App\Models\Company;
 
 class AyoMakaryoController extends Controller
 {
