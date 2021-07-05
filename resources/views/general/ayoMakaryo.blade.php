@@ -3,12 +3,26 @@
     Ayo Makaryo
 @endsection
 @section('content')
+<div class="mx-auto" style="height: 100px;">
+</div>
     <div class="headAyoMakaryo">
         <div class="container ham">
             <form>
                 <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Perusahaan">
+                    <select id="inputState" class="form-control" >
+                        <option disable selected>perusahaan</option>
+                        @foreach ($companies as $Company)
+                            <option value="{{ $Company->id }}">{{ $Company->name }}</option>
+                        @endforeach
+                        <?php
+                        // $Job = array('FrontEnd Engineer','BackEnd Engineer');
+                        // foreach ($Job as $val){
+                        //     echo "<option value='$val'>$val</option>"; 
+                        // }
+                        ?>
+                        
+                    </select>
                   </div>
                   <div class="col">
                     <input type="text" class="form-control" placeholder="Bidang Profesi">
