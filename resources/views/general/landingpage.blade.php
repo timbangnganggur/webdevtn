@@ -11,11 +11,11 @@
     <br><br><br> <br><br><br> 
     <h1 class="text-center">Informatif & Edukatif untuk Persiapan Diri di Dunia Kerja</h1>
     <br><br><br>
-    <form action="{{ route('search') }}" method="GET">
+    <form action="{{ route('ayoMakaryo') }}" method="GET">
     <div class="pencarian">
       <div class="row d-flex text-start">
         <div class="col input-group">
-          <input class="col-lg-8 offset-lg-1 col-md-6 offset-md-2 form-control" type="search" placeholder="Cari Lowongan Kerja" aria-label="Search">
+          <input class="col-lg-8 offset-lg-1 col-md-6 offset-md-2 form-control" type="search" placeholder="Cari Lowongan Kerja" aria-label="Search" name="q">
           <button class="col-lg-2 btn btn-danger" style="border-radius: 0;" type="submit"><i class="fas fa-search"></i> <span class="fw-bold">Cari</span></button>
         </div>
       </div>
