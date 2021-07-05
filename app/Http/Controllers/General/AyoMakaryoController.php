@@ -6,13 +6,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Job;
 use App\Models\SkillJob;
+use App\Models\Company;
 
 class AyoMakaryoController extends Controller
 {
     public function index()
     {
         $jobs = Job::all();
-        return view('general.ayoMakaryo', compact('jobs'));
+        $companies = Company::all();
+        return view('general.ayoMakaryo', compact('jobs', 'companies'));
     }
 
     public function show($id)
