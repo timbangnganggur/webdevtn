@@ -7,11 +7,19 @@ use Illuminate\Http\Request;
 use App\Models\Job;
 use App\Models\SkillJob;
 use App\Models\Company;
+use App\Models\Region;
 
 class AyoMakaryoController extends Controller
 {
     public function index(Request $request)
     {
+
+        // dropDown Option
+        $jobs = Job::all();
+        $companies = Company::all();
+        $regions = Region::all();
+
+
         // set default variabel search to null
         $search = null;
 
@@ -30,11 +38,7 @@ class AyoMakaryoController extends Controller
             // show avaiable all job
             $jobs = Job::all();
         }
-
-        // get all companies
-        $companies = Company::all();
-
-        return view('general.ayoMakaryo', compact('jobs', 'search', 'companies'));
+        return view('general.ayoMakaryo', compact('jobs', 'search', 'companies', 'regions'));
     }
 
     public function show($id)

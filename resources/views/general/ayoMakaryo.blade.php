@@ -34,7 +34,19 @@
                     </select>
                   </div>
                   <div class="col search-box">
-                    <input class="form-control search-text" type="search" placeholder="Kabupaten/Kota">
+                    <select id="inputState" class="form-control" >
+                        <option disable selected>Kabupaten/kota</option>
+                        @foreach ($regions as $Region)
+                            <option value="{{ $Region->id }}">{{ $Region->name }}</option>
+                        @endforeach
+                        <?php
+                        // $Job = array('FrontEnd Engineer','BackEnd Engineer');
+                        // foreach ($Job as $val){
+                        //     echo "<option value='$val'>$val</option>"; 
+                        // }
+                        ?>
+                        
+                    </select>
                 </div>
                <button class="submit-btn"> <i class="fas fa-search"></i> </button>
                 </div>
