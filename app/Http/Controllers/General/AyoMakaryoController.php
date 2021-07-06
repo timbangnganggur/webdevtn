@@ -38,7 +38,6 @@ class AyoMakaryoController extends Controller
             // show avaiable all job
             $jobs = Job::all();
         }
-
         return view('general.ayoMakaryo', compact('jobs', 'search', 'companies', 'regions'));
     }
 
