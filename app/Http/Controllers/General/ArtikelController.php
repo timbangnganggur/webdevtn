@@ -47,12 +47,8 @@ class ArtikelController extends Controller
      */
     public function show($id)
     {
-        // Jobdesk @supri
-        // Panggil model artikel
         $article = Article::all();
-        // Cari berdasarkan id
         $article = Article::find($id);
-        // Kirimkan ke view artikel.show dengan compact('...')
         return view('general.artikel.show', compact('article'));
     }
 
@@ -90,4 +86,3 @@ class ArtikelController extends Controller
         //
     }
 }
-
