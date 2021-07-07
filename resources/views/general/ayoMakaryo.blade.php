@@ -36,14 +36,10 @@
                   <div class="col search-box">
                     <select id="inputState" class="form-control" >
                         <option disable selected>Kabupaten/kota</option>
-                        @foreach ($regions as $Region)
-                            <option value="{{ $Region->id }}">{{ $Region->name }}</option>
+                        @foreach ($regions as $region)
+                            <option value="{{ $region->id }}">{{ $region->name }}</option>
                         @endforeach
                         <?php
-                        // $Job = array('FrontEnd Engineer','BackEnd Engineer');
-                        // foreach ($Job as $val){
-                        //     echo "<option value='$val'>$val</option>"; 
-                        // }
                         ?>
                         
                     </select>
