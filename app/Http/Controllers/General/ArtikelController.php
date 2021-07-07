@@ -4,6 +4,7 @@ namespace App\Http\Controllers\General;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class ArtikelController extends Controller
 {
@@ -48,11 +49,11 @@ class ArtikelController extends Controller
     {
         // Jobdesk @supri
         // Panggil model artikel
-
+        $article = Article::all();
         // Cari berdasarkan id
-
+        $article = Article::find($id);
         // Kirimkan ke view artikel.show dengan compact('...')
-        return view('general.artikel.show');
+        return view('general.artikel.show', compact('article'));
     }
 
     /**
@@ -89,3 +90,4 @@ class ArtikelController extends Controller
         //
     }
 }
+
