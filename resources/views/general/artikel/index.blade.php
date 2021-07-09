@@ -17,7 +17,7 @@
             <p>by (penulis)</p>
             <p>Tanggal terbit</p>
             <div class="panel-footer">
-                Views: {{$article}}
+                Views: 
             </div>
           </div>
         </div>
