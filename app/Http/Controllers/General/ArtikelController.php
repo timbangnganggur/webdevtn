@@ -15,8 +15,13 @@ class ArtikelController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $article = Article::all();
         return view('general.artikel.index', compact('article'));
+=======
+        $articles = Article::all();
+        return view('general.artikel.index', compact('articles'));
+>>>>>>> 55a86e1837ef0740eea78ae7090cb4e051f617c6
     }
 
     /**
@@ -46,11 +51,15 @@ class ArtikelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
+<<<<<<< HEAD
         $article = Article::all();
         $article = Article::find($id);
         
+=======
+        $article = Article::where('slug', 'LIKE', '%'.$slug.'%')->first();
+>>>>>>> 55a86e1837ef0740eea78ae7090cb4e051f617c6
         return view('general.artikel.show', compact('article'));
     }
 
