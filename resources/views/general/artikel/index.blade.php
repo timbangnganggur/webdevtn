@@ -1,4 +1,7 @@
 @extends('general.master')
+@section('title')
+    Artikel | TimbangNganggur
+@endsection
 @section('content')
 <div class="container pembungkusCLBK">
   <br><br><br>
@@ -13,6 +16,9 @@
             <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
             <p>by (penulis)</p>
             <p>Tanggal terbit</p>
+            <div class="panel-footer">
+                Views: {{$article}}
+            </div>
           </div>
         </div>
       </div>
@@ -24,6 +30,9 @@
             <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
             <p>by (penulis)</p>
             <p>Tanggal terbit</p>
+            <div class="panel-footer">
+                Views:
+            </div>
           </div>
         </div>
       </div>
@@ -35,6 +44,9 @@
             <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
             <p>by (penulis)</p>
             <p>Tanggal terbit</p>
+            <div class="panel-footer">
+                Views:
+            </div>
           </div>
         </div>
       </div>
@@ -46,6 +58,9 @@
             <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
             <p>by (penulis)</p>
             <p>Tanggal terbit</p>
+            <div class="panel-footer">
+                Views:
+            </div>
           </div>
         </div>
       </div>
@@ -57,6 +72,9 @@
             <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
             <p>by (penulis)</p>
             <p>Tanggal terbit</p>
+            <div class="panel-footer">
+                Views:
+            </div>
           </div>
         </div>
       </div>
@@ -68,6 +86,9 @@
             <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
             <p>by (penulis)</p>
             <p>Tanggal terbit</p>
+            <div class="panel-footer">
+                Views:
+            </div>
           </div>
         </div>
       </div>

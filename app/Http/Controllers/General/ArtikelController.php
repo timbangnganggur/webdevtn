@@ -15,7 +15,8 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        return view('general.artikel.index');
+        $article = Article::all();
+        return view('general.artikel.index', compact('article'));
     }
 
     /**
@@ -49,6 +50,7 @@ class ArtikelController extends Controller
     {
         $article = Article::all();
         $article = Article::find($id);
+        
         return view('general.artikel.show', compact('article'));
     }
 
