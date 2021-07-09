@@ -13,93 +13,8 @@
 <div class="container pembungkusCLBK">
   <div class="row">
     <div class="col-md-12 d-flex flex-wrap">
-<<<<<<< HEAD
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="/img/card-image.jpg" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Topik</h5>
-            <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
-            <p>by (penulis)</p>
-            <p>Tanggal terbit</p>
-            <div class="panel-footer">
-                Views: 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="/img/card-image.jpg" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Topik</h5>
-            <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
-            <p>by (penulis)</p>
-            <p>Tanggal terbit</p>
-            <div class="panel-footer">
-                Views:
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="/img/card-image.jpg" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Topik</h5>
-            <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
-            <p>by (penulis)</p>
-            <p>Tanggal terbit</p>
-            <div class="panel-footer">
-                Views:
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="/img/card-image.jpg" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Topik</h5>
-            <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
-            <p>by (penulis)</p>
-            <p>Tanggal terbit</p>
-            <div class="panel-footer">
-                Views:
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="/img/card-image.jpg" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Topik</h5>
-            <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
-            <p>by (penulis)</p>
-            <p>Tanggal terbit</p>
-            <div class="panel-footer">
-                Views:
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="card">
-          <img src="/img/card-image.jpg" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Topik</h5>
-            <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => 1]) }}">Judul</a></h4>
-            <p>by (penulis)</p>
-            <p>Tanggal terbit</p>
-            <div class="panel-footer">
-                Views:
-            </div>
-          </div>
-        </div>
-      </div>
-=======
-      @foreach ($articles as $article)
+
+      @foreach ($article as $article)
         <div class="col-sm-4">
           <div class="card h-100">
             <img src="/img/card-image.jpg" alt="">
@@ -108,11 +23,12 @@
               <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></h4>
               <p>by ({{ $article->writer }})</p>
               <p>{{ $article->created_at }}</p>
+              <p>Views: {{ $article->view_count }}</p>
             </div>
           </div>
         </div>
       @endforeach
->>>>>>> 55a86e1837ef0740eea78ae7090cb4e051f617c6
+
     </div>
   </div>
   <div class="row">
