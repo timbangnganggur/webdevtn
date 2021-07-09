@@ -1,8 +1,13 @@
 @extends('general.master')
 @section('content')
+<div class="container">
+    <div class="mt-5 pt-5 text-center">
+        <img class="d-block mx-auto mb-4" src="{{ asset("img/artikel/konten.png") }}" alt="" width="72" height="72">
+        <h2>Artikel</h2>
+        <p class="lead">Informasi Seputar Dunia Kerja</p>
+      </div>
+</div>
 <div class="container pembungkusCLBK">
-  <br><br><br>
-  <h3 class="m-3 fw-bold">Artikel</h3>
   <div class="row">
     <div class="col-md-12 d-flex flex-wrap">
       @foreach ($articles as $article)
