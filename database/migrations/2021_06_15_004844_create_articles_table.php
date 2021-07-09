@@ -23,6 +23,7 @@ class CreateArticlesTable extends Migration
             $table->text('tag');
             $table->text('slug');
             $table->string('writer', 255);
+            $table->integer('view_count')->default(0);
             $table->timestamps();
         });
     }

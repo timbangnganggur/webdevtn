@@ -20,8 +20,8 @@
   @include('general.header')
   @yield('content')
   @include('general.footer')
+  @include('general.modalLogin')
   @include('general.script')
   @yield('script')
 </body>
-
 </html>

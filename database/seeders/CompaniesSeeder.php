@@ -15,7 +15,27 @@ class CompaniesSeeder extends Seeder
     public function run()
     {
         Company::create([
-            'name' => 'Perusahaan A',
+            'name' => 'Okey Group',
+            'regions_id' => '1'
+        ]);
+
+        Company::create([
+            'name' => 'Jne',
+            'regions_id' => '1'
+        ]);
+        
+        Company::create([
+            'name' => 'Sampingan',
+            'regions_id' => '1'
+        ]);
+
+        Company::create([
+            'name' => 'Little Pep',
+            'regions_id' => '1'
+        ]);
+
+        Company::create([
+            'name' => 'Tana Tumpa Dara',
             'regions_id' => '1'
         ]);
     }
