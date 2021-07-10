@@ -4,6 +4,7 @@ namespace App\Http\Controllers\General;
 
 use App\Http\Controllers\Controller;
 use App\Models\Job;
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -11,8 +12,8 @@ class LandingPageController extends Controller
     public function index()
     {
         // Kirim data semua artikel ke view landing page dengan compact
-        
-        return view('general.landingpage');
+        $articles = Article::all();
+        return view('general.landingpage', compact('articles'));
     }
 }
  

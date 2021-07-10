@@ -92,11 +92,13 @@
             <ul class="splide__list"> 
                 @foreach($articles as $article)
               <li class="splide__slide" style="min-width:250px;">
-                {!! json_encode(json_decode($article)) !!}
                 <div class="card m-3 ">
-                  <img class="card-img-top" src="{{ asset('img/clbk/ig-1.jpg') }}" alt="Card image cap">
+                  <div>{{ $article->image_url }}</div>
                   <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Diperbaharui pada 12 Juni 2021</small></p>
+                    <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></p>
+                    <p>by ({{ $article->writer }})</p>
+                    <p class="card-text"><small class="text-muted">{{ $article->created_at }}</small></p>
+                    <p>Views: {{ $article->view_count }}</p>
                   </div>
                 </div>
               </li>
