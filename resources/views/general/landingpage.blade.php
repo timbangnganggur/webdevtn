@@ -89,16 +89,20 @@
         <h6 class="card-subtitle mb-2 text-muted text-center">Artikel</h6>
         <div id="splide-artikel" class="splide">
           <div class="splide__track d-flex">
-            <ul class="splide__list">
-              {{-- Lakukan perulangan <li> dengan mengisikan data artikel disini dengan @foreach($articles as $article) --}}
+            <ul class="splide__list"> 
+                @foreach($articles as $article)
               <li class="splide__slide" style="min-width:250px;">
                 <div class="card m-3 ">
-                  <img class="card-img-top" src="{{ asset('img/clbk/ig-1.jpg') }}" alt="Card image cap">
+                  <div>{{ $article->image_url }}</div>
                   <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Diperbaharui pada 12 Juni 2021</small></p>
+                    <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></p>
+                    <p>by ({{ $article->writer }})</p>
+                    <p class="card-text"><small class="text-muted">{{ $article->created_at }}</small></p>
+                    <p>Views: {{ $article->view_count }}</p>
                   </div>
                 </div>
               </li>
+               @endforeach
             </ul>
           </div>
         </div>
