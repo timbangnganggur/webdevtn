@@ -89,12 +89,12 @@
         <h6 class="card-subtitle mb-2 text-muted text-center">Artikel</h6>
         <div id="splide-artikel" class="splide">
           <div class="splide__track d-flex">
-<<<<<<< HEAD
+
             <ul class="splide__list"> 
-                @foreach($articles as $article)
-              <li class="splide__slide" style="min-width:250px;">
+                @foreach($article as $article)
+              <li class="splide__slide" style="min-width:250px;" >
                 <div class="card m-3 ">
-                  <div>{{ $article->image_url }}</div>
+                  <img src="{{$article->image_url}}" class="img-thumbnail">
                   <div class="card-body">
                     <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></p>
                     <p>by ({{ $article->writer }})</p>
@@ -104,18 +104,6 @@
                 </div>
               </li>
                @endforeach
-=======
-            <ul class="splide__list">
-              {{-- Lakukan perulangan <li> dengan mengisikan data artikel disini dengan @foreach($articles as $article) --}}
-              <li class="splide__slide" style="min-width:250px;">
-                <div class="card m-3 ">
-                  <img class="card-img-top" src="{{ asset('img/clbk/ig-1.jpg') }}" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Diperbaharui pada 12 Juni 2021</small></p>
-                  </div>
-                </div>
-              </li>
->>>>>>> 3ac6e8155dcc14e99604df8d8e9d4846178058da
             </ul>
           </div>
         </div>
