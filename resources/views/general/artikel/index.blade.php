@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col-md-12 d-flex flex-wrap">
 
-      @foreach ($article as $article)
+      @foreach ($articles as $article)
         <div class="col-sm-4">
           <div class="card h-100">
             <img src="/img/card-image.jpg" alt="">

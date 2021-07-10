@@ -1,6 +1,6 @@
 <footer class="page-footer bg-footer">
 
-        <div class="container text-center text-md-left mt-5">
+        <div class="container text-center text-md-left mt-5 pt-5">
           <div class="row">
   
             <div class="col-md-3 mx-auto mb-4 mgFooter">

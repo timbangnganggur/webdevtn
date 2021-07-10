@@ -26,8 +26,8 @@
 <!--Akhir Hero-->
 
 <section id="main">
-    <div class="card m-2">
-      <div class="card-body">
+    <div class="card mx-2 my-4" style="border: none;">
+      <div class="card-body" style="background-color: rgba(244, 241, 222, 1);">
         <h5 class="card-title text-center">Cangkruk Langsung Bahas Kerjoan</h5>
         <h6 class="card-subtitle mb-2 text-muted text-center">CLBK</h6>
         <div id="splide" class="splide">
@@ -82,40 +82,37 @@
         </div>
       </div>
     </div>
+
+    <div class="card mx-2 my-4" style="border: none;">
+      <div class="card-body" style="background-color: rgba(244, 241, 222, 1);">
+        <h5 class="card-title text-center">Artikel</h5>
+        <h6 class="card-subtitle mb-2 text-muted text-center">Artikel</h6>
+        <div id="splide-artikel" class="splide">
+          <div class="splide__track d-flex">
+            <ul class="splide__list"> 
+                @foreach($articles as $article)
+              <li class="splide__slide" style="min-width:250px;">
+                <div class="card m-3 ">
+                  <div>{{ $article->image_url }}</div>
+                  <div class="card-body">
+                    <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></p>
+                    <p>by ({{ $article->writer }})</p>
+                    <p class="card-text"><small class="text-muted">{{ $article->created_at }}</small></p>
+                    <p>Views: {{ $article->view_count }}</p>
+                  </div>
+                </div>
+              </li>
+               @endforeach
+            </ul>
+          </div>
+        </div>
+        <div class="splide__progress">
+          <div class="splide__progress__bar">
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
-
-<!-- <section id="ayo-sinau" style="height: 100%">
-  <div class="row m-0 p-0 text-center">
-    <div class="col-lg-12 m-0 p-0 clbk-tag">
-      <h2>
-        <b>CLBK</b>
-      </h2>
-      <span style="font-size: 12pt">: CANGKRUK LANGSUNG BAHAS KERJOAN</span>
-    </div>
-    <div class="col-lg-12 m-0 p-0">
-      <hr class="bg-dark mb-4 mt-0 d-inline-block mx-auto" style="width: 30%; height: 2px;">
-    </div>
-  </div>
-
-  <div class="owl-carousel owl-theme">
-    <div class="item">
-      <a href="#"><img class="gambar-carousel" src="img/Tips.png" alt=""></a>
-
-      <h2>Tips & Trick</h2>
-    </div>
-    <div class="item">
-      <a href="#"><img class="gambar-carousel" src="img/MK.png" alt=""></a>
-      
-      <h2>Merintis Karir</h2>
-    </div>
-    <div class="item">
-      <a href="#"><img src="img/DK.png" alt=""></a>
-      
-      <h2>Dunia Kerja</h2>
-    </div>
-  </div>
-  {{-- <button type="button" role="presentation" class="btn-next disabled fas fa-angle-right"></button> --}}
-</section> -->
 @endsection
 @section('script')
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
@@ -127,8 +124,20 @@ if (navigator.userAgent.match(/Mobile/)) {
       perMove: 1,
       autoplay: true,
   } ).mount();
+  new Splide( '#splide-artikel', {
+      type   : 'loop',
+      perPage: 1,
+      perMove: 1,
+      autoplay: true,
+  } ).mount();
 }else{
-      new Splide( '#splide', {
+  new Splide( '#splide', {
+      type   : 'loop',
+      perPage: 5,
+      perMove: 1,
+      autoplay: true,
+  } ).mount();
+  new Splide( '#splide-artikel', {
       type   : 'loop',
       perPage: 5,
       perMove: 1,
@@ -145,8 +154,20 @@ if (navigator.userAgent.match(/Mobile/)) {
       perMove: 1,
       autoplay: true,
   } ).mount();
+  new Splide( '#splide-artikel', {
+      type   : 'loop',
+      perPage: 1,
+      perMove: 1,
+      autoplay: true,
+  } ).mount();
 }else{
-      new Splide( '#splide', {
+  new Splide( '#splide', {
+      type   : 'loop',
+      perPage: 5,
+      perMove: 1,
+      autoplay: true,
+  } ).mount();
+  new Splide( '#splide-artikel', {
       type   : 'loop',
       perPage: 5,
       perMove: 1,
