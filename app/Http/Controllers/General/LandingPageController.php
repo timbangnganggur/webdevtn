@@ -10,6 +10,8 @@ class LandingPageController extends Controller
 {
     public function index()
     {
+        // Kirim data semua artikel ke view landing page dengan compact
+        
         return view('general.landingpage');
     }
 }
