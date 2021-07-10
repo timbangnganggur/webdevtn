@@ -48,26 +48,14 @@ class ArtikelController extends Controller
      */
     public function show($slug)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         // Jobdesk @supri
         // Panggil model artikel
         $article = Article::all();
         // Cari berdasarkan id
         $article = Article::find($id);
         // Kirimkan ke view artikel.show dengan compact('...')
-=======
-        $article = Article::where('slug', 'LIKE', '%'.$slug.'%')->first();
->>>>>>> 55a86e1837ef0740eea78ae7090cb4e051f617c6
-=======
-
-        $article = Article::all();
-        //$article = Article::find($id);
-        
 
         $article = Article::where('slug', 'LIKE', '%'.$slug.'%')->first();
-
->>>>>>> 3ac6e8155dcc14e99604df8d8e9d4846178058da
         return view('general.artikel.show', compact('article'));
     }
 
