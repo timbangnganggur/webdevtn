@@ -48,13 +48,6 @@ class ArtikelController extends Controller
      */
     public function show($slug)
     {
-        // Jobdesk @supri
-        // Panggil model artikel
-        $article = Article::all();
-        // Cari berdasarkan id
-        $article = Article::find($id);
-        // Kirimkan ke view artikel.show dengan compact('...')
-
         $article = Article::where('slug', 'LIKE', '%'.$slug.'%')->first();
         return view('general.artikel.show', compact('article'));
     }
