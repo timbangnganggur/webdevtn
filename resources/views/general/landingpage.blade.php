@@ -89,7 +89,6 @@
         <h6 class="card-subtitle mb-2 text-muted text-center">Artikel</h6>
         <div id="splide-artikel" class="splide">
           <div class="splide__track d-flex">
-
             <ul class="splide__list"> 
                 @foreach($article as $article)
               <li class="splide__slide" style="min-width:250px;" >
