@@ -13,8 +13,13 @@ class LandingPageController extends Controller
     {
         // Kirim data semua artikel ke view landing page dengan compact
 
+
         $article = Article::all();
         return view('general.landingpage', compact('article'));
+
+        $articles = Article::all();
+        return view('general.landingpage', compact('articles'));
+
     }
 
 }
