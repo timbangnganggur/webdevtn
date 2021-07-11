@@ -90,15 +90,10 @@
         <div id="splide-artikel" class="splide">
           <div class="splide__track d-flex">
             <ul class="splide__list"> 
-
                 @foreach($article as $article)
               <li class="splide__slide" style="min-width:250px;" >
                 <div class="card m-3 ">
                   <img src="{{$article->image_url}}" class="img-thumbnail">
-                @foreach($articles as $article)
-              <li class="splide__slide" style="min-width:250px;">
-                <div class="card m-3 ">
-                  <div>{{ $article->image_url }}</div>
                   <div class="card-body">
                     <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></p>
                     <p>by ({{ $article->writer }})</p>

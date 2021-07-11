@@ -16,10 +16,6 @@ class LandingPageController extends Controller
 
         $article = Article::all();
         return view('general.landingpage', compact('article'));
-
-        $articles = Article::all();
-        return view('general.landingpage', compact('articles'));
-
     }
 
 }
