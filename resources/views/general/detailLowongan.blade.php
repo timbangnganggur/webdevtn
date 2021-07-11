@@ -1,6 +1,7 @@
 @extends('general.master')
 @section('content')
-
+<div class="mx-auto" style="height: 100px;">
+</div>
     <div class="container">
         <div class="row">
             <div class="col-md-9 img-detilLowongan">
@@ -37,9 +38,13 @@
                             {{ $job->description }}
                         </ul>
                         <h4>Kualifikasi</h4>
+                        @if ($job->qualification != "")
+                        @foreach (explode(',', $job->qualification) as $job)
                         <ul>
-                            {{ $job->qualification }}
+                            <li>{{ $job }}</li>
                         </ul>
+                        @endforeach
+                        @endif
                         <div class="skill" >
                             <h4 style="display: inline-block;">Skill</h4>
                             @if (count($skillsJobs) != 0)
