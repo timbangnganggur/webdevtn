@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 @endsection
-@section('title')
-    Artikel
+@section(‘title’) 
+    $article->title | TimbangNganggur 
 @endsection
 @section('content')
 <div class="content-wrapper">
