@@ -12,8 +12,11 @@ class LandingPageController extends Controller
     public function index()
     {
         // Kirim data semua artikel ke view landing page dengan compact
-        $articles = Article::all();
-        return view('general.landingpage', compact('articles'));
+
+
+        $article = Article::all();
+        return view('general.landingpage', compact('article'));
     }
+
 }
  
