@@ -1,4 +1,7 @@
 @extends('general.master')
+@section('title')
+  {{ $article->title }} | TimbangNganggur
+@endsection
 @section('content')
 <div class="container isidetailClbk">
 <br><br><br><br>
@@ -21,7 +24,7 @@
         @php
           $body = html_entity_decode($article->body);
         @endphp
-        {{!! ($body) !!}}
+        {!! $body !!}
       </p>
 
       <div class="row mx-1">
