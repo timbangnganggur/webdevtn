@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\General;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Job;
+use Illuminate\Http\Request;
 
-class ArtikelController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,7 @@ class ArtikelController extends Controller
     public function index()
     {
         $articles = Article::all();
-        return view('general.artikel.index', compact('articles'));
+        return view('admin.role.index', compact('articles'));
     }
 
     /**
@@ -37,7 +38,11 @@ class ArtikelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $admin = new Admin();
+        $admin->username = $request->username;
+        $admin->username = $request->password;
+        $admin->save();
+        return redirect('admin/role');
     }
 
     /**
@@ -46,17 +51,9 @@ class ArtikelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($id)
     {
-        // Jobdesk @supri
-        // Panggil model artikel
-        $article = Article::all();
-        // Cari berdasarkan id
-        //$article = Article::find($id);
-        // Kirimkan ke view artikel.show dengan compact('...')
-
-        $article = Article::where('slug', 'LIKE', '%'.$slug.'%')->first();
-        return view('general.artikel.show', compact('article'));
+        //
     }
 
     /**
@@ -93,4 +90,3 @@ class ArtikelController extends Controller
         //
     }
 }
-
