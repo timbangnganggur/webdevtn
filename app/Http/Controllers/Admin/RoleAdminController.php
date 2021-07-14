@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Article;
-use App\Models\Job;
+use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
-class RoleController extends Controller
+class RoleAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
-        return view('admin.role.index', compact('articles'));
+        $admins = Admin::all();
+        return view('admin.role.index', compact('admins'));
     }
 
     /**
@@ -27,7 +27,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.role.create');
     }
 
     /**
@@ -39,8 +39,11 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $admin = new Admin();
+        $admin->name = $request->name;
         $admin->username = $request->username;
         $admin->username = $request->password;
+        $admin->password = Hash::make($request->password);
+        $admin->role = $request->role;
         $admin->save();
         return redirect('admin/role');
     }
@@ -87,6 +90,12 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $admin = Admin::find($id);
+        if($admin->role != 'superadmin'){
+            $admin->delete();
+            return back()->with('success', 'Role berhasil terhapus');
+        }else{
+            return back()->with('error', 'Tidak dapat menghapus role ini');
+        }
     }
 }
