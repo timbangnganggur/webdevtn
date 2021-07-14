@@ -37,7 +37,7 @@
   
   <nav class="navbar navbar-expand-lg navbar-light bg-light mx-4 mt-2 p-0 pr-4 fixed-top">
     <div class="container-fluid" id="navbar-container">
-      <a class="navbar-brand p-0 m-0" href="/"><span><img id="navbar-brand-img" class="img-fluid mx-5" src="{{ asset('img/Logo.png') }}" alt=""></span></a>
+      <a class="navbar-brand p-0 m-0" href="{{ URL::to('/') }}"><span><img id="navbar-brand-img" class="img-fluid mx-5" src="{{ asset('img/Logo.png') }}" alt=""></span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
