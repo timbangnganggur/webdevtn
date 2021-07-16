@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\InfoLokerAdminController;
 use App\Http\Controllers\Admin\PerusahaanAdminController;
 use App\Http\Controllers\Admin\DaerahAdminController;
 use App\Http\Controllers\Admin\ArticleAdminController;
+use App\Http\Controllers\Admin\RoleAdminController;
 
 use App\Http\Controllers\Company\DashboardCompanyController;
 
@@ -51,4 +52,5 @@ Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function ()
     Route::resource('daerah', DaerahAdminController::class);
     Route::resource('artikel', ArticleAdminController::class);
     Route::get('/article/detail/{id}/{slug}',[ArticleAdminController::class,'show'])->name('article.show');
+    Route::resource('role', RoleAdminController::class);
 });
