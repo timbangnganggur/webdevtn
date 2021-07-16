@@ -53,6 +53,13 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="{{ route('admin.role.index') }}" class="nav-link">
+                <i class="fas fa-briefcase nav-icon"></i>
+                <p>Role Admin</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
                 <button class="btn btn-warning nav-link w-100 text-left">

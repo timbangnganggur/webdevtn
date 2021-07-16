@@ -45,7 +45,7 @@ class RoleAdminController extends Controller
         $admin->password = Hash::make($request->password);
         $admin->role = $request->role;
         $admin->save();
-        return redirect('admin/role');
+        return redirect('admin/role')->with('success', 'Role berhasil terbuat');
     }
 
     /**

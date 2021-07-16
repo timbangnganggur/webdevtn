@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                         <div class="card-footer">
-                            <a href="{{ URL::to('admin/perusahaan') }}" class="btn btn-outline-info">Kembali</a>
+                            <a href="{{ URL::to('admin/role') }}" class="btn btn-outline-info">Kembali</a>
                             <button class="btn btn-primary">Simpan</button>
                         </div>
                         </div>
