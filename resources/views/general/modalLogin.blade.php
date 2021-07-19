@@ -53,68 +53,53 @@
             </button>
         </div>
         <div class="modal-body">
-            <form>
+            <form method="POST" action="{{ route('register') }}">
+            @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
                 <label for="inputNama">Nama</label>
-                <input type="text" class="form-control" id="inputNama" placeholder="depan">
+                <input name="first_name" type="first_name" class="form-control" id="inputNama" placeholder="depan">
                 </div>
                 <div class="form-group col-md-6">
                 <label for="inputNamaBelakang">.</label>
-                <input type="text" class="form-control" id="inputNamaBelakang" placeholder="belakang">
+                <input name="last_name" type="last_name" class="form-control" id="inputNamaBelakang" placeholder="belakang">
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-3">
-                <label for="inputCity">Tanggal Lahir</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Tanggal</option>
-                    <option>1</option>
-                    <option>2</option>
-                </select>
-                </div>
-                <div class="form-group col-md-3">
-                <label for="inputState">.</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Bulan</option>
-                    <option>Januari</option>
-                    <option>Februari</option>
-                </select>
-                </div>
-                <div class="form-group col-md-3">
-                <label for="inputZip">.</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Tahun</option>
-                    <option>1999</option>
-                    <option>2000</option>
-                </select>
-                </div>
+                <div class="form-group">
+                    date birth
+                    <div class="form-group">
+                    <input
+                    type="birthdate"
+                    name="birthdate"
+                    id="birthdate"
+                    maxlength="10">
+                    </div>
             </div>
             <div class="form-group">
                 <label for="inputUsername">Username</label>
-                <input type="text" class="form-control" id="inputUsername" placeholder="username">
+                <input name="username" type="username" class="form-control" id="inputUsername" placeholder="username">
                 <small>min. 6 karakter</small>
             </div>
             <div class="form-group">
                 <label for="inputNomor">No. Hp</label>
-                <input type="text" class="form-control" id="inputNomor" placeholder="+62 ">
+                <input name="phone_number" type="phone_number" class="form-control" id="inputNomor" placeholder="+62 ">
             </div>
             <div class="form-group">
                 <label for="inputInstagram">Instagram</label>
-                <input type="text" class="form-control" id="inputInstagram">
+                <input name="instagram_account" type="instagram_account" class="form-control" id="inputInstagram">
             </div>
             <div class="form-group">
                 <label for="inputEmail">Email</label>
-                <input type="text" class="form-control" id="inputEmail">
+                <input name=email type="email" class="form-control" id="inputEmail">
             </div>
             <div class="form-group">
                 <label for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword">
+                <input name="password" type="password" class="form-control" id="inputPassword">
                 <small>min. 8 karakter</small>
             </div>
             <div class="form-group">
                 <label for="inputPassword2">Ulangi Password</label>
-                <input type="password" class="form-control" id="inputPassword2">
+                <input name="password" type="password" class="form-control" id="inputPassword2">
             </div>
             <div class="modal-footer">
                 <div class="col m-auto">
