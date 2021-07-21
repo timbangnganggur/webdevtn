@@ -25,19 +25,22 @@ class AuthController extends Controller
 
     public function register(Request $request) 
     {
-    
-        $user = new User();
-        $user->first_name = $request->first_name;
-        $user->last_name = $request->last_name;
-        $user->birthdate = $request->birthdate;
-        $user->username = $request->username;
-        $user->phone_number = $request->phone_number;
-        $user->instagram_account = $request->instagram_account;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->save();
+      $user = new User();
+              $user->first_name = $request->first_name;
+              $user->last_name = $request->last_name;
+              $user->birthdate = $request->birthdate;
+              $user->username = $request->username;
+              $user->phone_number = $request->phone_number;
+              $user->instagram_account = $request->instagram_account;
+              $user->email = $request->email;
+              $user->password = $request->password;
+              //$user->save();
 
-    return redirect("ayo-makaryo")->with('success', 'You have signed-in');
+      if ($user->save()) {
+          return redirect('/profile-tn')->with('alert-success','Berhasil Menambahkan Data!'); 
+     } else {
+          return redirect('/profile-tn')->with('alert','Gagal Menambah Data');
+     }
     }
 
     public function logout()
