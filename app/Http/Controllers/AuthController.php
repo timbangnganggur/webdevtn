@@ -35,9 +35,14 @@ class AuthController extends Controller
             $user->instagram_account = $request->instagram_account;
             $user->email = $request->email;
             $user->password = $request->password;
-            $user->save();
+            //$user->save();
 
-    return redirect("ayo-makaryo")->withSuccess('You have signed-in');
+    if ($user->save()) {
+        return redirect('/profile-tn')->with('alert-success','Berhasil Menambahkan Data!'); 
+   } else {
+        return redirect('/profile-tn')->with('alert','Gagal Menambah Data');
+   }
+    //return redirect("ayo-makaryo")->withSuccess('You have signed-in');
     }
 
     public function logout()

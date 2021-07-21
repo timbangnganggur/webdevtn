@@ -72,7 +72,8 @@
                     type="birthdate"
                     name="birthdate"
                     id="birthdate"
-                    maxlength="10">
+                    maxlength="10"
+                    placeholder="YYYY-MM-DD">
                     </div>
             </div>
             <div class="form-group">
@@ -112,8 +113,8 @@
         </div>
         </div>
     </div>
-    </div>   
-@else
+    </div>  
+    @else 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
     <div class="modal-dialog" role="document">
