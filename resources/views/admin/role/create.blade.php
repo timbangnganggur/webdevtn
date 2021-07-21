@@ -47,7 +47,7 @@
                                         <label for="name">Role Admin</label>
                                         <select class="form-control" name="role">
                                             <option value="artikel">Admin Artikel</option>
-                                            <option value="artikel">Admin Loker</option>
+                                            <option value="loker">Admin Loker</option>
                                         </select>
                                     </div>
                                 </div>

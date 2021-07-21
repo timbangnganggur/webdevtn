@@ -41,7 +41,6 @@ class RoleAdminController extends Controller
         $admin = new Admin();
         $admin->name = $request->name;
         $admin->username = $request->username;
-        $admin->username = $request->password;
         $admin->password = Hash::make($request->password);
         $admin->role = $request->role;
         $admin->save();
