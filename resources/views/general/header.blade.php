@@ -8,7 +8,7 @@
          padding:10px;
      }
   }
-  @media (min-width: 241px) and (max-width: 319px) {
+  @media (min-width: 241px) and (max-width: 300px) {
      /* a little bit bigger screens */
      #navbar-brand-img {
          width: 40px;
