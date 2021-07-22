@@ -69,7 +69,7 @@ class ArticleAdminController extends Controller
         $article_new->writer = $user->name;
         $article_new->image_url = $imageName;
         $article_new->save();
-        return redirect('admin/artikel')->with('success', 'Artikel berhasil terbuat');;
+        return redirect()->route('admin.artikel.index')->with('success', 'Artikel berhasil terbuat');;
     }
 
     public function destroy(Request $request, $id)

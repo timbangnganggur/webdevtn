@@ -26,6 +26,7 @@ class AuthController extends Controller
 
     public function register(Request $request) 
     {
+
         $this->validate($request, array(
         'first_name' => 'required',
         'last_name' => 'required',
@@ -36,6 +37,7 @@ class AuthController extends Controller
         'email' => 'required',
         'password' => 'required'
         ));
+
 
       $user = new User();
               $user->first_name = $request->first_name;
@@ -49,10 +51,12 @@ class AuthController extends Controller
               //$user->save();
 
       if ($user->save()) {
+
           return back()->with('alert-success','Berhasil Menambahkan Data!'); 
      } elseif ($validator->fails()) {
           return self::index($request)->withErrors($validator->errors());
      }
+
 
     }
 
