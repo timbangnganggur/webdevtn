@@ -73,7 +73,7 @@
                     name="birthdate"
                     id="birthdate"
                     maxlength="10"
-                    placeholder="YYYY-MM-DD">
+                    placeholder="YYYY/MM/DD">
                     </div>
             </div>
             <div class="form-group">

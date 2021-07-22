@@ -1,17 +1,7 @@
 @extends('general.master')
 @section('content')
-<div class="mx-auto" style="height: 200px;">
+<div class="mx-auto" style="height: 100px;">
 </div>
-@if (session('alert-success'))
-    <div class="alert alert-success">
-        {{ session('alert-success') }}
-    </div>
-@endif
-@if (session('alert'))
-    <div class="alert alert-danger">
-        {{ session('alert') }}
-    </div>
-@endif
 <div class="container profileTN">
   <section class="sectionLogo">
     <div class="row">
