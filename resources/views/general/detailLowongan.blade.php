@@ -7,7 +7,7 @@
             <div class="col-md-9 img-detilLowongan">
                 <img src="{{ asset('img/Logo.png') }}" alt="" >
                 <div class="detil">
-                    <h1 style="margin-top:">{{ $job->name }}</h1>
+                    <h1 style="margin-top:">{{ $job->name | TimbangNganggur }}</h1>
                     <h1 class="namaPerusahaan">{{ $job->companies->name }} <span class="daerah"> - {{ $job->companies->regions->name }}</span></h2>
                     <p class="card-text"><i class="fas fa-coins"></i> {{ $job->salary }} </p>
                     <p class="card-text"><i class="fas fa-clock"></i>
