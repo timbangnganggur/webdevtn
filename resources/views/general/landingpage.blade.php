@@ -25,6 +25,18 @@
 </form>
 <!--Akhir Hero-->
 
+@if (session('alert-success'))
+    <div class="alert alert-success">
+        {{ session('alert-success') }}
+    </div>
+@endif
+
+ @if ($errors->any())
+     @foreach ($errors->all() as $error)
+         <div class="text-danger text-center bg-warning" >{{$error}}</div>
+     @endforeach
+ @endif
+
 <section id="main">
     <div class="card mx-2 my-4" style="border: none;">
       <div class="card-body" style="background-color: rgba(244, 241, 222, 1);">
