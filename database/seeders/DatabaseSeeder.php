@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             CompaniesSeeder::class,
             JobsSeeder::class,
             SkillsSeeder::class,
-            SkillsJobsSeeder::class,    
+            SkillsJobsSeeder::class,
+            ArticlesSeeder::class, 
         ]);
         // \App\Models\User::factory(10)->create();
     }

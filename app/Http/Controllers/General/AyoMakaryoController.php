@@ -6,13 +6,39 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Job;
 use App\Models\SkillJob;
+use App\Models\Company;
+use App\Models\Region;
 
 class AyoMakaryoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+
+        // dropDown Option
         $jobs = Job::all();
-        return view('general.ayoMakaryo', compact('jobs'));
+        $companies = Company::all();
+        $regions = Region::all();
+
+
+        // set default variabel search to null
+        $search = null;
+
+        // if has key search
+        if($request->has("q")){
+            $search = $request->get("q");
+        }
+
+        // if variabel search is not null
+        if($search){
+            // show spesific jobs
+            $jobs = Job::where('description', 'LIKE', "%".$search."%")
+                    ->orWhere('name', 'LIKE', "%".$search."%")
+                    ->get();
+        }else{
+            // show avaiable all job
+            $jobs = Job::all();
+        }
+        return view('general.ayoMakaryo', compact('jobs', 'search', 'companies', 'regions'));
     }
 
     public function show($id)

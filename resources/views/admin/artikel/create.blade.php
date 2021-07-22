@@ -40,7 +40,7 @@
                 <!-- /. tools -->
               </div>
               <!-- /.card-header -->
-                <form action="{{ route('admin.artikel.store') }}" method="POST">
+                <form action="{{ route('admin.artikel.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body pad">
                         <div class="form-group">
@@ -50,6 +50,10 @@
                         <div class="form-group">
                             <label class="form-label">Header</label>
                             <input type="text" name="header" class="form-control" placeholder="Tuliskan header tambahan" required/>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Image Upload</label>
+                            <input type="file" name="image" class="form-control" required>
                         </div>
                         <div class="my-3">
                             <label class="form-label">Body</label>
