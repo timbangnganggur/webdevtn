@@ -23,26 +23,37 @@ class AuthController extends Controller
         }
     }
 
+
     public function register(Request $request) 
     {
-    
-    $user = new User();
-            $user->first_name = $request->first_name;
-            $user->last_name = $request->last_name;
-            $user->birthdate = $request->birthdate;
-            $user->username = $request->username;
-            $user->phone_number = $request->phone_number;
-            $user->instagram_account = $request->instagram_account;
-            $user->email = $request->email;
-            $user->password = $request->password;
-            //$user->save();
+        $this->validate($request, array(
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'birthdate' => 'required',
+        'username' => 'required',
+        'phone_number' => 'required',
+        'instagram_account' => 'required',
+        'email' => 'required',
+        'password' => 'required'
+        ));
 
-    if ($user->save()) {
-        return redirect('/profile-tn')->with('alert-success','Berhasil Menambahkan Data!'); 
-   } else {
-        return redirect('/profile-tn')->with('alert','Gagal Menambah Data');
-   }
-    //return redirect("ayo-makaryo")->withSuccess('You have signed-in');
+      $user = new User();
+              $user->first_name = $request->first_name;
+              $user->last_name = $request->last_name;
+              $user->birthdate = $request->birthdate;
+              $user->username = $request->username;
+              $user->phone_number = $request->phone_number;
+              $user->instagram_account = $request->instagram_account;
+              $user->email = $request->email;
+              $user->password = $request->password;
+              //$user->save();
+
+      if ($user->save()) {
+          return back()->with('alert-success','Berhasil Menambahkan Data!'); 
+     } elseif ($validator->fails()) {
+          return self::index($request)->withErrors($validator->errors());
+     }
+
     }
 
     public function logout()
