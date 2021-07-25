@@ -40,51 +40,24 @@
 <section id="main">
     <div class="card mx-2 my-4" style="border: none;">
       <div class="card-body" style="background-color: rgba(244, 241, 222, 1);">
-        <h5 class="card-title text-center">Cangkruk Langsung Bahas Kerjoan</h5>
-        <h6 class="card-subtitle mb-2 text-muted text-center">CLBK</h6>
+        <h5 class="card-title text-center">Artikel</h5>
+        <h6 class="card-subtitle mb-2 text-muted text-center">Artikel</h6>
         <div id="splide" class="splide">
           <div class="splide__track d-flex">
             <ul class="splide__list">
-              <li class="splide__slide" style="min-width:250px;">
+              @foreach($article as $articles)
+              <li class="splide__slide" style="min-width:250px;" >
                 <div class="card m-3 ">
-                  <img class="card-img-top" src="{{ asset('img/clbk/ig-1.jpg') }}" alt="Card image cap">
+                  <img src="{{$articles->image_url}}" class="img-thumbnail">
                   <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Diperbaharui pada 12 Juni 2021</small></p>
+                    <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $articles->slug]) }}">{{ $articles->title }}</a></p>
+                    <p>by ({{ $articles->writer }})</p>
+                    <p class="card-text"><small class="text-muted">{{ $articles->created_at }}</small></p>
+                    <p>Views: {{ $articles->view_count }}</p>
                   </div>
                 </div>
               </li>
-              <li class="splide__slide" style="min-width:250px;">
-                <div class="card m-3 ">
-                  <img class="card-img-top" src="{{ asset('img/clbk/ig-2.jpg') }}" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Diperbaharui pada 12 Juni 2021</small></p>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide" style="min-width:250px;">
-                <div class="card m-3 ">
-                  <img class="card-img-top" src="{{ asset('img/clbk/ig-3.jpg') }}" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Diperbaharui pada 12 Juni 2021</small></p>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide" style="min-width:250px;">
-                <div class="card m-3 ">
-                  <img class="card-img-top" src="{{ asset('img/clbk/ig-4.jpg') }}" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Diperbaharui pada 12 Juni 2021</small></p>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide" style="min-width:250px;">
-                <div class="card m-3 ">
-                  <img class="card-img-top" src="{{ asset('img/clbk/ig-5.jpg') }}" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text"><small class="text-muted">Diperbaharui pada 12 Juni 2021</small></p>
-                  </div>
-                </div>
-              </li>
+               @endforeach
             </ul>
           </div>
         </div>
@@ -102,7 +75,7 @@
         <div id="splide-artikel" class="splide">
           <div class="splide__track d-flex">
             <ul class="splide__list"> 
-                @foreach($article as $article)
+              @foreach($article as $article)
               <li class="splide__slide" style="min-width:250px;" >
                 <div class="card m-3 ">
                   <img src="{{$article->image_url}}" class="img-thumbnail">
