@@ -42,42 +42,12 @@
       <div class="card-body" style="background-color: rgba(244, 241, 222, 1);">
         <h5 class="card-title text-center">Artikel</h5>
         <h6 class="card-subtitle mb-2 text-muted text-center">Artikel</h6>
-        <div id="splide" class="splide">
-          <div class="splide__track d-flex">
-            <ul class="splide__list">
-              @foreach($article as $articles)
-              <li class="splide__slide" style="min-width:250px;" >
-                <div class="card m-3 ">
-                  <img src="{{$articles->image_url}}" class="img-thumbnail">
-                  <div class="card-body">
-                    <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $articles->slug]) }}">{{ $articles->title }}</a></p>
-                    <p>by ({{ $articles->writer }})</p>
-                    <p class="card-text"><small class="text-muted">{{ $articles->created_at }}</small></p>
-                    <p>Views: {{ $articles->view_count }}</p>
-                  </div>
-                </div>
-              </li>
-               @endforeach
-            </ul>
-          </div>
-        </div>
-        <div class="splide__progress">
-          <div class="splide__progress__bar">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card mx-2 my-4" style="border: none;">
-      <div class="card-body" style="background-color: rgba(244, 241, 222, 1);">
-        <h5 class="card-title text-center">Artikel</h5>
-        <h6 class="card-subtitle mb-2 text-muted text-center">Artikel</h6>
         <div id="splide-artikel" class="splide">
           <div class="splide__track d-flex">
             <ul class="splide__list"> 
-              @foreach($article as $article)
+              @foreach($articles as $article)
               <li class="splide__slide" style="min-width:250px;" >
-                <div class="card m-3 ">
+                <div class="card m-3 h-100">
                   <img src="{{$article->image_url}}" class="img-thumbnail">
                   <div class="card-body">
                     <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></p>
@@ -103,12 +73,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <script>
 if (navigator.userAgent.match(/Mobile/)) {
-  new Splide( '#splide', {
-      type   : 'loop',
-      perPage: 1,
-      perMove: 1,
-      autoplay: true,
-  } ).mount();
   new Splide( '#splide-artikel', {
       type   : 'loop',
       perPage: 1,
@@ -116,12 +80,6 @@ if (navigator.userAgent.match(/Mobile/)) {
       autoplay: true,
   } ).mount();
 }else{
-  new Splide( '#splide', {
-      type   : 'loop',
-      perPage: 5,
-      perMove: 1,
-      autoplay: true,
-  } ).mount();
   new Splide( '#splide-artikel', {
       type   : 'loop',
       perPage: 5,
@@ -133,12 +91,6 @@ if (navigator.userAgent.match(/Mobile/)) {
 // When browser resized
 $(window).resize(function() {
 if (navigator.userAgent.match(/Mobile/)) {
-  new Splide( '#splide', {
-      type   : 'loop',
-      perPage: 1,
-      perMove: 1,
-      autoplay: true,
-  } ).mount();
   new Splide( '#splide-artikel', {
       type   : 'loop',
       perPage: 1,
@@ -146,12 +98,6 @@ if (navigator.userAgent.match(/Mobile/)) {
       autoplay: true,
   } ).mount();
 }else{
-  new Splide( '#splide', {
-      type   : 'loop',
-      perPage: 5,
-      perMove: 1,
-      autoplay: true,
-  } ).mount();
   new Splide( '#splide-artikel', {
       type   : 'loop',
       perPage: 5,
