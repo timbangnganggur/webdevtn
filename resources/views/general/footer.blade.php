@@ -13,8 +13,8 @@
               <hr class="bg-warning mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height: 2px;">
   
               <ul class="list-unstyled">
-                <li class="my-2"><a href="/ayoMakaryo" class="penawaran">AYO MAKARYO</a></li>
-                <li class="my-2"><a href="/clbk" class="penawaran">CLBK</a></li>
+                <li class="my-2"><a href="{{ route('ayoMakaryo') }}" class="penawaran">AYO MAKARYO</a></li>
+                <li class="my-2"><a href="{{ route('clbk') }}" class="penawaran">CLBK</a></li>
               </ul>
             </div>
   
@@ -37,7 +37,7 @@
               
               <ul class="list-unstyled">
                 <li class="my-2 w-100"><a href="https://instagram.com/timbangnganggurofficial?igshid=v46t8hf7iwxx" class="FUO"><i class="fab fa-instagram"></i>@TIMBANGNGANGGUROFFICIAL</a></li>
-                <li class="my-2 w-100"><a href="#" class="FUO"><i class="far fa-envelope"></i>OFFICIAL.TIMBANGNGANGGUR@GMAIL.COM</a></li>
+                <li class="my-2 w-100"><a href="mailto:official.timbangnganggur@gmail.com" class="FUO"><i class="far fa-envelope"></i>OFFICIAL.TIMBANGNGANGGUR@GMAIL.COM</a></li>
                 <li class="my-2"><a href="#"></a></li>
                 <li class="my-2"><a href="#"></a></li>
               </ul>
