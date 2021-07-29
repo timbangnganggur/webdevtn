@@ -48,7 +48,7 @@
               @foreach($articles as $article)
               <li class="splide__slide" style="min-width:250px;" >
                 <div class="card m-3 h-100">
-                  <img src="{{$article->image_url}}" class="img-thumbnail">
+                  <img src="{{ asset('images/artikel/'.$article->image_url)}}" class="img-thumbnail">
                   <div class="card-body">
                     <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></p>
                     <p>by ({{ $article->writer }})</p>
