@@ -57,50 +57,79 @@
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
-                <label for="inputNama">Nama</label>
+                <label for="inputNama">Nama Depan</label>
                 <input name="first_name" type="first_name" class="form-control" id="inputNama" placeholder="depan">
+                  @if ($errors->first('first_name'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('first_name')}}</div>
+                  @endif
                 </div>
                 <div class="form-group col-md-6">
-                <label for="inputNamaBelakang">.</label>
+                <label for="inputNamaBelakang">Nama Belakang</label>
                 <input name="last_name" type="last_name" class="form-control" id="inputNamaBelakang" placeholder="belakang">
+                  @if ($errors->first('last_name'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('last_name')}}</div>
+                  @endif
                 </div>
             </div>
                 <div class="form-group">
-                    date birth
+                    Tanggal Lahir
                     <div class="form-group">
                     <input
-                    type="birthdate"
+                    type="date"
                     name="birthdate"
                     id="birthdate"
-                    maxlength="10"
-                    placeholder="YYYY/MM/DD">
+                    placeholder="YYYY/MM/DD"
+                    value="2018-07-22"
+                   min="1500-01-01" 
+                   max="2100-12-31">
                     </div>
+                    @if ($errors->first('birthdate'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('birthdate')}}</div>
+                  @endif
             </div>
             <div class="form-group">
                 <label for="inputUsername">Username</label>
                 <input name="username" type="username" class="form-control" id="inputUsername" placeholder="username">
                 <small>min. 6 karakter</small>
+                    @if ($errors->first('username'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('username')}}</div>
+                  @endif
             </div>
             <div class="form-group">
                 <label for="inputNomor">No. Hp</label>
-                <input name="phone_number" type="phone_number" class="form-control" id="inputNomor" placeholder="+62 ">
+                <input name="phone_number" type="tel" class="form-control" id="inputNomor" placeholder="+62" pattern="^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$">
+                    @if ($errors->first('phone_number'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('phone_number')}}</div>
+                  @endif
             </div>
             <div class="form-group">
                 <label for="inputInstagram">Instagram</label>
                 <input name="instagram_account" type="instagram_account" class="form-control" id="inputInstagram">
+                @if ($errors->first('instagram_account'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('instagram_account')}}</div>
+                  @endif
             </div>
             <div class="form-group">
                 <label for="inputEmail">Email</label>
                 <input name=email type="email" class="form-control" id="inputEmail">
+                 @if ($errors->first('email'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('email')}}</div>
+                  @endif
             </div>
             <div class="form-group">
                 <label for="inputPassword">Password</label>
-                <input name="password" type="password" class="form-control" id="inputPassword">
+                <input name="password" type="password" class="form-control" id="inputPassword" minlength="8" required>
                 <small>min. 8 karakter</small>
+                @if ($errors->first('password'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('password')}}</div>
+                  @endif
             </div>
             <div class="form-group">
                 <label for="inputPassword2">Ulangi Password</label>
-                <input name="password" type="password" class="form-control" id="inputPassword2">
+                <input name="password" type="password" class="form-control" id="inputPassword2" minlength="8" required>
+                @if ($errors->first('password'))
+                    <div class="text-danger text-center bg-warning" >{{$errors->first('password')}}</div>
+                  @endif
             </div>
             <div class="modal-footer">
                 <div class="col m-auto">
