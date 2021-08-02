@@ -62,7 +62,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $job->companies->name }}</h5>
                                     <p class="card-text"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $job->companies->regions->name }}</p>
-                                    <p class="card-text"><i class="fas fa-user"></i>&nbsp;{{ $job->name }}</p>
+                                    <p class="card-text"><i class="fas fa-user"></i>&nbsp;{{ $job->name }} | TimbangNganggur </p>
                                     @if ($job->salary == -1)
                                         <p class="card-text"><i class="fas fa-coins"></i>&nbsp;Tidak Disebutkan</p>
                                     @else

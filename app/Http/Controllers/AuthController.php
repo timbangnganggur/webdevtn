@@ -31,11 +31,11 @@ class AuthController extends Controller
         'first_name' => 'required',
         'last_name' => 'required',
         'birthdate' => 'required',
-        'username' => 'required',
-        'phone_number' => 'required',
-        'instagram_account' => 'required',
-        'email' => 'required',
-        'password' => 'required'
+        'username' => 'required|unique:users',
+        'phone_number' => 'required|unique:users',
+        'instagram_account' => 'required|unique:users',
+        'email' => 'required|email|unique:users',
+        'password' => 'required|unique:users'
         ));
 
 
@@ -47,7 +47,7 @@ class AuthController extends Controller
               $user->phone_number = $request->phone_number;
               $user->instagram_account = $request->instagram_account;
               $user->email = $request->email;
-              $user->password = $request->password;
+              $user->password = Hash::make($request->password);
               //$user->save();
 
       if ($user->save()) {

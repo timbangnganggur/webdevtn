@@ -20,7 +20,7 @@
     
     <div class="col">
       <p>
-        <img src="/img/coba.jpg">
+        <img src="{{ asset('images/artikel/'.$article->image_url) }}">
         @php
           $body = html_entity_decode($article->body);
         @endphp

@@ -1,4 +1,7 @@
 @extends('general.master')
+@section('title')
+    {{ $job->name }} | TimbangNganggur
+@endsection
 @section('content')
 <div class="mx-auto" style="height: 100px;">
 </div>
