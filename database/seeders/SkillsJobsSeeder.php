@@ -15,8 +15,8 @@ class SkillsJobsSeeder extends Seeder
     public function run()
     {
         SkillJob::create([
-            'skills_id' => '',
-            'jobs_id' => ''
+            'skills_id' => '1',
+            'jobs_id' => '1'
         ]);
     }
 }
