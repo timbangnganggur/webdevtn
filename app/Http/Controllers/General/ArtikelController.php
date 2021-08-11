@@ -49,6 +49,8 @@ class ArtikelController extends Controller
     public function show($slug)
     {
         $article = Article::where('slug', 'LIKE', '%'.$slug.'%')->first();
+        $article->view_count = $article->view_count+1;
+        $article->save();
         return view('general.artikel.show', compact('article'));
     }
 

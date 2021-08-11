@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Hash;
+use Validator;
 
 class AuthController extends Controller
 {
@@ -27,7 +28,9 @@ class AuthController extends Controller
     public function register(Request $request) 
     {
 
-        $this->validate($request, array(
+
+
+        $v = Validator::make($request->all(), [
         'first_name' => 'required',
         'last_name' => 'required',
         'birthdate' => 'required',
@@ -36,7 +39,12 @@ class AuthController extends Controller
         'instagram_account' => 'required|unique:users',
         'email' => 'required|email|unique:users',
         'password' => 'required|unique:users'
-        ));
+        ]);
+
+        if ($v->fails())
+    {
+        return back()->withErrors($v->errors());
+    }
 
 
       $user = new User();
@@ -53,9 +61,11 @@ class AuthController extends Controller
       if ($user->save()) {
 
           return back()->with('alert-success','Berhasil Menambahkan Data!'); 
-     } elseif ($validator->fails()) {
-          return self::index($request)->withErrors($validator->errors());
-     }
+         } 
+         //elseif ($validator->fails()) {
+          //return view('general.clbk');
+          //self::index($request)->withErrors($validator->errors());
+      //}
 
 
     }
