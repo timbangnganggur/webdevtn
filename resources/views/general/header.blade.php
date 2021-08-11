@@ -50,13 +50,13 @@
         </div>
             @if (!Auth::check())
               <div class="masuk">
-                <button type="button" class="btn btn-sm btn-danger m-auto rounded" data-toggle="modal" data-target="#exampleModal"><span class="fw-bold">Masuk</span></button>
+                <button type="button" class="btn btn-sm btn-danger m-auto rounded" data-toggle="modal" data-target="#modal-login"><span class="fw-bold">Masuk</span></button>
               </div>
               <div class="text-center">
                 <span class="fw-bold">atau</span>
               </div>
               <div class="daftar">
-                <button type="button" class="btn btn-sm btn-danger m-auto rounded" data-toggle="modal" data-target="#exampleModal2"><span class="fw-bold">Daftar</span></button>
+                <button type="button" class="btn btn-sm btn-danger m-auto rounded" data-toggle="modal" data-target="#modal-register"><span class="fw-bold">Daftar</span></button>
               </div>
             @else
               <button type="button" class="btn btn-danger tombol w-100" data-toggle="modal" data-target="#exampleModal3">Logout</button>

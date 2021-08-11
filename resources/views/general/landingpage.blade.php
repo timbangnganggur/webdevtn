@@ -23,20 +23,10 @@
   </div>
 </div>
 </form>
+@if(session('alert-error-register'))
+{{ var_dump(session('alert-error-register')) }}
+@endif
 <!--Akhir Hero-->
-
-@if (session('alert-success'))
-    <div class="alert alert-success">
-        {{ session('alert-success') }}
-    </div>
-@endif
-@if($errors->any())
- @foreach( $errors->all() as $message )
-  <div class="text-danger bg-warning">
-   <span>{{ $message }}</span>
-  </div>
- @endforeach
-@endif
 <section id="main">
     <div class="card mx-2 my-4" style="border: none;">
       <div class="card-body" style="background-color: rgba(244, 241, 222, 1);">
