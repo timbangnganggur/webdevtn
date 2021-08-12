@@ -49,13 +49,13 @@ class AuthController extends Controller
               $user->password = Hash::make($request->password);
               //$user->save();
 
-    if($validator->fails()){
-        return back()->with('alert-error-register', $validator->errors()); 
-    }else if($user->save()){
-        return back()->with('alert-success-register','Anda berhasil mendaftar, silahkan login!'); 
-    }else{
-        return back()->with('alert-error-register', 'Server Bermasalah'); 
-    }
+        if($validator->fails()){
+            return back()->with('alert-error-register', json_decode($validator->errors(), true)); 
+        }else if($user->save()){
+            return back()->with('alert-success-register','Anda berhasil mendaftar, silahkan login!'); 
+        }else{
+            return back()->with('alert-error-register', 'Server Bermasalah'); 
+        }
     }
 
     public function logout()
