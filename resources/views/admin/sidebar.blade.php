@@ -15,11 +15,11 @@
         <img src="{{ asset('img/Logo.png') }}" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
-        <a href="#" class="d-block">Administrator</a>
+        <a href="{{ route('admin.dashboard.index') }}" class="d-block">{{ Auth::guard('admin')->user()->name }}</a>
     </div>
     </div>
 
-    <!-- Sidebar Menu -->
+    <!-- Sidebar Menu -->   
     <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
@@ -28,6 +28,7 @@
                 <p>Dashboard</p>
             </a>
         </li>
+        @if (Auth::guard('admin')->user()->role == 'loker' || Auth::guard('admin')->user()->role == 'superadmin')
         <li class="nav-item">
             <a href="{{ route('admin.info-loker.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
@@ -46,12 +47,23 @@
                 <p>Daerah</p>
             </a>
         </li>
+        @endif
+        @if (Auth::guard('admin')->user()->role == 'artikel' || Auth::guard('admin')->user()->role == 'superadmin')
         <li class="nav-item">
             <a href="{{ route('admin.artikel.index') }}" class="nav-link">
                 <i class="fas fa-briefcase nav-icon"></i>
                 <p>Artikel</p>
             </a>
         </li>
+        @endif
+        @if (Auth::guard('admin')->user()->role == 'superadmin')
+        <li class="nav-item">
+            <a href="{{ route('admin.role.index') }}" class="nav-link">
+                <i class="fas fa-briefcase nav-icon"></i>
+                <p>Role Admin</p>
+            </a>
+        </li>
+        @endif
         <li class="nav-item">
             <form action="{{ route('logout') }}" method="POST">
                 @csrf

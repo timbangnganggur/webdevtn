@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Article;
+use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
-class ArticleController extends Controller
+class RoleAdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +16,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
-        return view('general.Article.index');
+        $admins = Admin::all();
+        return view('admin.role.index', compact('admins'));
     }
 
     /**
@@ -25,7 +27,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.role.create');
     }
 
     /**
@@ -36,16 +38,22 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $admin = new Admin();
+        $admin->name = $request->name;
+        $admin->username = $request->username;
+        $admin->password = Hash::make($request->password);
+        $admin->role = $request->role;
+        $admin->save();
+        return redirect('admin/role')->with('success', 'Role berhasil terbuat');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Article  $article
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show($id)
     {
         //
     }
@@ -53,10 +61,10 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Article  $article
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +73,10 @@ class ArticleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Article  $article
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,11 +84,17 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Article  $article
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        //
+        $admin = Admin::find($id);
+        if($admin->role != 'superadmin'){
+            $admin->delete();
+            return back()->with('success', 'Role berhasil terhapus');
+        }else{
+            return back()->with('error', 'Tidak dapat menghapus role ini');
+        }
     }
 }

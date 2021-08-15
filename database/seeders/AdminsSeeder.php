@@ -20,7 +20,7 @@ class AdminsSeeder extends Seeder
             'name' => 'Admin TimbangNganggur',
             'username' => 'AdminTN',
             'password' => Hash::make('Admin.12345'),
-            'role' => 'super'
+            'role' => 'superadmin'
         ]);
     }
 }

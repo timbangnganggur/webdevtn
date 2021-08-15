@@ -18,7 +18,7 @@ class CreateAdminsTable extends Migration
             $table->text('name');
             $table->string('username');
             $table->text('password');
-            $table->enum('role', ['super', 'content_creator', 'marketing']);
+            $table->enum('role', ['superadmin', 'artikel', 'loker']);
             $table->timestamps();
         });
     }

@@ -1,9 +1,97 @@
 @extends('general.master')
 @section('content')
 
+<div class="container pembungkusCLBK">
+  <br><br><br>
+  <h3 class="m-3 fw-bold">CLBK</h3>
+  <div class="row">
+    <div class="col-md-12 d-flex flex-wrap">
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/card-image.jpg" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Topik</h5>
+            <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
+            <p>by (penulis)</p>
+            <p>Tanggal terbit</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/card-image.jpg" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Topik</h5>
+            <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
+            <p>by (penulis)</p>
+            <p>Tanggal terbit</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/card-image.jpg" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Topik</h5>
+            <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
+            <p>by (penulis)</p>
+            <p>Tanggal terbit</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/card-image.jpg" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Topik</h5>
+            <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
+            <p>by (penulis)</p>
+            <p>Tanggal terbit</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/card-image.jpg" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Topik</h5>
+            <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
+            <p>by (penulis)</p>
+            <p>Tanggal terbit</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/img/card-image.jpg" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Topik</h5>
+            <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
+            <p>by (penulis)</p>
+            <p>Tanggal terbit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 d-flex flex-row-reverse">
+      <nav aria-label="Page navigation example" class="paging-clbk">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
 
-    <div class="container pembungkusCLBK">
-        <div class="row rowAtas">
+    <!-- <div class="container pembungkusCLBK">
+    <br><br><br> -->
+        <!-- <div class="row rowAtas mt-5">
             <div class="col-md-7">
                 <h1>Topik</h1>
                  <ul>
@@ -19,103 +107,17 @@
                     <button class="submit-btn"> <i class="fas fa-search"></i> </button>
                   </form>
             </div>
-        </div>
+        </div> -->
         
-        <div class="row rowBawah">
+        <!-- <div class="row rowBawah">
             <ul>
                 <li class="topik4 topik"><a href="#">BIDANG KERJA</a></li>
                 <li class="topik5 topik"><a href="#">DUNIA KERJA</a></li>
             </ul>
-        </div>
+        </div> -->
+            <!-- </div> Akhir col-kiri-clbk -->
 
-
-          <div class="row">
-            <div class="col-md-8 col-kiri-Clbk">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="card">
-                    <img src="/img/coba.jpg" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
-                      <p>by (penulis)</p>
-                      <p>Tanggal terbit</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="card">
-                    <img src="/img/coba.jpg" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
-                      <p>by (penulis)</p>
-                      <p>Tanggal terbit</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="card">
-                    <img src="/img/coba.jpg" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
-                      <p>by (penulis)</p>
-                      <p>Tanggal terbit</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="card">
-                    <img src="/img/coba.jpg" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
-                      <p>by (penulis)</p>
-                      <p>Tanggal terbit</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="card">
-                    <img src="/img/coba.jpg" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
-                      <p>by (penulis)</p>
-                      <p>Tanggal terbit</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="card">
-                    <img src="/img/coba.jpg" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title">Topik</h5>
-                      <h4 class="card-text"><a href="{{ route('detailClbk', ['id' => 1]) }}">Judul</a></h4>
-                      <p>by (penulis)</p>
-                      <p>Tanggal terbit</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <nav aria-label="Page navigation example" class="paging-clbk">
-                <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-              </nav>
-            </div><!--Akhir col-kiri-clbk-->
-
-            <div class="col-md-4 col-kanan-clbk">
+            <!-- <div class="col-md-4 col-kanan-clbk">
               <h3><i class="far fa-heart"></i>Terfavorit</h3>
               <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
@@ -159,14 +161,15 @@
                 </div>
               </div>
 
-            </div><!--Akhir col-kanan-clbk-->
+            </div> -->
+            <!--Akhir col-kanan-clbk-->
 
-        </div>
+        <!-- </div> -->
          
 
     
     
-      </div> <!--Akhir Container-->
+      <!-- </div> Akhir Container -->
         
         
 

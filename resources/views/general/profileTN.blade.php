@@ -1,5 +1,7 @@
 @extends('general.master')
 @section('content')
+<div class="mx-auto" style="height: 100px;">
+</div>
 <div class="container profileTN">
   <section class="sectionLogo">
     <div class="row">

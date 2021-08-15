@@ -15,6 +15,12 @@ class ArticleAdminController extends Controller
         $articles = Article::all();
         return view('admin.artikel.index', compact('articles'));
     }
+    
+    public function show($id, $slug)
+    {
+        $article = Article::find($id);
+        return view('admin.artikel.index', compact('article'));
+    }
 
     public function create()
     {
@@ -27,9 +33,10 @@ class ArticleAdminController extends Controller
                                     'header' => ['required'],
                                     'body' => ['required'],
                                     'footer' => ['required'],
-                                    'tag' => ['required']
+                                    'tag' => ['required'],
+                                    'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                     ]);
-
+                    
         if($validator->fails()){
             return back()->with('error', 'Ada Beberapa form yang terlewat');
         }
@@ -39,7 +46,6 @@ class ArticleAdminController extends Controller
         $body = $request->body;
         $footer = $request->footer;
         $tag = $request->tag;
-        $writer = $request->writer;
         $slug = $this->slugify($title);
 
         $article_selected = Article::where('slug', $slug)->first();
@@ -48,6 +54,9 @@ class ArticleAdminController extends Controller
             die();
         }
 
+        $imageName = time().'.'.$request->image->extension();                
+        $request->image->move(public_path('images/artikel'), $imageName);
+        
         $user = Auth::guard('admin')->user();
 
         $article_new = new Article;
@@ -58,8 +67,9 @@ class ArticleAdminController extends Controller
         $article_new->tag = $tag;
         $article_new->slug = $slug;
         $article_new->writer = $user->name;
+        $article_new->image_url = $imageName;
         $article_new->save();
-        return redirect('admin/artikel')->with('success', 'Artikel berhasil terbuat');;
+        return redirect()->route('admin.artikel.index')->with('success', 'Artikel berhasil terbuat');;
     }
 
     public function destroy(Request $request, $id)
