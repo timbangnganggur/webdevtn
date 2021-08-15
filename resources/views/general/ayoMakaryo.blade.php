@@ -1,35 +1,45 @@
 @extends('general.master')
 @section('title')
-    Ayo Makaryo
+    Ayo Makaryo | TimbangNganggur
 @endsection
 @section('content')
+    <div class="container">
+        <div class="mt-5 pt-5 text-center">
+            <img class="d-block mx-auto mb-4" src="{{ asset("img/ayoMakaryo/ayoMakaryo.png") }}" alt="" width="72" height="72">
+            <h2>Ayo Makaryo</h2>
+            <p class="lead">Informasi Lowongan Kerja Terupdate</p>
+          </div>
+    </div>
     <div class="headAyoMakaryo">
         <div class="container ham">
             <form>
                 <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Perusahaan">
+                    <select id="perusahaan" class="form-control" name="perusahaan">
+                    <option disable selected>~ Perusahaan ~</option>
+                        @foreach ($companies as $company)
+                            <option value="{{ $company->id }}">{{ $company->name }}</option>
+                        @endforeach
+                    </select>
                   </div>
                   <div class="col">
                     <input type="text" class="form-control" placeholder="Bidang Profesi">
                   </div>
                   <div class="col">
-                    <select id="inputState" class="form-control" >
-                        <option disable selected>Jenis Pekerjaan</option>
+                    <select id="jenis-pekerjaan" class="form-control" name="jenis-pekerjaan">
+                    <option disable selected>~ Jenis Pekerjaan ~</option>
                         @foreach ($jobs as $job)
                             <option value="{{ $job->id }}">{{ $job->name }}</option>
                         @endforeach
-                        <?php
-                        // $Job = array('FrontEnd Engineer','BackEnd Engineer');
-                        // foreach ($Job as $val){
-                        //     echo "<option value='$val'>$val</option>"; 
-                        // }
-                        ?>
-                        
                     </select>
                   </div>
                   <div class="col search-box">
-                    <input class="form-control search-text" type="search" placeholder="Kabupaten/Kota">
+                    <select id="wilayah" class="form-control" name="wilayah">
+                    <option disable selected>~ Kabupaten/kota ~</option>
+                        @foreach ($regions as $region)
+                            <option value="{{ $region->id }}">{{ $region->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
                <button class="submit-btn"> <i class="fas fa-search"></i> </button>
                 </div>
@@ -40,17 +50,21 @@
         <div class="row">
             <!-- Area Kiri -->
             <div class="col-md-9">
-                <h2 id="loker">Lowongan Pekerjaan</h2>
+                <h2 id="loker" class="mb-5">Lowongan Pekerjaan</h2>
                 <div class="lowongan-kerja">
                     <div class="row">
                         @foreach ($jobs as $job)
-                            <div class="card mx-2" style="width: 16rem;">
+                            <div class="card m-2" style="width: 16rem;">
                                 <img src="{{ asset('img/Logo.png') }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $job->companies->name }}</h5>
                                     <p class="card-text"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $job->companies->regions->name }}</p>
-                                    <p class="card-text"><i class="fas fa-user"></i>&nbsp;{{ $job->name }}</p>
-                                    <p class="card-text"><i class="fas fa-coins"></i>&nbsp;{{ $job->salary }}</p>
+                                    <p class="card-text"><i class="fas fa-user"></i>&nbsp;{{ $job->name }} | TimbangNganggur </p>
+                                    @if ($job->salary == -1)
+                                        <p class="card-text"><i class="fas fa-coins"></i>&nbsp;Tidak Disebutkan</p>
+                                    @else
+                                        <p class="card-text"><i class="fas fa-coins"></i>&nbsp;{{ $job->salary }}</p>
+                                    @endif
                                     <p class="card-text"><i class="fas fa-clock"></i>
                                         @if ($job->type == 'full_time')
                                             &nbsp;Full Time    
