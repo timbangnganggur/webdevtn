@@ -3,6 +3,9 @@
     Artikel | TimbangNganggur
 @endsection
 @section('content')
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <div class="container">
     <div class="mt-5 pt-5 text-center">
         <img class="d-block mx-auto mb-4" src="{{ asset("img/artikel/konten.png") }}" alt="" width="72" height="72">
@@ -30,19 +33,10 @@
       @endforeach
 
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 d-flex flex-row-reverse">
-      <nav aria-label="Page navigation example" class="paging-clbk">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
+        </div>
+          <div class="justify-content-center">
+           {{ $articles->links() }}
+        </div>
     </div>
-  </div>
 </div>
 @endsection
