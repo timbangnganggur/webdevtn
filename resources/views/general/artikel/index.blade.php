@@ -31,31 +31,10 @@
           </div>
         </div>
       @endforeach
-
     </div>
-<<<<<<< HEAD
-        </div>
-          <div class="justify-content-center">
-           {{ $articles->links() }}
-        </div>
-=======
   </div>
-  Halaman : {{ $articles->currentPage() }} <br/>
-	Jumlah Data : {{ $articles->total() }} <br/>
-	Data Per Halaman : {{ $articles->perPage() }} <br/>
-  {{ $articles->links() }}
-  <div class="row">
-    <div class="col-md-12 d-flex flex-row-reverse">
-      <nav aria-label="Page navigation example" class="paging-clbk">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
->>>>>>> main
-    </div>
 </div>
+    <div class="d-flex justify-content-center">
+  <div>{{ $articles->links() }}</div>
+    </div>
 @endsection
