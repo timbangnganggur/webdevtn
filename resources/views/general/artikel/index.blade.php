@@ -31,6 +31,10 @@
 
     </div>
   </div>
+  Halaman : {{ $articles->currentPage() }} <br/>
+	Jumlah Data : {{ $articles->total() }} <br/>
+	Data Per Halaman : {{ $articles->perPage() }} <br/>
+  {{ $articles->links() }}
   <div class="row">
     <div class="col-md-12 d-flex flex-row-reverse">
       <nav aria-label="Page navigation example" class="paging-clbk">
