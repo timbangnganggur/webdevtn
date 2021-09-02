@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use Hash;
 use Validator;
+use Hash;
 
 class AuthController extends Controller
 {
@@ -27,26 +27,17 @@ class AuthController extends Controller
 
     public function register(Request $request) 
     {
-
-
-
-        $v = Validator::make($request->all(), [
-        'first_name' => 'required',
-        'last_name' => 'required',
-        'birthdate' => 'required',
-        'username' => 'required|unique:users',
-        'phone_number' => 'required|unique:users',
-        'instagram_account' => 'required|unique:users',
-        'email' => 'required|email|unique:users',
-        'password' => 'required|unique:users'
-        ]);
-
-        if ($v->fails())
-    {
-        return back()->withErrors($v->errors());
-    }
-
-
+        // Jangan menggunakan $this->validate karena akan langsung return dan tidak next ke baris dibawahnya jika error
+        $validator = Validator::make($request->all(), [
+                                    'first_name' => 'required',
+                                    'last_name' => 'required',
+                                    'birthdate' => 'required',
+                                    'username' => 'required|unique:users',
+                                    'phone_number' => 'required|unique:users',
+                                    'instagram_account' => 'required|unique:users',
+                                    'email' => 'required|email|unique:users',
+                                    'password' => 'required|unique:users'
+                                ]);
       $user = new User();
               $user->first_name = $request->first_name;
               $user->last_name = $request->last_name;
@@ -58,16 +49,13 @@ class AuthController extends Controller
               $user->password = Hash::make($request->password);
               //$user->save();
 
-      if ($user->save()) {
-
-          return back()->with('alert-success','Berhasil Menambahkan Data!'); 
-         } 
-         //elseif ($validator->fails()) {
-          //return view('general.clbk');
-          //self::index($request)->withErrors($validator->errors());
-      //}
-
-
+        if($validator->fails()){
+            return back()->with('alert-error-register', json_decode($validator->errors(), true)); 
+        }else if($user->save()){
+            return back()->with('alert-success-register','Anda berhasil mendaftar, silahkan login!'); 
+        }else{
+            return back()->with('alert-error-register', 'Server Bermasalah'); 
+        }
     }
 
     public function logout()

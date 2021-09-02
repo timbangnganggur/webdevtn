@@ -15,8 +15,8 @@
             <form>
                 <div class="row">
                   <div class="col">
-                    <select id="inputState" class="form-control" >
-                        <option disable selected>Perusahaan</option>
+                    <select id="perusahaan" class="form-control" name="perusahaan">
+                    <option disable selected>~ Perusahaan ~</option>
                         @foreach ($companies as $company)
                             <option value="{{ $company->id }}">{{ $company->name }}</option>
                         @endforeach
@@ -26,22 +26,19 @@
                     <input type="text" class="form-control" placeholder="Bidang Profesi">
                   </div>
                   <div class="col">
-                    <select id="inputState" class="form-control" >
-                        <option disable selected>Jenis Pekerjaan</option>
+                    <select id="jenis-pekerjaan" class="form-control" name="jenis-pekerjaan">
+                    <option disable selected>~ Jenis Pekerjaan ~</option>
                         @foreach ($jobs as $job)
                             <option value="{{ $job->id }}">{{ $job->name }}</option>
                         @endforeach
                     </select>
                   </div>
                   <div class="col search-box">
-                    <select id="inputState" class="form-control" >
-                        <option disable selected>Kabupaten/kota</option>
+                    <select id="wilayah" class="form-control" name="wilayah">
+                    <option disable selected>~ Kabupaten/kota ~</option>
                         @foreach ($regions as $region)
                             <option value="{{ $region->id }}">{{ $region->name }}</option>
                         @endforeach
-                        <?php
-                        ?>
-                        
                     </select>
                 </div>
                <button class="submit-btn"> <i class="fas fa-search"></i> </button>

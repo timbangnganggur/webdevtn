@@ -16,10 +16,14 @@ class ArtikelController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $articles = Article::all();
         $articles = DB::table('articles')
         ->paginate(5);
         $articles = Article::paginate(5);
+=======
+        $articles = Article::paginate(3);
+>>>>>>> main
         return view('general.artikel.index', compact('articles'));
     }
 
