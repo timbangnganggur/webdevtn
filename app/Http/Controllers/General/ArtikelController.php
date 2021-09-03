@@ -5,6 +5,7 @@ namespace App\Http\Controllers\General;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Article;
+use Illuminate\Support\Facades\DB;
 
 class ArtikelController extends Controller
 {
@@ -15,8 +16,11 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $articles = Article::paginate(3);
-        return view('general.artikel.index', compact('articles'));
+        $articles = Article::where('title', 2)->paginate(1);
+        $articles = Article::all();
+        $articles = Article::paginate(1);
+        $articles = DB::table('articles')->paginate(1);
+        return view('general.artikel.index')->with('articles', $articles);
     }
 
     /**
@@ -88,4 +92,3 @@ class ArtikelController extends Controller
         //
     }
 }
-
