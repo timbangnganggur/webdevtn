@@ -20,7 +20,7 @@
       @foreach ($articles as $article)
         <div class="col-sm-4">
           <div class="card h-100">
-            <img src="/img/card-image.jpg" alt="">
+            <img src="{{ asset('images/artikel/'.$article->image_url)}}" alt="" class="img-thumbnail">
             <div class="card-body">
               <h5 class="card-title">Topik</h5>
               <h4 class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></h4>
