@@ -13,3 +13,17 @@
 
 <script src="{{ asset('owlcarousel/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
+@if(!empty(Session::get('alert-success-register')))
+<script>
+$(function() {
+    $('#modal-login').modal('show');
+});
+</script>
+@endif
+@if(!empty(Session::get('alert-error-register')))
+<script>
+$(function() {
+    $('#modal-register').modal('show');
+});
+</script>
+@endif

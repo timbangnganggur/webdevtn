@@ -31,12 +31,10 @@
           </div>
         </div>
       @endforeach
-
     </div>
-        </div>
-          <div class="justify-content-center">
-           {{ $articles->links() }}
-        </div>
-    </div>
+  </div>
 </div>
+    <div class="d-flex justify-content-center">
+  <div>{{ $articles->links() }}</div>
+    </div>
 @endsection

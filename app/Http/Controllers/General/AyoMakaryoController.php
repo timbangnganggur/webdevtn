@@ -8,16 +8,15 @@ use App\Models\Job;
 use App\Models\SkillJob;
 use App\Models\Company;
 use App\Models\Region;
+use Illuminate\Support\Facades\DB;
 
 class AyoMakaryoController extends Controller
 {
     public function index(Request $request)
     {
-
         // dropDown Option
-        $jobs = Job::all();
         $companies = Company::all();
-        $regions = Region::all();
+        $regions = Region::all();  
 
 
         // set default variabel search to null
@@ -36,13 +35,14 @@ class AyoMakaryoController extends Controller
                     ->get();
         }else{
             // show avaiable all job
-            $jobs = Job::all();
+            $jobs = Job::paginate(5);
         }
         return view('general.ayoMakaryo', compact('jobs', 'search', 'companies', 'regions'));
     }
 
     public function show($id)
     {
+        $job = Job::paginate(3);
         $job = Job::find($id);
         if($job != NULL){
             $skillsJobs = SkillJob::where('jobs_id', $job->id)->get();

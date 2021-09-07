@@ -16,11 +16,11 @@ class ArtikelController extends Controller
      */
     public function index()
     {
+        $articles = Article::where('title', 2)->paginate(1);
         $articles = Article::all();
-        $articles = DB::table('articles')
-        ->paginate(5);
-        $articles = Article::paginate(5);
-        return view('general.artikel.index', compact('articles'));
+        $articles = Article::paginate(1);
+        $articles = DB::table('articles')->paginate(1);
+        return view('general.artikel.index')->with('articles', $articles);
     }
 
     /**
