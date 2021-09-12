@@ -32,6 +32,20 @@
         <div class="row">
           <div class="col-12">
             <div class="card">
+  @if (session('success'))
+  <div class="alert-success">
+    <p>{{ session('success') }}</p>
+  </div>
+  @endif
+        @if ($errors->any())
+  <div class="alert-danger">
+    <ul>
+      @foreach ($errors->all() as $error)
+      <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+  @endif
               <div class="card-header">
                 <h3 class="card-title">Informasi Lowongan Kerja</h3>
                 <div class="card-tools">
@@ -81,7 +95,7 @@
                             <input type="hidden" name="_method" value="DELETE" />
                             <div class="btn-group">
                                 <a class="btn btn-info" href="{{ URL::to('admin/info-loker/'.$job->id) }}"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-success" href="{{ $job->id }}" title="Ubah Data Info Loker"><i class="fa fa-magic" aria-hidden="true"></i></a>
+                                <a class="btn btn-success" href="/admin/info-loker/edit/{{$job->id}}" title="Ubah Data Info Loker"><i class="fa fa-magic" aria-hidden="true"></i></a>
                                 <button title="Hapus Data Info Loker" onclick="confirmDelete()" type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                             </div>
                         </form>

@@ -50,6 +50,7 @@ Route::get('dashboard', [DashboardCompanyController::class, 'index'])->name('com
 Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('dashboard', [DashboardAdminController::class, 'index'])->name('dashboard.index');
     Route::resource('info-loker', InfoLokerAdminController::class);
+    Route::get('/info-loker/edit/{id}', [InfoLokerAdminController::class, 'edit'])->name('admin.infoLoker.edit');
     Route::resource('perusahaan', PerusahaanAdminController::class);
     Route::resource('daerah', DaerahAdminController::class);
     Route::resource('artikel', ArticleAdminController::class);
