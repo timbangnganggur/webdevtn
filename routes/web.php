@@ -54,7 +54,9 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
     Route::resource('perusahaan', PerusahaanAdminController::class);
     Route::resource('daerah', DaerahAdminController::class);
     Route::resource('artikel', ArticleAdminController::class);
-    Route::get('/article/detail/{id}/{slug}',[ArticleAdminController::class,'show'])->name('article.show');
+    Route::get('/artikel/edit/{slug}', [ArticleAdminController::class, 'edit'])->name('admin.artikel.edit');
+    Route::put('/artikel/edit/{id}', [ArticleAdminController::class, 'update'])->name('admin.artikel.edit');
+    // Route::get('/article/detail/{id}/{slug}',[ArticleAdminController::class,'show'])->name('article.show');
     Route::resource('role', RoleAdminController::class);
     Route::get('/password', [PasswordController::class, 'edit'])->name('password.edit');
     Route::patch('/password', [PasswordController::class, 'update'])->name('password.update');

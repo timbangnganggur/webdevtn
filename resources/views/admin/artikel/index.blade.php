@@ -68,8 +68,8 @@
                             @csrf
                             <input type="hidden" name="_method" value="DELETE" />
                             <div class="btn-group">
-                                {{-- <a class="btn btn-info" href="{{ URL::to('admin/info-loker/'.$company->id) }}"><i class="fa fa-eye"></i></a> --}}
-                                {{-- <a class="btn btn-success" href="{{ $company->id }}" title="Ubah Data Perusahaan"><i class="fa fa-magic" aria-hidden="true"></i></a> --}}
+                                <a class="btn btn-info" href="{{ URL::to('/artikel/'.$article->slug) }}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-success" href="/admin/artikel/edit/{{$article->id}}" title="Ubah Data Perusahaan"><i class="fa fa-magic" aria-hidden="true"></i></a>
                                 <button title="Hapus Data Artikel" onclick="confirmDelete()" type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                             </div>
                         </form>

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use Validator;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleAdminController extends Controller
 {
@@ -54,7 +56,7 @@ class ArticleAdminController extends Controller
             die();
         }
 
-        $imageName = time().'.'.$request->image->extension();                
+        $imageName = $request->image->getClientOriginalName();               
         $request->image->move(public_path('images/artikel'), $imageName);
         
         $user = Auth::guard('admin')->user();
@@ -70,6 +72,33 @@ class ArticleAdminController extends Controller
         $article_new->image_url = $imageName;
         $article_new->save();
         return redirect()->route('admin.artikel.index')->with('success', 'Artikel berhasil terbuat');;
+    }
+    public function edit($id)
+    {
+        $article = Article::findOrFail($id);
+
+        return view('admin.artikel.edit', [
+            'article' => $article
+        ]);
+    }
+    public function update(Request $request, $id)
+    {
+        $article = Article::find($id)->update($request->all());
+        
+        $article = Article::where('id',$id)->first();
+        unlink('images/artikel/'.$article['image_url']);
+        
+        // $image = $request->file('image');
+        // $imageName = $image->getClientOriginalName();
+        // $image->move(public_path('images/artikel'), $imageName);
+
+        $imageName = $request->image->getClientOriginalName();               
+        $request->image->move(public_path('images/artikel'), $imageName);
+
+        $article->image_url = $imageName;
+        $article->save();
+
+        return redirect()->route('admin.artikel.index')->with('success',' Data telah diperbaharui!');
     }
 
     public function destroy(Request $request, $id)
