@@ -8,6 +8,7 @@ use App\Models\Job;
 use App\Models\Company;
 use App\Models\Skill;
 use App\Models\SkillJob;
+use Validator;
 
 class InfoLokerAdminController extends Controller
 {
@@ -92,7 +93,15 @@ class InfoLokerAdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $companies = Company::all();
+        $skills = Skill::all();
+        $job = Job::findOrFail($id);
+
+        return view('admin.infoLoker.edit', [
+            'job' => $job,
+            'companies' => $companies,
+            'skills' => $skills
+        ]);
     }
 
     /**
@@ -104,7 +113,19 @@ class InfoLokerAdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->route('admin.info-loker.index')
+                            ->withErrors($validator)
+                            ->withInput();
+        }
+
+        $job = Job::find($id)->update($request->all());
+
+        return redirect()->route('admin.info-loker.index')->with('success',' Data telah diperbaharui!');
     }
 
     /**
