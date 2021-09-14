@@ -16,7 +16,7 @@
       <div class="row d-flex text-start">
         <div class="col input-group">
           <input class="col-lg-8 offset-lg-1 col-md-6 offset-md-2 form-control" type="search" placeholder="Cari Lowongan Kerja" aria-label="Search" name="q">
-          <button class="col-lg-2 btn btn-danger" style="border-radius: 0;" type="submit"><i class="fas fa-search"></i> <span class="fw-bold">Cari</span></button>
+          <button class="col-lg-2 btn btn-danger btn-search"  type="submit"><i class="fas fa-search"></i> <span class="fw-bold">Cari</span></button>
         </div>
       </div>
     </div>
