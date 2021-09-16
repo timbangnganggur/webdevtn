@@ -24,38 +24,7 @@
 <!-- /.content-header -->
 
 <!-- Main content -->
-@foreach ($articles as $article)
-<section class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header card-header-warning card-header-icon">
-                                    <div class="card-icon">
-                                        <img class="d-block mx-auto mb-4" src="{{ asset("img/ayoMakaryo/ayoMakaryo.png") }}" alt="" width="72" height="72">
-                                    </div>
-                                    
-                                    <h2 class="card-category">Info Loker</h2>
-                                    <h3 class="card-title">{{ $jobs->count()}} Info Loker</h3>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="card card-stats">
-                                <div class="card-header card-header-success card-header-icon">
-                                    <div class="card-icon">
-                                        <img class="d-block mx-auto mb-4" src="{{ asset("img/artikel/konten.png") }}" alt="" width="72" height="72">
-                                    </div>
-                                    <h2 class="card-category">Artikel</h2>
-                                    <h3 class="card-title">{{ $article->count() }} Artikel</h3>
-                                </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-@endforeach
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
