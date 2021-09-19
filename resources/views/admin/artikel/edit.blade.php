@@ -60,7 +60,7 @@
                         <div class="my-3">
                             <label class="form-label">Body</label>
                             <textarea name="body" class="textarea" placeholder="Place some text here"
-                            style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$article->body}}</textarea>
+                            style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{html_entity_decode($article->body)}}</textarea>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Footer</label>

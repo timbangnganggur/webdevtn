@@ -9,6 +9,7 @@ use App\Http\Controllers\General\ArtikelController;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\InfoLokerAdminController;
@@ -60,4 +61,5 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
     Route::resource('role', RoleAdminController::class);
     Route::get('/password', [PasswordController::class, 'edit'])->name('password.edit');
     Route::patch('/password', [PasswordController::class, 'update'])->name('password.update');
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
 });
