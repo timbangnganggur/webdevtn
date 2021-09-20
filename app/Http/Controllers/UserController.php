@@ -23,7 +23,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function changeStatus(Request $request)
+    public function edit(Request $request)
     {
         $user = User::find($request->user_id);
         $user->status = $request->status;

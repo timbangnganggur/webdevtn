@@ -4,6 +4,7 @@
 @endsection
 @section('style')
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 @endsection
 @section('content')
 <section class="content">
@@ -20,7 +21,7 @@
             <tbody>
                @foreach($users as $user)
                   <tr>
-                     <td>{{ $user->name }}</td>
+                     <td>{{ $user->first_name }} {{ $user->last_name }}</td>
                      <td>{{ $user->email }}</td>
                      <td>
                         <input data-id="{{$user->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $user->status ? 'checked' : '' }}>
