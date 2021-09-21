@@ -26,6 +26,8 @@ span.fw-bold {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     background-color: #FFFAE5;
     max-height: 83px;
+    min-height: 83px;
+    width: 100%;
 }
 
 .btn-nav{
@@ -48,17 +50,74 @@ span.fw-bold {
 /* END OF NAVBAR  */
 /*-----------------------------------------------------------------------------------------*/
 
+
+/* START OF JUMBOTRON */
+/*-----------------------------------------------------------------------------------------*/
+
 .jumbotron {
-    background-color: #3D405B;
     background-position: center;
-    background-image: url("../img/image-hero.png");
-    background-size: auto;
-    height: 567px; 
+    background-image: url("../img/jumbotron.svg");
+    background-size: cover;
+    height: 717px; 
+    margin-top: 83px;
+}
+
+.jumbotron .container {
+    margin-left: 77px;
+    margin-right: 162px;
+    padding: 0;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.jumbotron h1{
+    align-self: center;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 75px;
+    color: white;
 }
 
 .pencarian {
-    text-align: center;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
 }
+
+.form-control{
+    height: 80px;
+}
+
+.btn-search{
+    margin-left: 10px;
+    border-radius: 5px; 
+    color: #8B8B8B;
+    border: none;
+    background-color: #FFFAE5;
+    width: 200px;
+    font-size: 24px;
+}
+.btn-search span{
+    opacity: 0;
+    transition: .4s ease-in;
+}
+.btn-search i{
+    font-weight: 600;
+    transform: translateX(28px);
+    transition: .3s ease-in;
+
+}
+
+.btn-search:hover i,
+.btn-search:hover span{
+    font-weight: 400;
+    transform: translateX(0px);
+    opacity: 1;
+
+}
+/* END OF JUMBOTRON */
+/*-----------------------------------------------------------------------------------------*/
 
 #clbk {
     z-index: 1; 
@@ -97,13 +156,7 @@ span.fw-bold {
 h1.text-center{
     color: white;
 }
-.btn-search{
-    border-radius: 0; 
-    height: 100%; 
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: none;
-}
+
 
 .tombol {
     border: 4px solid #004aad;
@@ -282,6 +335,7 @@ footer .list-social{
 footer .list-social li{
     list-style: none;
     font-size: 14px;
+    text-align: center;
 }
 footer .list-social i{
     font-size: 30px;
