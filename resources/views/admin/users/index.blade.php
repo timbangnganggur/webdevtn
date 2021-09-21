@@ -7,7 +7,7 @@
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 @endsection
 @section('content')
-<section class="content">
+<section class="content-wrapper">
     <div class="container">
         <h1>Laravel Update User Status Using Toggle Button</h1>
         <table class="table table-bordered">
@@ -23,7 +23,7 @@
                   <tr>
                      <td>{{ $user->first_name }} {{ $user->last_name }}</td>
                      <td>{{ $user->email }}</td>
-                     <td>
+                        <td>
                         <input data-id="{{$user->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $user->status ? 'checked' : '' }}>
                      </td>
                   </tr>
@@ -39,10 +39,11 @@
     $('.toggle-class').change(function() {
         var status = $(this).prop('checked') == true ? 1 : 0; 
         var user_id = $(this).data('id'); 
+         
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: '/changeStatus',
+            url: '{{ URL::to('admin/users/edit')}}',
             data: {'status': status, 'user_id': user_id},
             success: function(data){
               console.log(data.success)
