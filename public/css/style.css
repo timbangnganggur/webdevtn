@@ -63,8 +63,6 @@ span.fw-bold {
 }
 
 .jumbotron .container {
-    margin-left: 77px;
-    margin-right: 162px;
     padding: 0;
     height: 100%;
     display: grid;
@@ -118,6 +116,50 @@ span.fw-bold {
 }
 /* END OF JUMBOTRON */
 /*-----------------------------------------------------------------------------------------*/
+
+/* START OF JELAJAH ARTIKEL */
+/*-----------------------------------------------------------------------------------------*/
+h5.judul-section{
+    font-size: 36px;
+    font-weight: bold;
+    color: #0D3017;
+}
+h6.subjudul-section{
+    font-size: 18px;
+    color: #666666;
+}
+.jelajah-artikel{
+    margin-bottom: 20px;
+}
+.jelajah-artikel .card-body{
+    display: flex;
+    justify-content: center;
+}
+.jelajah-artikel a{
+    text-decoration: none;
+    color: inherit;
+}
+.jelajah-artikel .card{
+    background-color: #FFFCF1;
+    width: 240px;
+    margin: 30px;
+    border: none;
+}
+.jelajah-artikel .card-img-top{
+    border: none;
+}
+.jelajah-artikel .card-title{
+    font-size: 23px;
+    font-weight: 600;
+    height: 45px;
+    align-items: center;
+}
+
+/* END OF JELAJAH ARTIKEL */
+/*-----------------------------------------------------------------------------------------*/
+
+
+
 
 #clbk {
     z-index: 1; 
@@ -214,24 +256,6 @@ h1.text-center{
     font-weight: bold;
     margin-bottom: 90px;
 }
-/* 
-.section-judul h2::after{
-    position: absolute;
-    content: "";
-    width: 200px;
-    height: 3px;
-    background-color: black;
-    bottom: -20px;
-    left: 50%;
-    transform: translate(-50%);
-} */
-
-/* img{
-   width: 200px;
-   height: 200px;
-   margin: auto;
-   border: 3px solid black;
-} */
 
 .owl-carousel .item {
     overflow: hidden;
@@ -362,6 +386,10 @@ footer .list-social i{
 /* END OF FOOTER  */
 /*------------------------------------------------------------------------------------------------------------------*/
 
+
+
+/*------------------------------------------------------------END OF CSS INDEX-------------------------------------------------------------*/
+
 /* CSS profileTN */
 .profileTN .sectionLogo img {
     width: auto;
@@ -402,6 +430,7 @@ footer .list-social i{
     height: 50px;
     width: 50px;
 }
+/*------------------------------------------------------------END OF CSS PROFILE-------------------------------------------------------------*/
 
 /* CSS Ayo Makaryo */
 .headAyoMakaryo {
@@ -484,6 +513,9 @@ footer .list-social i{
     margin-top: 50px;
 }
 
+/*------------------------------------------------------------END OF CSS AYO MAKARYO----------------------------------------------------------*/
+
+
 /* CSS detailLowongan */
 .img-detilLowongan img {
     width: 250px;
@@ -533,6 +565,8 @@ footer .list-social i{
     color: white;
     text-decoration: none;
 }
+/*------------------------------------------------------------END OF CSS DETAIL LOWONGAN----------------------------------------------------------*/
+
 
 /* CSS CLBK */
 .pembungkusCLBK {
@@ -662,6 +696,8 @@ footer .list-social i{
 .col-kanan-clbk .card-body a:hover {
     color: lightgreen;
 }
+/*------------------------------------------------------------END OF CSS CLBK----------------------------------------------------------*/
+
 
 /* CSS detailClbk */
 .row-gambar-detailClbk img {
@@ -712,3 +748,4 @@ footer .list-social i{
     text-transform: none;
     font-size: 20px;
 }
+/*------------------------------------------------------------END OF CSS DETAIL CLBK----------------------------------------------------------*/
