@@ -12,17 +12,24 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+
         $data = [
             'username' => $request->username,
             'password' => $request->password
         ];
 
-        if (Auth::guard('admin')->attempt($data)) {
-            return redirect()->route('admin.dashboard.index');
-        } else if (Auth::guard('user')->attempt($data)) {
+        if ($validator->fails()) {
+            return back()->with('alert-error-login-input', json_decode($validator->errors(), true));
+        } else if (Auth::guard('admin')->attempt($data)) {
+            return redirect()->route('admin.dashboard.index')->with('alert-success-login', ' Berhasil Login');
+        }else if (Auth::guard('user')->attempt($data)) {
             dd('Selamat Berhasil Login');
         } else {
-            return back();
+            return back()->with('alert-error-login', 'Password atau username tidak tersedia, harap periksa lagi!');
         }
     }
 
