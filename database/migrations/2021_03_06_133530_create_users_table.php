@@ -24,6 +24,8 @@ class CreateUsersTable extends Migration
             $table->text('email');
             $table->text('password');
             $table->timestamps();
+            $table->enum('status', ['1', '0'])->default('0');
+
         });
     }
 

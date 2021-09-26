@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}">
 @endsection
 @section('content')
-    <div class="container">
+<div class="content-wrapper">
+    <div class="content-header">
+    <div class="content">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 @if(session()->has('message'))
@@ -41,8 +43,7 @@
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
-                            <div class="form-group row mb-0">
-                                <div class="col-md-6 offset-md-4">
+                            <div class="form-group">
                                     <div class="form-group row">
                                         <label for="current_password" class="col-md-4 col-form-label text-md-right">{{ __('Current Password') }}</label>
                                         <div class="col-md-6">
@@ -52,11 +53,12 @@
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
-                                        </div>
                                     </div>
+                                    <div class="mx-auto text-center">
                                     <button type="submit" class="btn btn-primary">
                                         Update Password
                                     </button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -64,5 +66,7 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 @endsection
