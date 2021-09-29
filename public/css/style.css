@@ -28,6 +28,7 @@ span.fw-bold {
     max-height: 83px;
     min-height: 83px;
     width: 100%;
+    padding: 0;
 }
 
 .btn-nav{
@@ -46,6 +47,14 @@ span.fw-bold {
     border-radius: 5px;
 }
 
+.navbar-toggler{
+    margin-right: 20px;
+}
+.navbar-collapse{
+    background-color: #FFFAE5 ;
+    width: 100%;
+    padding-bottom: 20px;
+}
 
 /* END OF NAVBAR  */
 /*-----------------------------------------------------------------------------------------*/
@@ -81,6 +90,7 @@ span.fw-bold {
     padding-right: 30px;
     display: flex;
     justify-content: space-between;
+    margin-left: 20px;
 }
 
 .form-control{
@@ -372,7 +382,6 @@ h1.text-center{
     font-weight: 600;
     line-height: 36px;
     color: #FA7E61;
-
     /* identical to box height */
 }
 .footer-sub {
@@ -431,6 +440,7 @@ footer .list-social i{
     display: flex;
     align-items: center;
     transition: .2s ease-in;
+    
 }
 .FUO:hover i{
     color: white;
@@ -809,3 +819,37 @@ footer .far {
     font-size: 20px;
 }
 /*------------------------------------------------------------END OF CSS DETAIL CLBK----------------------------------------------------------*/
+
+/*------------------------------------------------------------START OF RESPONSIVE CSS----------------------------------------------------------*/
+/* navbar become burger  */
+@media (max-width: 994px){
+    .masuk{
+        text-align: center;
+    }
+    .daftar{
+        text-align: center;
+    }
+    
+    .footer-title,
+    .footer-sub{
+        font-size: 20px;
+    }
+    footer .list-social li{
+        font-size: 12px;
+    }
+    footer .list-social i{
+        font-size: 25px;
+    }
+}
+
+/* footer become center  */
+@media (max-width: 761px) {
+    .FUO{
+        justify-content: center;
+    }
+}
+
+
+
+
+/*------------------------------------------------------------END OF RESPONSIVE CSS----------------------------------------------------------*/
