@@ -1,39 +1,3 @@
-<style>
-  @media (max-width: 240px) {
-     /* really tiny screens */
-     #navbar-brand-img {
-         width: 40px;
-     }
-        #navbar-container{
-         padding:10px;
-     }
-  }
-  @media (min-width: 241px) and (max-width: 300px) {
-     /* a little bit bigger screens */
-     #navbar-brand-img {
-         width: 40px;
-     }
-     
-     #navbar-container{
-         padding:10px;
-     }
-  }
-  @media (min-width: 320px) and (max-width: 767px) {
-     /* Basically up to, but not including an iPad */
-     #navbar-brand-img {
-         width: 40px;
-     }
-     #navbar-container{
-         padding:10px;
-     }
-  }
-  @media (min-width: 768px) {
-     /* iPad and bigger */
-     #navbar-brand-img {
-         width: 80px;
-     }
-  }
-  </style>
   
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid" id="navbar-container">
