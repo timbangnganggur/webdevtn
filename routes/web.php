@@ -61,5 +61,6 @@ Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(functi
     Route::resource('role', RoleAdminController::class);
     Route::get('/password', [PasswordController::class, 'edit'])->name('password.edit');
     Route::patch('/password', [PasswordController::class, 'update'])->name('password.update');
+    Route::get('/users/edit/', [UserController::class, 'changeUserStatus'])->name('admin.users.index');
     Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
 });

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -23,11 +24,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function changeStatus(Request $request)
+    public function changeUserStatus(Request $request)
     {
         $user = User::find($request->user_id);
         $user->status = $request->status;
         $user->save();
-        return response()->json(['success'=>'Status change successfully.']);
+  
+        return response()->json(['success'=>'User status change successfully.']);
     }
 }
