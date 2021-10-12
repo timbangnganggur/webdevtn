@@ -8,6 +8,8 @@ use App\Http\Controllers\General\ClbkController;
 use App\Http\Controllers\General\ArtikelController;
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\Admin\DashboardAdminController;
 use App\Http\Controllers\Admin\InfoLokerAdminController;
@@ -46,12 +48,19 @@ Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('dashboard', [DashboardCompanyController::class, 'index'])->name('company.dashboard');
 
 // ROUTE ADMIN
-Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('dashboard', [DashboardAdminController::class, 'index'])->name('dashboard.index');
     Route::resource('info-loker', InfoLokerAdminController::class);
+    Route::get('/info-loker/edit/{id}', [InfoLokerAdminController::class, 'edit'])->name('admin.infoLoker.edit');
     Route::resource('perusahaan', PerusahaanAdminController::class);
     Route::resource('daerah', DaerahAdminController::class);
     Route::resource('artikel', ArticleAdminController::class);
-    Route::get('/article/detail/{id}/{slug}',[ArticleAdminController::class,'show'])->name('article.show');
+    Route::get('/artikel/edit/{slug}', [ArticleAdminController::class, 'edit'])->name('admin.artikel.edit');
+    Route::put('/artikel/edit/{id}', [ArticleAdminController::class, 'update'])->name('admin.artikel.edit');
+    // Route::get('/article/detail/{id}/{slug}',[ArticleAdminController::class,'show'])->name('article.show');
     Route::resource('role', RoleAdminController::class);
+    Route::get('/password', [PasswordController::class, 'edit'])->name('password.edit');
+    Route::patch('/password', [PasswordController::class, 'update'])->name('password.update');
+    Route::get('/users/edit/', [UserController::class, 'changeUserStatus'])->name('admin.users.index');
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
 });

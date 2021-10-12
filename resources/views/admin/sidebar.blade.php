@@ -63,6 +63,18 @@
                 <p>Role Admin</p>
             </a>
         </li>
+        <li class="nav-item">
+            <a href="{{ route('admin.password.edit') }}" class="nav-link">
+                <i class="fas fa-briefcase nav-icon"></i>
+                <p>Change Password</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ URL::to('admin/users') }}" class="nav-link">
+                <i class="fas fa-briefcase nav-icon"></i>
+                <p>Aktivasi User</p>
+            </a>
+        </li>
         @endif
         <li class="nav-item">
             <form action="{{ route('logout') }}" method="POST">

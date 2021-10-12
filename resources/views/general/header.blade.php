@@ -11,6 +11,7 @@
           <a class="nav-link text-center mr-2" href="{{ route('ayoMakaryo') }}"><span class="fw-bold">Ayo Makaryo</span></a>
           <a class="nav-link text-center mr-2" href="{{ route('clbk') }}"><span class="fw-bold">CLBK</span></a>
           <a class="nav-link text-center mr-2" href="{{ route('artikel.index') }}"><span class="fw-bold">Artikel</span></a>
+          <a class="nav-link text-center mr-2" href="{{ route('zoom.index') }}"><span class="fw-bold">Zoom</span></a>
         </div>
             @if (!Auth::check())
               <div class="masuk">

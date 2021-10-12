@@ -1,25 +1,26 @@
-@extends('admin.main')
+@extends('general.master')
 @section('dataTablesCSS')
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 @endsection
 @section('title') 
-  Artikel
+Zoom Meetings
 @endsection
 @section('content')
+<div class="mh-100" style="height: 100px";></div>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Artikel</h1>
+            <h1>Zoom</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Artikel</li>
+              <li class="breadcrumb-item active">Zoom</li>
             </ol>
           </div>
         </div>
@@ -33,11 +34,11 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Artikel</h3>
-                <div class="card-tools">
-                  <a href="{{ url('admin/artikel/create') }}" class="btn btn-tool">
+                <h3 class="card-title">Zoom</h3>
+                <div class="card-tools" class="center">
+                  <a href="{{ url('api/index-create') }}" class="btn btn-tool">
                       <i class="fa fa-plus"></i>
-                      &nbsp; Tambah Data Baru
+                      &nbsp; Tambah Zoom Meeting Baru
                   </a>
               </div>
               </div>
@@ -46,42 +47,42 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Title</th>
-                    <th>Tags</th>
-                    <th>Writer</th>
+                    <th>topic</th>
+                    <th>start_time</th>
+                    <th>agenda</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
                   <tbody>
-                    @foreach ($articles as $article)
+                  @foreach($response['meetings'] as $response)
                     <tr>
-                      <td>{{ $article->title }}</td>
-                        <td>
-                            @foreach (explode(',', $article->tag) as $tag)
-                              <span class="m-1 badge bg-primary">{{ $tag }}</span>
-                            @endforeach
-                        </td>
-                      <td>{{ $article->writer }}</td>
+                      <td>{{ $response['topic'] }}</td>
+                        <td>{{ $response['start_time'] }}</td>
+                      <td>{{ $response['agenda'] }}</td>
 
                       <td class="text-center">
-                        <form method="POST" action="{{ URL::to('admin/artikel/'.$article->id) }}">
+                        <form method="POST" action="{{ URL::to('api/meetings/'.$response['id']) }}">
                             @csrf
-                            <input type="hidden" name="_method" value="DELETE" />
-                            <div class="btn-group">
-                                <a class="btn btn-info" href="{{ URL::to('/artikel/'.$article->slug) }}"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-success" href="/admin/artikel/edit/{{$article->id}}" title="Ubah Data Perusahaan"><i class="fa fa-magic" aria-hidden="true"></i></a>
-                                <button title="Hapus Data Artikel" onclick="confirmDelete()" type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                            <input type="hidden" name="_method" value="DELETE"/>
+                            <div>
+
+                                <a class="btn btn-info" href="{{ URL::to('api/meetings/'.$response['id']) }}"><p>Join</p></a>
+                           
+  
+                                <a class="btn btn-success" href="{{ url('api/index-update/'.$response['id']) }}" title="Ubah Data Zoom"><p>Edit</p></a>
+                  
+                                <button title="Hapus Data Zoom" onclick="confirmDelete()" type="submit" class="btn btn-danger"><p>Delete</p></button>
                             </div>
                         </form>
                       </td>
                     </tr>
-                    @endforeach
+                 @endforeach
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Title</th>
-                    <th>Tags</th>
-                    <th>Writer</th>
+                    <th>topic</th>
+                    <th>start_time</th>
+                    <th>agenda</th>
                     <th>Aksi</th>
                   </tr>
                   </tfoot>
