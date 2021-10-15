@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+html{
+    min-width: 100%;
+}
 *{
     font-family: 'Montserrat', sans-serif;
 }
@@ -100,7 +103,7 @@ span.fw-bold {
     margin-left: 20px;
 }
 
-.form-control{
+.jumbotoron .form-control{
     height: 80px;
 }
 
@@ -129,8 +132,8 @@ span.fw-bold {
     font-weight: 400;
     transform: translateX(0px);
     opacity: 1;
-
 }
+
 /* END OF JUMBOTRON */
 /*-----------------------------------------------------------------------------------------*/
 
@@ -179,58 +182,76 @@ h6.subjudul-section{
 
 /* START OF ARTIKEL POPULER*/
 /*-----------------------------------------------------------------------------------------*/
-.artikel-populer{
-    margin: 50px;
+.jumbotron.artikel {
+    background-position: center;
+    background-image: url("../img/jumbotron-artikel.svg");
+    background-size: cover;
+    height: 257px; 
+    margin-top: 83px;
+    border-radius: 0;
+    margin-bottom: 0;
 }
-.artikel-populer a{
-    text-decoration: none;
-    color: inherit;
-}
-.artikel-populer .card{
-    border: none;
-    margin: 30px;
-}
-button.splide__arrow{
-    background-color: #2B9348;
-    height: 50px;
-    width: 50px;
-}
-.artikel-populer .card-img{
-    opacity: 0.1;
-}
-.artikel-populer .card-img-overlay{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px;
-    gap: 15px;
-}
-.artikel-populer .card-title{
-    font-family: 'Roboto', sans-serif;
-    font-size: 18;
-    font-weight: 700;
+.jumbotron.artikel h1{
     text-align: center;
+    align-self: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    margin: 0;
 }
-.artikel-populer .card-bottom{
-
-    bottom: 90px;
-}
-.artikel-populer .card-count{
-    font-family: 'Roboto', sans-serif;
-    color: #CECECE;
+.jumbotron.artikel h3{
+    text-align: center;
+    align-self: center;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
+    color: white;
     margin: 0;
-    margin-top: 30px;
 }
-.artikel-populer .card-tag{
-    font-family: 'Roboto', sans-serif;
-    color: #F6E204;
-    font-size: 14px;
-    font-weight: 700;
-    margin: 0;
-    margin-top: 10px;
+
+.navbar-artikel{
+    display: flex;
+    flex-direction: row;
+    background-color: #F8F2DA;
+    max-height: 83px;
+    min-height: 83px;
+    width: 100%;
+    padding: 0;
+}
+.navbar-artikel .navbar-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+}
+.navbar-artikel a{
+    color: rgba(0, 0, 0, 0.33);
+}
+
+.navbar-artikel a.active{
+    color: #000000;
+}
+
+.navbar-artikel .form{
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    border-top-right-radius : 0 ;
+    border-bottom-right-radius: 0 ;
+    background-color: #FFFAE5;
+    min-height: 38px;
+}
+.navbar-artikel .form-inline:focus{
+    outline: none !important;
+}
+.navbar-artikel .btn{
+    border-radius: 15px;
+    border-top-left-radius : 0 ;
+    border-bottom-left-radius: 0 ;
+    background-color: #FFFAE5;
+}
+
+.container.artikel{
+    margin-top: 40px;
 }
 /* END OF ARTIKEL POPULER */
 /*-----------------------------------------------------------------------------------------*/
@@ -854,6 +875,10 @@ footer .far {
     }
     footer .list-social i{
         font-size: 25px;
+    }
+
+    .navbar-artikel a{
+        font-size: 15px;
     }
 }
 
