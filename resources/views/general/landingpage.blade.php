@@ -11,7 +11,7 @@
     <br><br><br> <br><br><br> 
     <h1 class="text-center">Informatif & Edukatif untuk Persiapan Diri di Dunia Kerja</h1>
     <br><br><br>
-    <form action="{{ route('ayoMakaryo') }}" method="GET">
+    <form action="{{ route('cari') }}" method="GET">
     <div class="pencarian">
       <div class="row d-flex text-start">
         <div class="col input-group">
@@ -34,9 +34,9 @@
           <div class="splide__track d-flex">
             <ul class="splide__list"> 
               @foreach($articles as $article)
-              <li class="splide__slide" style="min-width:250px;" >
+              <li class="splide__slide" style="max-width:17em;" >
                 <div class="card m-3 h-100">
-                  <img src="{{ asset('images/artikel/'.$article->image_url)}}" class="img-thumbnail">
+                  <img class="img-fluid" src="{{ asset('images/artikel/'.$article->image_url)}}">
                   <div class="card-body">
                     <p class="card-text"><a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">{{ $article->title }}</a></p>
                     <p>by ({{ $article->writer }})</p>
