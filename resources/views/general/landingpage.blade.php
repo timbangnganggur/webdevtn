@@ -105,7 +105,7 @@ Timbangnganggur | Website Informatif & Edukatif untuk Persiapan Diri di Dunia Ke
         type: 'loop',
         perPage: 3,
         perMove: 1,
-        autoplay: true,
+        autoplay: false,
         pagination: false,
         breakpoints: {
             1088: {

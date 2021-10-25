@@ -205,6 +205,27 @@ h6.subjudul-section{
     position: absolute;
     right: -25px;
 }
+
+.card{
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+}
+.card-img{
+    opacity: 0.3;
+    border-radius: 20px;
+}
+
+.card-img-overlay{
+    display: grid;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card .card-tag{
+    color: #F6E204;
+}
+
 /* END OF ARTIKEL POPULER */
 /*-----------------------------------------------------------------------------------------*/
 
@@ -290,17 +311,7 @@ h6.subjudul-section{
     margin-left: 15px;
 }
 
-.container.artikel .card{
-    border-radius: 20px;
-}
-.container.artikel .card-img{
-    opacity: 0.3;
-    border-radius: 20px;
-}
 
-.card-title{
-    color: black;
-}
 .container.artikel{
 
 }
