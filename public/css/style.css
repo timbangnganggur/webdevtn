@@ -310,6 +310,31 @@ h6.subjudul-section{
     margin-right: 15px;
     margin-left: 15px;
 }
+.artikel-populer .card-bottom{
+
+    bottom: 90px;
+}
+.artikel-populer .card-count{
+    font-family: 'Roboto', sans-serif;
+    color: #CECECE;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 30px;
+}
+.artikel-populer .card-tag{
+    font-family: 'Roboto', sans-serif;
+    color: #F6E204;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 10px;
+}
+/* END OF ARTIKEL POPULER */
+/*-----------------------------------------------------------------------------------------*/
+
+
+
 
 
 .container-artikel .pagination{
