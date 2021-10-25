@@ -69,27 +69,29 @@ Timbangnganggur | Website Informatif & Edukatif untuk Persiapan Diri di Dunia Ke
     <div class="artikel-populer card-body">
         <h5 class="judul-section text-center">Artikel</h5>
         <h6 class="subjudul-section text-center">Artikel</h6>
-        <div id="splide-artikel" class="splide">
-            <div class="splide__track d-flex">
-                <ul class="splide__list">
-                    @foreach($articles as $article)
-                    <li class="splide__slide">
-                        <a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">
-                            <div class="card">
-                                <img class="card-img" src="{{ asset('images/artikel/'.$article->image_url)}}"
-                                    alt="Card image">
-                                <div class="card-img-overlay">
-                                    <h5 class="card-title">{{ $article->title }}</h5>
-                                    <div class="card-bottom">
-                                        <p class="card-count"><i class="far fa-eye"></i> {{ $article->view_count }}</p>
-                                        <p class="card-tag">{{ $article->tag }}</p>
+        <div class="list_artikel">
+            <div id="splide-artikel" class="splide">
+                <div class="splide__track d-flex">
+                    <ul class="splide__list">
+                        @foreach($articles as $article)
+                        <li class="splide__slide">
+                            <a href="{{ route('artikel.show', ['artikel' => $article->slug]) }}">
+                                <div class="card">
+                                    <img class="card-img" src="{{ asset('images/artikel/'.$article->image_url)}}"
+                                        alt="Card image">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">{{ $article->title }}</h5>
+                                        <div class="card-bottom">
+                                            <p class="card-count"><i class="far fa-eye"></i> {{ $article->view_count }}</p>
+                                            <p class="card-tag">{{ $article->tag }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                    @endforeach
-                </ul>
+                            </a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
