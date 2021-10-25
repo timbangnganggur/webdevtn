@@ -31,7 +31,7 @@ Artikel | TimbangNganggur
     </form>
 </nav>
 
-<div class="container artikel">
+<div class="container-artikel">
     <div class="row">
         <div class="col-md-12 d-flex flex-wrap">
 
@@ -50,6 +50,12 @@ Artikel | TimbangNganggur
             </a>
             @endforeach
         </div>
+    </div>
+    <div class="pagination">
+        <div class="page">1</div>
+        <div class="page">2</div>
+        <div class="page">3</div>
+        <div class="page nextpage-btn">Lanjut</div>
     </div>
 </div>
 <div class="d-flex justify-content-center">

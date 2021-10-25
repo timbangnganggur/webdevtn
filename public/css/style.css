@@ -302,18 +302,33 @@ h6.subjudul-section{
     background-color: #FFFAE5;
 }
 
-.container.artikel{
+.container-artikel{
     margin: 70px;
 }
 
-.container.artikel a{
+.container-artikel a{
     margin-right: 15px;
     margin-left: 15px;
 }
 
 
-.container.artikel{
+.container-artikel .pagination{
+    float: right;
+    margin-top: 20px;
+}
+.container-artikel .pagination .page{
+    background-color: #2B9348;
+    min-width: 30px;
+    min-height: 30px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
+.container-artikel .pagination .nextpage-btn{
+    padding: 0 10px 0 10px;
 }
 /*------------------------------------------------------------END OF CSS ARTIKEL-------------------------------------------------------------*/
 
