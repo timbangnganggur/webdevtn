@@ -16,10 +16,23 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
-        $articles = Article::paginate(5);
-        $articles = DB::table('articles')->paginate(5);
-        return view('general.artikel.index')->with('articles', $articles);
+        $articles = Article::latest();
+
+        if (request('search')) {
+            $articles->where('title', 'like', '%' . request('search') . '%')
+            ->orWhere('writer', 'like', '%' . request('search') . '%');
+        }
+
+        $pages = Article::paginate(5);
+        $pages = DB::table('articles')->paginate(5);
+
+        return view('general.artikel.index', [
+            'articles' => $articles->get(),
+            'pages' => $pages
+        ]);
+
+        
+
     }
 
     /**
