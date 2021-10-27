@@ -1,6 +1,6 @@
 @extends('general.master')
 @section('title')
-    Artikel | TimbangNganggur
+Artikel | TimbangNganggur
 @endsection
 @section('content')
 <!-- jQuery library -->
@@ -11,14 +11,29 @@
         <img class="d-block mx-auto mb-4" src="{{ asset("img/artikel/konten.png") }}" alt="" width="72" height="72">
         <h2>Artikel</h2>
         <p class="lead">Informasi Seputar Dunia Kerja</p>
-      </div>
+    </div>
 </div>
+
+<div class="row justify-content-center mb-3">
+    <div class="col-md-6">
+        <form action="/artikel">
+            
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Tulis keyword judul atau nama penulis ..." name="search" value="{{ request('search') }}">
+                <button class="btn btn-warning" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@if ($articles->count())
+
 <div class="container pembungkusCLBK">
   <div class="row">
     <div class="col-md-12 d-flex flex-wrap">
 
       @foreach ($articles as $article)
-        <div class="col-sm-4">
+      <div class="col-sm-4">
           <div class="card h-100">
             <img src="{{ asset('images/artikel/'.$article->image_url)}}" alt="" class="img-thumbnail">
             <div class="card-body">
@@ -27,14 +42,22 @@
               <p>by ({{ $article->writer }})</p>
               <p>{{ $article->created_at }}</p>
               <p>Views: {{ $article->view_count }}</p>
-            </div>
           </div>
-        </div>
-      @endforeach
-    </div>
+      </div>
   </div>
+  @endforeach
 </div>
-    <div class="d-flex justify-content-center">
-  <div>{{ $articles->links() }}</div>
-    </div>
+</div>
+</div>
+
+@else
+
+<p class="text-center fs-4">No post found.</p>
+
+@endif
+
+<div class="d-flex justify-content-center">
+  <div>{{ $pages->links() }}</div>
+</div>
+
 @endsection

@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 hr {
     color: white; 
     font-weight: bold;
@@ -15,23 +20,223 @@ span.fw-bold {
 .modal-footer {
     justify-content: center;
 }
-
+/*------------------------------------------------------------------------------------------*/
+/* START OF NAVBAR  */
 .navbar {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
+    background-color: #FFFAE5;
+    max-height: 83px;
+    min-height: 83px;
+    width: 100%;
+    padding: 0;
+}
+#navbar-brand-img {
+    width: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.btn-nav{
+    border: 2.5px solid #2B9348;
+    background-color: #fff;
+    color: #2B9348;
+    width: 83px;
+    border-radius: 5px;
 }
 
+.btn-nav-sec{
+    border: 2.5px solid #2B9348;
+    background-color: #2B9348;
+    color: #fff;
+    width: 83px;
+    border-radius: 5px;
+}
+
+.navbar-toggler{
+    margin-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.navbar-collapse{
+    background-color: #FFFAE5 ;
+    width: 100%;
+}
+
+/* END OF NAVBAR  */
+/*-----------------------------------------------------------------------------------------*/
+
+
+/* START OF JUMBOTRON */
+/*-----------------------------------------------------------------------------------------*/
+
 .jumbotron {
-    background-color: #3D405B;
     background-position: center;
-    background-image: url("../img/image-hero.png");
-    background-size: auto;
-    height: 567px; 
+    background-image: url("../img/jumbotron.svg");
+    background-size: cover;
+    height: 717px; 
+    margin-top: 83px;
+}
+
+.jumbotron .container {
+    padding: 0;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.jumbotron h1{
+    align-self: center;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 75px;
+    color: white;
 }
 
 .pencarian {
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.form-control{
+    height: 80px;
+}
+
+.btn-search{
+    margin-left: 10px;
+    border-radius: 5px; 
+    color: #8B8B8B;
+    border: none;
+    background-color: #FFFAE5;
+    width: 200px;
+    font-size: 24px;
+}
+.btn-search span{
+    opacity: 0;
+    transition: .4s ease-in;
+}
+.btn-search i{
+    font-weight: 600;
+    transform: translateX(28px);
+    transition: .3s ease-in;
+
+}
+
+.btn-search:hover i,
+.btn-search:hover span{
+    font-weight: 400;
+    transform: translateX(0px);
+    opacity: 1;
+
+}
+/* END OF JUMBOTRON */
+/*-----------------------------------------------------------------------------------------*/
+
+/* START OF JELAJAH ARTIKEL */
+/*-----------------------------------------------------------------------------------------*/
+h5.judul-section{
+    font-size: 36px;
+    font-weight: bold;
+    color: #0D3017;
+}
+h6.subjudul-section{
+    font-size: 18px;
+    color: #666666;
+}
+.jelajah-artikel{
+    margin-bottom: 20px;
+}
+.jelajah-artikel .card-body{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+.jelajah-artikel a{
+    text-decoration: none;
+    color: inherit;
+}
+.jelajah-artikel .card{
+    background-color: #FFFCF1;
+    width: 240px;
+    margin: 30px;
+    border: none;
+}
+.jelajah-artikel .card-img-top{
+    border: none;
+}
+.jelajah-artikel .card-title{
+    font-size: 23px;
+    font-weight: 600;
+    height: 45px;
+    align-items: center;
+}
+
+/* END OF JELAJAH ARTIKEL */
+/*-----------------------------------------------------------------------------------------*/
+
+
+/* START OF ARTIKEL POPULER*/
+/*-----------------------------------------------------------------------------------------*/
+.artikel-populer{
+    margin: 50px;
+}
+.artikel-populer a{
+    text-decoration: none;
+    color: inherit;
+}
+.artikel-populer .card{
+    border: none;
+    margin: 30px;
+}
+button.splide__arrow{
+    background-color: #2B9348;
+    height: 50px;
+    width: 50px;
+}
+.artikel-populer .card-img{
+    opacity: 0.1;
+}
+.artikel-populer .card-img-overlay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 15px;
+}
+.artikel-populer .card-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18;
+    font-weight: 700;
     text-align: center;
 }
+.artikel-populer .card-bottom{
+
+    bottom: 90px;
+}
+.artikel-populer .card-count{
+    font-family: 'Roboto', sans-serif;
+    color: #CECECE;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 30px;
+}
+.artikel-populer .card-tag{
+    font-family: 'Roboto', sans-serif;
+    color: #F6E204;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 10px;
+}
+/* END OF ARTIKEL POPULER */
+/*-----------------------------------------------------------------------------------------*/
+
+
+
 
 #clbk {
     z-index: 1; 
@@ -66,6 +271,11 @@ span.fw-bold {
     background: #FA7E61;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+h1.text-center{
+    color: white;
+}
+
 
 .tombol {
     border: 4px solid #004aad;
@@ -123,24 +333,6 @@ span.fw-bold {
     font-weight: bold;
     margin-bottom: 90px;
 }
-/* 
-.section-judul h2::after{
-    position: absolute;
-    content: "";
-    width: 200px;
-    height: 3px;
-    background-color: black;
-    bottom: -20px;
-    left: 50%;
-    transform: translate(-50%);
-} */
-
-/* img{
-   width: 200px;
-   height: 200px;
-   margin: auto;
-   border: 3px solid black;
-} */
 
 .owl-carousel .item {
     overflow: hidden;
@@ -175,35 +367,7 @@ span.fw-bold {
     text-decoration: none;
     margin-right: 10px;
 }
-.fab,
-.far {
-    font-size: 50px;
-    color: #F3DF05;
-    text-decoration: none;
-    margin-right: 15px;
-}
 
-.FUO {
-    color: #F3DF05;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.FUO:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-title {
-
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 36px;
-    color: #FA7E61;
-
-    /* identical to box height */
-}
 
 .sub-link {
     text-decoration: none;
@@ -215,6 +379,18 @@ span.fw-bold {
     color: white;
 }
 
+/*-------------------------------------------------------------------------*/
+/* START OF FOOTER  */
+
+.footer-title {
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    color: #FA7E61;
+    /* identical to box height */
+}
 .footer-sub {
     font-size: 24px;
     font-style: normal;
@@ -225,22 +401,73 @@ span.fw-bold {
 }
 
 .bg-footer {
-    background: #3D405B;
-
+    background: #2B9348;
 }
 
 .logo-footer {
-    margin-left: -50px;
+    margin-left: -10px;
     height: 200px;
     width: 200px;
 }
 
 .page-footer {
-    color: #F3DF05;
+    color: #fff;
 }
 
-/* CSS profileTN */
+footer .list-unstyled li a{
+    text-decoration: none;
+    color: #CECECE;
+    transition: .2s ease;
+}
+footer .list-unstyled li{
+    transition: .2s ease-in;
+}
+footer .list-unstyled li:hover,
+footer .list-unstyled li:hover a,
+.FUO:hover{
+    transform: translateY(-2px);
+    color: #fff;
+    text-decoration: none;
+}
+footer .list-social{
+    padding: 0;
+}
+footer .list-social li{
+    list-style: none;
+    font-size: 14px;
+    text-align: center;
+}
+footer .list-social i{
+    font-size: 30px;
+}
 
+.FUO {
+    color: #CECECE;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: .2s ease-in;
+    
+}
+.FUO:hover i{
+    color: white;
+}
+footer .fab,
+footer .far {
+    color: #CECECE;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: .2s ease-in;
+}
+
+/* END OF FOOTER  */
+/*------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------END OF CSS INDEX-------------------------------------------------------------*/
+
+/* CSS profileTN */
 .profileTN .sectionLogo img {
     width: auto;
     height: 400px;
@@ -280,6 +507,7 @@ span.fw-bold {
     height: 50px;
     width: 50px;
 }
+/*------------------------------------------------------------END OF CSS PROFILE-------------------------------------------------------------*/
 
 /* CSS Ayo Makaryo */
 .headAyoMakaryo {
@@ -362,6 +590,9 @@ span.fw-bold {
     margin-top: 50px;
 }
 
+/*------------------------------------------------------------END OF CSS AYO MAKARYO----------------------------------------------------------*/
+
+
 /* CSS detailLowongan */
 .img-detilLowongan img {
     width: 250px;
@@ -411,6 +642,8 @@ span.fw-bold {
     color: white;
     text-decoration: none;
 }
+/*------------------------------------------------------------END OF CSS DETAIL LOWONGAN----------------------------------------------------------*/
+
 
 /* CSS CLBK */
 .pembungkusCLBK {
@@ -540,6 +773,8 @@ span.fw-bold {
 .col-kanan-clbk .card-body a:hover {
     color: lightgreen;
 }
+/*------------------------------------------------------------END OF CSS CLBK----------------------------------------------------------*/
+
 
 /* CSS detailClbk */
 .row-gambar-detailClbk img {
@@ -590,3 +825,46 @@ span.fw-bold {
     text-transform: none;
     font-size: 20px;
 }
+/*------------------------------------------------------------END OF CSS DETAIL CLBK----------------------------------------------------------*/
+
+/*------------------------------------------------------------START OF RESPONSIVE CSS----------------------------------------------------------*/
+/* navbar become burger  */
+@media (max-width: 994px){
+    #navbar-brand-img {
+        width: 50px;
+        top: 20px;
+    }
+    .navbar-collapse{
+        margin-top: 80px;
+        padding-bottom: 20px;
+    }
+    .masuk{
+        text-align: center;
+    }
+    .daftar{
+        text-align: center;
+    }
+    
+    .footer-title,
+    .footer-sub{
+        font-size: 20px;
+    }
+    footer .list-social li{
+        font-size: 12px;
+    }
+    footer .list-social i{
+        font-size: 25px;
+    }
+}
+
+/* footer become center  */
+@media (max-width: 761px) {
+    .FUO{
+        justify-content: center;
+    }
+}
+
+
+
+
+/*------------------------------------------------------------END OF RESPONSIVE CSS----------------------------------------------------------*/
