@@ -26,10 +26,12 @@ Artikel | TimbangNganggur
                     class="fw-bold">KONTEN</span></a></li>
     </ul>
     <form class="form-inline">
-        <input class="form" type="search" placeholder="Search" aria-label="Search">
+        <input class="form" type="search" placeholder="Search" aria-label="Search" value="{{ request('search') }}">
         <button type="button" class="btn"><i class="fas fa-search"></i></button>
     </form>
 </nav>
+
+@if ($articles->count())
 
 <div class="container-artikel">
     <div class="row">
@@ -58,7 +60,14 @@ Artikel | TimbangNganggur
         <div class="page nextpage-btn">Lanjut</div>
     </div>
 </div>
+@else
+
+<p class="text-center fs-4">No post found.</p>
+
+@endif
+
 <div class="d-flex justify-content-center">
-    <div>{{ $articles->links() }}</div>
+  <div>{{ $pages->links() }}</div>
 </div>
+
 @endsection
