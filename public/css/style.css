@@ -350,6 +350,7 @@ h6.subjudul-section{
     justify-content: center;
     align-items: center;
     color: white;
+    cursor: pointer;
 }
 
 .container-artikel .pagination .nextpage-btn{

@@ -26,7 +26,7 @@ Artikel | TimbangNganggur
                     class="fw-bold">KONTEN</span></a></li>
     </ul>
     <form class="form-inline">
-        <input class="form" type="search" placeholder="Search" aria-label="Search" value="{{ request('search') }}">
+        <input class="form" type="text" placeholder="Search" name = "search" value="{{ request('search') }}">
         <button type="button" class="btn"><i class="fas fa-search"></i></button>
     </form>
 </nav>
