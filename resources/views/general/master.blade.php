@@ -14,7 +14,7 @@
   @yield('style')
   <style>
     body {
-      background-color: #F4F1DE;
+      background-color: #FFFAE5;
     }
   </style>
   <title>@yield('title')</title>

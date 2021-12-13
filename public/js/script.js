@@ -16,5 +16,20 @@ $(document).ready(function(){
             }
         }
     })
-
 });
+
+const artikelNav = document.querySelectorAll('.nav-link')
+
+function removeActive(){
+    for(artikel in artikelNav){
+        artikel.classList.remove('active');
+    }
+}
+
+for(artikel in artikelNav){
+    artikel.addEventListener('click', function() {
+        console.log('masuk');
+        removeActive();
+        artikel.classList.add('active');
+    })
+}
